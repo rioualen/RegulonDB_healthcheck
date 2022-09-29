@@ -66,6 +66,17 @@ Notes:
 * Some formatting is done in order to uniformize columns accross versions (uppercase/lowercase in confidence levels, word or symbol +- for strand and effect, etc)
 * Starting v11.0.1 there are 2 evidence columns (site evidence and function evidence), here I merged them so I can compare with older versions
 
+Comments on evidence and confidence issues:
+
+* Version 10.6 did not include confirmed TFBS **error query? corregido por Cesar en la versión 10.7**
+* Version 10.7 seems right 
+* Version 10.8 seem to have too many confirmed TFBSs: **erroneous cross-validations CV(SM) and CV(GEA) were added to all TFBS, sometimes even duplicated**
+* Version 10.9 loses most evidence information: **?**
+* Version 10.10 and 11.0 have mostly weak sites, and many NAs: **only function evidence is taken into account (not site)**
+* Version 11.0.1 does not have confirmed TFBSs: **only site evidence is taken into account (not function)**
+* Version 11.0.2 seems about right? **congruent with version 10.7**
+
+
 ```{r binding-sites-data-per-version}
 
 ## V10.6 excluded because it doesn't include TU_ID, only TU names which are not unique; otherwise it's almost the same as v10.7 which is included
@@ -336,7 +347,6 @@ DT::datatable(effect_summary, rownames= FALSE, options = list(searching = FALSE,
 
 ```
 
-
 ## Evidence 
 
 ```{r tfbs-evidence}
@@ -402,8 +412,9 @@ UpSetR::upset(fromList(tfbs_evidence_shared), sets = tfbs_versions, order.by = "
               # queries = list(list(query = intersects, params = list("v10.7"), color = "red", active = T),
               #                list(query = intersects, params = list("v10.9", "v10.10", "v11.0", "v11.0.1", "v11.0.2"), color = "blue", active = T))
               )
-```
 
+## Revise congruency between table and upset plot (table has CE listed as only present in 10.8, shjould have 10.7 too)
+```
 
 
 ## Confidence 
@@ -462,14 +473,6 @@ confidence_summary <- all_tfbs %>%
 DT::datatable(confidence_summary, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10))
 
 ```
-
-Comments:
-
-* Version 10.8 seem to have too many confirmed TFBSs
-* Version 10.9 loses most confidence information
-* Version 10.10 and 11.0 have mostly weak sites, and many NAs **only function evidence is taken into account (not site)**
-* Version 11.0.1 does not have confirmed TFBSs **only site evidence is taken into account (not function)**
-* Version 11.0.2 seems about right?
 
 
 ## RI IDs 
@@ -618,9 +621,12 @@ UpSetR::upset(fromList(tu_names), sets = tfbs_versions, order.by = "freq", keep.
 
 Notes:
 
-* TFBSs from v10.7 and v11.0.2 are mapped by TFBS_ID and promoter name
-* The following table displays the differences
+* TFBSs from v10.7 and v11.0.2 are mapped by **TFBS_ID** and **promoter** name
+  * TFBS_IDs are not unique, eg. a given TFBS_ID can be associated with several promoters and TUs
+  * Some RI_IDs seem to have changed, all other parameters equal (ex. seems like Fis TFBS_ID ECK120011288 was associated with RI_ID ECK120034675, now ECK125300661)
+  * Older versions of BindingSiteSet.txt did not come with a TU_ID column, and TU_name is not unique, and is sometimes missing
 
+The following table displays the differences.
 **Many (most?) differences seem to be caused by different promoter names**
 
 Ex. 
@@ -629,12 +635,6 @@ Ex.
 * in 11.0.2 micFp1 and micFp2 are both regulated by the same TF and TFBS, and are linked to 2 distinct TUs (both TUs are named micF but have distinct IDs)
 * **all three entries have the same evidence**
 
-
-<!-- This mapping is not perfect, given the following: -->
-
-<!-- * TFBS_IDs are not unique, eg. a given TFBS_ID can be associated with several promoters and TUs -->
-<!-- * Some RI_IDs seem to have changed, all other parameters equal (ex. seems like Fis TFBS_ID ECK120011288 was associated with RI_ID ECK120034675, now ECK125300661) -->
-<!-- * Older versions of BindingSiteSet.txt did not come with a TU_ID column, and TU_name is not unique, and is sometimes missing -->
 
 ```{r tfbs-mapping}
 ## Join versions 10.7 and 11.0.2 by TFBS_ID and promoter name
@@ -652,43 +652,14 @@ tfbs_differences_107_1102 <- dplyr::setdiff(tfbs_join_107_1102, tfbs_matches_107
 write.table(tfbs_join_107_1102, file = paste0(dir_results, "/TFBS_full_join_107_1102.tsv"), quote = F, row.names = F, col.names = T, sep = "\t")
 write.table(tfbs_differences_107_1102, file = paste0(dir_results, "/TFBS_differences_107_1102.tsv"), quote = F, row.names = F, col.names = T, sep = "\t")
 
-
-## display selection of columns
-# tfbs_differences_107_1102_simple <- tfbs_differences_107_1102 %>%
-#   dplyr::select(TFBS_ID, promoter, starts_with("TF_name"), starts_with("TU"), starts_with("coords"), starts_with("evidence_1"), starts_with("confidence"))
-
 DT::datatable(tfbs_differences_107_1102, rownames= FALSE, options = list(searching = TRUE, lengthChange = FALSE, pageLength = 5,
                                                                                 columnDefs = list(list(width = '200px', targets = c(11,12)))
                                                                                 ))
-
-
-# all_tfbs_RI_TU <- tfbs_set_v10.7 %>%
-  # dplyr::full_join(tfbs_set_v10.6.3 %>% dplyr::select(TFBS_ID, TF_name, RI_ID, TU_name, evidence, confidence), 
-  #                  by = c("TFBS_ID", "TF_name", "RI_ID", "TU_name"), suffix = c("_10.6", "_10.6.3")) %>%
-  # dplyr::full_join(tfbs_set_v10.7 %>% dplyr::select(TFBS_ID, TF_name, RI_ID, TU_name, evidence, confidence), 
-  #                  by = c("TFBS_ID", "TF_name", "RI_ID", "TU_name"), suffix = c("_10.6.3", "_10.7")) %>%
-  # dplyr::full_join(tfbs_set_v10.8 %>% dplyr::select(TFBS_ID, TF_name, RI_ID, TU_name, evidence, confidence), 
-  #                  by = c("TFBS_ID", "TF_name", "RI_ID", "TU_name"), suffix = c("_10.7", "_10.8")) %>%
-  # dplyr::full_join(tfbs_set_v10.9 %>% dplyr::select(TFBS_ID, TF_name, RI_ID, TU_name, evidence, confidence), 
-  #                  by = c("TFBS_ID", "TF_name", "RI_ID", "TU_name"), suffix = c("_10.8", "_10.9")) %>%
-  # dplyr::full_join(tfbs_set_v10.10 %>% dplyr::select(TFBS_ID, TF_name, RI_ID, TU_name, evidence, confidence), 
-  #                  by = c("TFBS_ID", "TF_name", "RI_ID", "TU_name"), suffix = c("_10.9", "_10.10")) %>%
-  # dplyr::full_join(tfbs_set_v11.0 %>% dplyr::select(TFBS_ID, TF_name, RI_ID, TU_name, evidence, confidence), 
-  #                  by = c("TFBS_ID", "TF_name", "RI_ID", "TU_name"), suffix = c("_10.10", "_11.0")) %>%
-  # dplyr::full_join(tfbs_set_v11.0.1 %>% dplyr::select(TFBS_ID, TF_name, RI_ID, TU_name, evidence, evidence_function, confidence), 
-  #                  by = c("TFBS_ID", "TF_name", "RI_ID", "TU_name"), suffix = c("_11.0", "_11.0.1")) %>%
-  # dplyr::full_join(tfbs_set_v11.0.2 %>% dplyr::select(TFBS_ID, TF_name, RI_ID, TU_name, evidence, evidence_function, confidence), 
-  #                  by = c("TFBS_ID", "TF_name", "RI_ID", "TU_name"), suffix = c("_11.0.1", "_11.0.2")) %>%
-  # dplyr::arrange(TFBS_ID) %>%
-  # dplyr::select(-conformation_name, -TF_ID) %>%
-  # dplyr::rename(confidence_11.0.2 = confidence, evidence_11.0.2 = evidence)
-
-
 ```
 
 <!-- These are the entries that appear after version 10.8:  -->
 
-```{r tfbs-frfom-10-9, eval = F}
+```{r tfbs-frfom-10-9, eval = F, include = F}
 tfbs_new_from_10.9 <- all_tfbs_RI_TU %>%
   dplyr::filter(is.na(evidence_10.6) & is.na(confidence_10.6) & 
                   is.na(evidence_10.6.3) & is.na(confidence_10.6.3) & 
@@ -703,7 +674,7 @@ write.table(tfbs_new_from_10.9, file = "TFBS_new_10.9.tsv", quote = F, row.names
 
 <!-- These are the entries that are "confirmed" in version 10.8:  -->
 
-```{r tfbs-confirmed-10-8, eval = F}
+```{r tfbs-confirmed-10-8, eval = F, include = F}
 tfbs_confirmed_10.8 <- all_tfbs_RI_TU %>%
   dplyr::filter(confidence_10.8 == "Confirmed")
 
@@ -715,483 +686,1095 @@ write.table(tfbs_confirmed_10.8, file = "TFBS_confirmed_10.8.tsv", quote = F, ro
 
 # network_tf_gene.txt  {.tabset}
 
-## Data
-
 ```{r network-tf-gene-data1}
-versions_nw <- setdiff(dir_versions, c("10.6", "10.10", "11.0.2"))
-for(v in versions_nw){
-  assign(paste0("network_set_", v), read.delim(paste0(dir_releases, "/", v, "/network_tf_gene.tsv"), comment.char = "#", header = T, stringsAsFactors = F, na.strings = "") %>%
-           dplyr::mutate(version = paste0("v", v)) #%>%
-           # dplyr::mutate(ifelse(effect == ))
-  )
+dir_versions <- c("10.6.3", "10.7", "10.8", "10.9", "11.0", "11.0.1")
+tfgnw_sets <- list()
+tfgnw_versions <- c()
+
+for(v in dir_versions){
+  version_tag <- paste0("v", v)
+  set <- read.delim(paste0(dir_releases, "/", v, "/network_tf_gene.tsv"), 
+                    comment.char = "#", header = T, stringsAsFactors = F, na.strings = c("", "NA")) %>% 
+    dplyr::mutate(effect = ifelse(effect == "repressor", "-", ifelse(effect == "activator", "+", ifelse(effect == "unknown", "?", effect)))) %>%
+    dplyr::mutate(version = version_tag) %>%
+    dplyr::rowwise() %>%
+    dplyr::mutate(evidence = ifelse("evidence_function" %in% colnames(.), concat_uniq2(evidence, evidence_function), evidence)) %>%
+    dplyr::mutate(pairs = paste0(TF_name, "_", gene_name)) 
+
+  
+  assign(paste0("tfgnw_set_", version_tag), set)
+  tfgnw_sets[[version_tag]] <- set
+  tfgnw_versions <- c(tfgnw_versions, version_tag)
+  
 }
+all_tfgnw <- bind_rows(tfgnw_sets) %>%
+  dplyr::mutate(version = factor(version, levels =  tfgnw_versions)) %>%
+  dplyr::mutate(effect = factor(effect, levels =  c("+", "-", "?"))) %>%
+  dplyr::mutate(confidence = tolower(confidence)) %>%
+  dplyr::mutate(confidence = factor(confidence, levels = c("weak", "strong", "confirmed")))
+
+all_tfgnw_by_evidence <- all_tfgnw %>%
+  tidyr::separate_rows(evidence, sep = ",") %>%
+  dplyr::mutate(evidence = trimws(gsub("\\[|\\]", "", evidence))) %>% 
+  dplyr::mutate(evidence_code = "",
+                evidence_level = "",
+                evidence_name = "") %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(evidence_code = ifelse(grepl("\\|", evidence), stringr::str_split(evidence, "\\|")[[1]][1], evidence),
+                evidence_level = ifelse(grepl("\\|", evidence), stringr::str_split(evidence, "\\|")[[1]][2], NA),
+                evidence_name = ifelse(grepl("\\|", evidence), stringr::str_split(evidence, "\\|")[[1]][3], NA)
+                )
+
+
 ```
 
 **NB: additional TAB characters at the end of each line cause parsing issues**
 
-```{r total-tf-gene, fig.height=5, fig.width=6}
-tf_gene_summary <- list()
-for(v in versions_nw){
-	tf_gene_summary[[paste0("v", v)]] <- data.frame(version = paste0("v", v), count = nrow(get(paste0("network_set_", v))))
-}
-tf_gene_summary_df <- data.table::rbindlist(tf_gene_summary)
-tf_gene_summary_df$version <- factor(tf_gene_summary_df$version, levels = paste0("v", versions_nw))
+## Releases
 
+Comparison of the network_tf_gene.txt file between the last releases.
 
-DT::datatable(tf_gene_summary_df, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10))
+| Release version     | Date           |
+|---------------------|----------------|
+| 10.6 (NA)                | 2019 July      |
+| 10.6.3              | -              |
+| 10.7                | 2020 April     |
+| 10.8                | 2020 October   |
+| 10.9                | 2021 April     |
+| 10.10 (NA)               | 2022 February  |
+| 11.0                | 2022 August    |
+| 11.0.1 (not public) | 2022 September |
 
-tf_gene_num <- simple_bar(tf_gene_summary_df, "version", "count") +
+```{r total-tfgnw, fig.height=4, fig.width=6}
+tfgnw_summary <- all_tfgnw %>%
+  dplyr::group_by(version) %>%
+  dplyr::summarise(total = n()) %>%
+  dplyr::arrange(version)
+
+tfgnw_num <- simple_bar(tfgnw_summary, "version", "total") +
   scale_fill_viridis(discrete = T) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14)) +
-  labs(x = "Release version", y = "Number of TFBSs", title = "")
+  labs(x = "Release version", y = "Number of TF-gene entries", title = "")
 
-tf_gene_num
+tfgnw_num
+
+DT::datatable(tfgnw_summary, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10))
+
 ```
+
+
 
 ## TF-gene pairs 
 
-```{r tfgene-ids-upset, fig.height=8}
-tf_gene_pairs <- list()
-for (v in versions_nw) {
-  pairs <- get(paste0("network_set_", v)) %>%
-    rowwise() %>%
-    mutate(TF_gene = paste0(TF_name, "_", gene_name))
-	tf_gene_pairs[[paste0("v", v)]] <- unique(pairs$TF_gene)
+```{r pairs-shared}
+pairs <- list()
+for (v in tfgnw_versions) {
+	pairs[[v]] <- unique( (get(paste0("tfgnw_set_", v)))$pairs)
 }
-UpSetR::upset(fromList(tf_gene_pairs), sets = paste0("v", versions_nw), order.by = "freq", keep.order = T,
+UpSetR::upset(fromList(pairs), sets = tfgnw_versions, order.by = "freq", keep.order = T,
               text.scale = c(2,2,2,2,2,2),
-              # queries = list(list(query = intersects, params = list("v10.6", "v10.6.3", "v10.7"), color = "red", active = T),
-              #                list(query = intersects, params = list("v10.9", "v10.10", "v11.0", "v11.0.1", "v11.0.2"), color = "blue", active = T))
+              # queries = list(
+              #                list(query = intersects, params = list("v10.9", "v10.10", "v11.0", "v11.0.1", "v11.0.2"), color = "blue", active = T),
+              #                list(query = intersects, params = list("v10.7", "v10.8"), color = "red", active = T)
+              #                )
               )
 ```
 
-### Duplicate TF-gene pairs 
-
-```{r tf-gene-ids-dupli}
-pairs_ids_dupli <- list()
-for (v in versions_nw) {
-	pairs_ids_dupli[[paste0("v", v)]] <- get(paste0("network_set_", v)) %>% 
-    rowwise() %>%
-    mutate(TF_gene = paste0(TF_name, "_", gene_name)) %>%
-	  group_by(TF_gene) %>% 
-	  summarise(occurrences = n()) %>% 
-	  group_by(occurrences) %>% 
-	  summarise(pairs_number = n()) %>%
-	  mutate(version = paste0("v", v))
-}
-
-pairs_ids_dupli_df <- data.table::rbindlist(pairs_ids_dupli) %>%
+```{r pairs-dupli}
+coords_dupli <- all_tfgnw %>%
+  dplyr::group_by(version, pairs) %>%
+  dplyr::summarise(occurrences = n()) %>%
+	  group_by(version, occurrences) %>% 
+	  summarise(pairs_number = n())%>%
   dplyr::mutate(occurrences = factor(occurrences))
 
-pairs_ids_dupli_df$version <- factor(pairs_ids_dupli_df$version, levels = paste0("v", versions_nw))
-
 ###
-dodge <- ggplot(pairs_ids_dupli_df, aes(fill = occurrences, y = pairs_number, x = version)) + 
+dodge <- ggplot(coords_dupli, aes(fill = occurrences, y = pairs_number, x = version)) + 
   geom_bar(position = position_dodge(preserve = "single"), stat = "identity") +
   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14)) +
-  labs(x = "", y = "Number of pairs", title = "TF-gene pairs duplication in network_tf_gene.txt across versions")
+  labs(x = "", y = "Number of unique TF-gene pairs", title = "TF-gene pairs duplication in network_tf_gene.txt across versions")
 
-dodge2 <- ggplot(pairs_ids_dupli_df %>% dplyr::filter(occurrences != 1), aes(fill = occurrences, y = pairs_number, x = version)) + 
+dodge2 <- ggplot(coords_dupli %>% dplyr::filter(!occurrences %in% c("1", "2", "3", "4")), aes(fill = occurrences, y = pairs_number, x = version)) + 
   geom_bar(position = position_dodge(preserve = "single"), stat = "identity") +
   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14),
         legend.position = "none") +
-  labs(x = "", y = "Number of pairs", title = "...minimum 2 copies")
-
+  labs(x = "", y = "Number of unique TF-gene pairs", title = "...minimum 5 copies")
 
 dodge / dodge2 
+
 ```
 
-## Evidence in network TF-gene
+### Which pairs are most duplicated?
 
-**NB: evidence is formatted in different ways between versions of downloadable file, which can cause parsing issues**
+```{r which-dupli-pairs}
+## pairs that have at least 10 entries in a given version
+pairs_dupli_max <- all_tfgnw %>%
+  dplyr::group_by(version, pairs) %>%
+  dplyr::summarise(occurrences = n()) %>%
+  dplyr::filter(occurrences >=10) %>%
+  dplyr::arrange(desc(occurrences)) %>%
+  pivot_wider(names_from = version,
+              values_from = c(occurrences))
 
-```{r network-evidence1, fig.width=10}
-# tf_gene_evidence <- bind_rows(network_set_10.6.3, network_set_10.7, network_set_10.8, network_set_10.9, network_set_11.0) %>%
-#   tidyr::separate_rows(evidence, sep = ",") %>%
-#   dplyr::mutate(evidence_code = gsub("\\[|\\]", "", evidence)) 
-# 
-# last <- network_set_11.0.1 %>%
-#   dplyr::mutate(evidence_function = gsub("\\[\\]", "\\[\\|\\|\\]", evidence_function)) %>%
-#   dplyr::mutate(evidence = gsub("\\[\\]", "\\[\\|\\|\\]", evidence)) %>%
-#   dplyr::rowwise() %>%
-#   dplyr::mutate(evidence = concat_uniq(evidence, evidence_function)) %>%
-#   tidyr::separate_rows(evidence, sep = ",") %>%
-#   dplyr::mutate(evidence = gsub("\\[|\\]", "", evidence)) %>%
-#   tidyr::separate(evidence, c("evidence_code", "evidence_level", "evidence_name"), sep = "\\|") 
-#   # dplyr::mutate(fevidence = gsub("\\[|\\]", "", evidence_function)) %>%
-#   # tidyr::separate(fevidence, c("fevidence_code", "fevidence_level", "fevidence_name"), sep = "\\|")
-# 
-# tf_gene_evidence <- bind_rows(tf_gene_evidence, last)
-# tf_gene_evidence$version <- factor(tf_gene_evidence$version, levels = paste0("v", versions_nw))
+DT::datatable(pairs_dupli_max, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10))
+```
 
 
-tf_gene_evidence <- bind_rows(network_set_10.7, network_set_10.8, network_set_10.9, network_set_11.0) %>%
-  tidyr::separate_rows(evidence, sep = ",") %>%
-  dplyr::mutate(evidence_code = gsub("\\[|\\]", "", evidence)) 
 
-last <- network_set_11.0.1 %>%
-  dplyr::mutate(evidence_function = gsub("\\[\\]", "\\[\\|\\|\\]", evidence_function)) %>%
-  dplyr::mutate(evidence = gsub("\\[\\]", "\\[\\|\\|\\]", evidence)) %>%
-  dplyr::rowwise() %>%
-  dplyr::mutate(evidence = paste0(evidence, ",", evidence_function)) %>%
-  tidyr::separate_rows(evidence, sep = ",") %>%
-  dplyr::mutate(evidence = gsub("\\[|\\]", "", evidence)) %>%
-  tidyr::separate(evidence, c("evidence_code", "evidence_level", "evidence_name"), sep = "\\|") 
-  # dplyr::mutate(fevidence = gsub("\\[|\\]", "", evidence_function)) %>%
-  # tidyr::separate(fevidence, c("fevidence_code", "fevidence_level", "fevidence_name"), sep = "\\|")
 
-tf_gene_evidence <- bind_rows(tf_gene_evidence, last)%>%
-  dplyr::mutate(evidence_code = trimws(evidence_code)) 
 
-tf_gene_evidence$version <- factor(tf_gene_evidence$version, levels = paste0("v", versions_nw))
 
-#
-##
-tf_gene_evidence_long <- tf_gene_evidence %>% 
-  group_by(version, evidence_code) %>% 
+
+## TFs
+
+```{r tfs-shared-tfgnw}
+tf_names <- list()
+for (v in tfgnw_versions) {
+	tf_names[[v]] <- unique( (get(paste0("tfgnw_set_", v)))$TF_name)
+}
+UpSetR::upset(fromList(tf_names), sets = tfgnw_versions, order.by = "freq", keep.order = T,
+              text.scale = c(2,2,2,2,2,2),
+              sets.x.label  = "Number of unique TF names",
+              # queries = list(list(query = intersects, params = list("v10.7", "v10.8", "v10.9"), color = "red", active = T))
+              )
+```
+
+
+
+## Genes
+
+```{r genes-shared-tfgnw}
+gene_names <- list()
+for (v in tfgnw_versions) {
+	gene_names[[v]] <- unique( (get(paste0("tfgnw_set_", v)))$gene_name)
+}
+UpSetR::upset(fromList(gene_names), sets = tfgnw_versions, order.by = "freq", keep.order = T,
+              text.scale = c(2,2,2,2,2,2),
+              sets.x.label  = "Number of unique TF names",
+              # queries = list(list(query = intersects, params = list("v10.7", "v10.8", "v10.9"), color = "red", active = T))
+              )
+
+```
+
+
+
+
+
+
+
+
+
+## Effect
+
+```{r tfgnw-effect, fig.width=10}
+tfgnw_effect_long <- all_tfgnw %>% 
+  group_by(version, effect) %>% 
   summarise(value = n()) 
 
-dodge <- ggplot(tf_gene_evidence_long, aes(fill = evidence_code, y = value, x = version, group = evidence_code)) + 
+dodge <- ggplot(tfgnw_effect_long, aes(fill = effect, y = value, x = version)) + 
   geom_bar(position = position_dodge(preserve = "single"), stat = "identity") +
   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") +
-  labs(x = "", y = "Number of entries", title = "")
+  labs(x = "", y = "Number of tfgnw", title = "")
 
-stack <- ggplot(tf_gene_evidence_long, aes(fill = evidence_code, y = value, x = version, group = evidence_code)) + 
+stack <- ggplot(tfgnw_effect_long, aes(fill = effect, y = value, x = version)) + 
   geom_bar(position = "stack", stat = "identity") +
   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") +
-  labs(x = "", y = "Number of evidence", title = "")
+  labs(x = "", y = "Number of tfgnw", title = "")
 
-line <-  ggplot(tf_gene_evidence_long, aes(y = value, x = version, group = evidence_code)) + 
-  geom_line(aes(color = evidence_code)) +
-  geom_point(size = 2, aes(color = evidence_code)) +
+line <-  ggplot(tfgnw_effect_long, aes(group = effect, y = value, x = version)) + 
+  geom_line(aes(color = effect)) +
+  geom_point(size = 2, aes(color = effect)) +
   scale_color_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
+  theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") +
+  labs(x = "Release version", y = "Number of tfgnw", title = "")
+
+## ggplotly to make it interactive
+# fig0 <- ggplotly(tfgnw_num)
+fig1 <- ggplotly(dodge)
+fig2 <- ggplotly(stack)
+fig3 <- ggplotly(line)
+
+subplot(fig1, fig2, fig3, nrows=3)
+```
+
+
+```{r tfgnw-effect-summary}
+effect_summary <- all_tfgnw %>% 
+  group_by(version, effect) %>% 
+  summarise(value = n())  %>%
+  data.frame() %>%
+  pivot_wider(names_from = version, values_from = c(value)) %>%
+   arrange(effect)
+
+DT::datatable(effect_summary, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10))
+
+```
+
+## Evidence 
+
+```{r tfgnw-evidence}
+tfgnw_evidence_long <- all_tfgnw_by_evidence %>% 
+  group_by(version, evidence_code) %>% 
+  summarise(value = n(), evidence_name = concat_uniq(evidence_name)) ## ojo que solo la 11.0.1 tiene evidence name
+
+evidence_palette <- random_palette(length(unique(all_tfgnw_by_evidence$evidence_code)))
+
+##----
+dodge <- ggplot(tfgnw_evidence_long, aes(fill = evidence_code, y = value, x = version, group = evidence_code)) + 
+  geom_bar(position = position_dodge(preserve = "single"), stat = "identity") +
+    scale_fill_manual(values = evidence_palette, drop = F, na.value = "gray") +
+  # scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
+  theme_minimal() +
+  theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") +
+  labs(x = "", y = "Number of tfgnws", title = "")
+
+stack <- ggplot(tfgnw_evidence_long, aes(fill = evidence_code, y = value, x = version, group = evidence_code)) + 
+  geom_bar(position = "stack", stat = "identity") +
+    scale_fill_manual(values = evidence_palette, drop = F, na.value = "gray") +
+  # scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
+  theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") +
-  labs(x = "Release version", y = "Number of entries", title = "")
+  labs(x = "", y = "Number of evidence", title = "")
 
-fig0 <- ggplotly(tf_gene_num)
-fig1<-ggplotly(dodge)
-fig2<-ggplotly(stack)
-fig3<-ggplotly(line)
+line <-  ggplot(tfgnw_evidence_long, aes(group = evidence_code, y = value, x = version)) + 
+  geom_line(aes(color = evidence_code)) +
+  scale_color_manual(values = evidence_palette, drop = F, na.value = "gray") +
+  geom_point(size = 2, aes(color = evidence_code)) +
+  # scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
+  theme_minimal() +
+  theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") +
+  labs(x = "Release version", y = "Number of tfgnw", title = "")
 
-subplot(fig0, fig1, fig2, fig3, nrows=4, shareY = TRUE)
+fig0 <- ggplotly(tfgnw_num)
+fig1 <- ggplotly(dodge)
+fig2 <- ggplotly(stack)
+fig3 <- ggplotly(line)
 
+subplot(fig0, fig1, fig2, fig3, nrows=4)
 
+```
 
+```{r tfgnw-evidence-table}
+
+tfgnw_evidence_table <- all_tfgnw_by_evidence %>% 
+  group_by(evidence_code) %>% 
+  summarise(value = n(), evidence_name = concat_uniq(evidence_name), version = concat_uniq(version)) ## ojo que solo la 11.0.1 tiene evidence name
+
+DT::datatable(tfgnw_evidence_table, rownames= FALSE, options = list(searching = TRUE, lengthChange = FALSE, pageLength = 10))
+
+## to do remove empty string from evidence table
+```
+
+```{r tfgnw-evidence-upset}
+
+tfgnw_evidence_shared <- list()
+for (v in tfgnw_versions) {
+	tfgnw_evidence_shared[[v]] <- unique((all_tfgnw_by_evidence %>% dplyr::filter(version == v))$evidence_code)
+}
+
+UpSetR::upset(fromList(tfgnw_evidence_shared), sets = tfgnw_versions, order.by = "freq", keep.order = T,
+              text.scale = c(2,2,2,2,2,2),
+              # queries = list(list(query = intersects, params = list("v10.7"), color = "red", active = T),
+              #                list(query = intersects, params = list("v10.9", "v10.10", "v11.0", "v11.0.1", "v11.0.2"), color = "blue", active = T))
+              )
+
+## Revise congruency between table and upset plot (table has CE listed as only present in 10.8, shjould have 10.7 too)
 ```
 
 
 ## Confidence 
 
-**NB: confidence is now written in the downloadable file in all caps, which can cause mapping issues**
+```{r tfgnw-confidence, fig.width=10}
+tfgnw_confidence_long <- all_tfgnw %>% 
+  group_by(version, confidence) %>% 
+  summarise(value = n()) 
 
-
-```{r tfgenebs-confidence, fig.width=10}
-confidence_nw_all_versions <- list()
-for(v in versions_nw){
-  confidence_nw_all_versions[[v]] <- get(paste0("network_set_", v)) %>% 
-    group_by(version, confidence) %>% 
-    summarise(value = n())
-}
-confidence_nw_all_versions_df <- data.table::rbindlist(confidence_nw_all_versions) %>%
-  dplyr::mutate(confidence = tolower(confidence)) 
-confidence_nw_all_versions_df$confidence <- factor(confidence_nw_all_versions_df$confidence, levels = c("weak", "strong", "confirmed"))
-confidence_nw_all_versions_df$version <- factor(confidence_nw_all_versions_df$version, levels = paste0("v", versions_nw))
-
-##
-tf_gene_confidence_long <- confidence_nw_all_versions_df
-
-dodge <- ggplot(tf_gene_confidence_long, aes(fill = confidence, y = value, x = version)) + 
+dodge <- ggplot(tfgnw_confidence_long, aes(fill = confidence, y = value, x = version)) + 
   geom_bar(position = position_dodge(preserve = "single"), stat = "identity") +
   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") +
-  labs(x = "", y = "Number of entries", title = "")
+  labs(x = "", y = "Number of tfgnw", title = "")
 
-stack <- ggplot(tf_gene_confidence_long, aes(fill = confidence, y = value, x = version)) + 
+stack <- ggplot(tfgnw_confidence_long, aes(fill = confidence, y = value, x = version)) + 
   geom_bar(position = "stack", stat = "identity") +
   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") +
-  labs(x = "", y = "Number of TFBS", title = "")
+  labs(x = "", y = "Number of tfgnw", title = "")
 
-line <-  ggplot(tf_gene_confidence_long, aes(group = confidence, y = value, x = version)) + 
+line <-  ggplot(tfgnw_confidence_long, aes(group = confidence, y = value, x = version)) + 
   geom_line(aes(color = confidence)) +
   geom_point(size = 2, aes(color = confidence)) +
   scale_color_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
-  theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") +
-  labs(x = "Release version", y = "Number of entries", title = "")
+  theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") +
+  labs(x = "Release version", y = "Number of tfgnw", title = "")
 
-fig0 <- ggplotly(tf_gene_num)
-fig1<-ggplotly(dodge)
-fig2<-ggplotly(stack)
-fig3<-ggplotly(line)
+## ggplotly to make it interactive
+# fig0 <- ggplotly(tfgnw_num)
+fig1 <- ggplotly(dodge)
+fig2 <- ggplotly(stack)
+fig3 <- ggplotly(line)
 
-subplot(fig0, fig1, fig2, fig3, nrows=4, shareY = T)
+subplot(fig1, fig2, fig3, nrows=3)
 ```
 
 
-```{r evidence-level-tfbs-3tab}
-confidence_nw_summary <- confidence_nw_all_versions_df %>%
-  arrange(confidence) %>%
+```{r confidence-summary-tfgnw}
+confidence_summary <- all_tfgnw %>% 
+  group_by(version, confidence) %>% 
+  summarise(value = n())  %>%
   mutate(confidence = ifelse(is.na(confidence), "null", as.character(confidence))) %>%
-  # mutate(value = ifelse(is.na(value), 0, value)) %>%
   data.frame() %>%
   pivot_wider(names_from = version, values_from = c(value)) %>%
   mutate(across(starts_with('v'), ~replace_na(.,0))) %>%
   bind_rows(summarise(.,
                       across(where(is.numeric), sum),
-                      across(where(is.character), ~"total")))
+                      across(where(is.character), ~"total"))) %>%
+   mutate(confidence = factor(confidence, levels = c("weak", "strong", "confirmed", "null", "total"))) %>%
+   arrange(confidence)
 
-DT::datatable(confidence_nw_summary, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10))
+DT::datatable(confidence_summary, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10))
 
 ```
 
 
+# network_tf_tu.txt  {.tabset}
 
-## Mapping
+```{r network-tf-tu-data1}
+dir_versions <- c("10.6.3", "10.7", "10.8", "10.9", "11.0", "11.0.1")
+tftunw_sets <- list()
+tftunw_versions <- c()
 
-```{r tf-gene-mapping, eval = F}
-all_tf_gene <- network_set_10.6.3 %>%
-  dplyr::full_join(network_set_10.7 %>% dplyr::select(TF_name, gene_name, effect, evidence, confidence), 
-                   by = c("TF_name", "gene_name", "effect"), suffix = c("_10.6.3", "_10.7")) %>%
-  dplyr::full_join(network_set_10.8 %>% dplyr::select(TF_name, gene_name, effect, evidence, confidence), 
-                   by = c("TF_name", "gene_name", "effect"), suffix = c("_10.7", "_10.8")) %>%
-  dplyr::full_join(network_set_10.9 %>% dplyr::select(TF_name, gene_name, effect, evidence, confidence), 
-                   by = c("TF_name", "gene_name", "effect"), suffix = c("_10.8", "_10.9")) %>%
-  dplyr::full_join(network_set_11.0 %>% dplyr::select(TF_name, gene_name, effect, evidence, confidence), 
-                   by = c("TF_name", "gene_name", "effect"), suffix = c("_10.9", "_11.0")) %>%
-  dplyr::full_join(network_set_11.0.1 %>% dplyr::select(TF_name, gene_name, effect, evidence, evidence_function, confidence), 
-                   by = c("TF_name", "gene_name", "effect"), suffix = c("_11.0", "_11.0.1")) %>%
-  dplyr::arrange(TF_name, gene_name)
-  # distinct()
-  # dplyr::rename(confidence_11.0.2 = confidence, evidence_11.0.2 = evidence)
+for(v in dir_versions){
+  version_tag <- paste0("v", v)
+  set <- read.delim(paste0(dir_releases, "/", v, "/network_tf_tu.tsv"), 
+                    comment.char = "#", header = T, stringsAsFactors = F, na.strings = c("", "NA")) %>% 
+    dplyr::mutate(effect = ifelse(effect == "repressor", "-", ifelse(effect == "activator", "+", ifelse(effect == "unknown", "?", effect)))) %>%
+    dplyr::mutate(version = version_tag) %>%
+    dplyr::rowwise() %>%
+    dplyr::mutate(evidence = ifelse("evidence_function" %in% colnames(.), concat_uniq2(evidence, evidence_function), evidence)) %>%
+    dplyr::mutate(pairs = paste0(TF_name, "_", TU_name)) 
 
-write.table(all_tf_gene, file = "all_tf_gene.tsv", quote = F, row.names = F, col.names = T, sep = "\t")
-```
-
-# network_tf_tu.txt {.tabset}
-
-## Data
-
-```{r network-tf-gene-data2}
-versions_nw <- setdiff(dir_versions, c("10.10", "11.0.2"))
-for(v in versions_nw){
-  assign(paste0("network_tu_set_", v), read.delim(paste0(dir_releases, "/", v, "/network_tf_tu.tsv"), comment.char = "#", header = T, stringsAsFactors = F, na.strings = "")%>% dplyr::mutate(version = paste0("v", v))) 
+  
+  assign(paste0("tftunw_set_", version_tag), set)
+  tftunw_sets[[version_tag]] <- set
+  tftunw_versions <- c(tftunw_versions, version_tag)
+  
 }
+all_tftunw <- bind_rows(tftunw_sets) %>%
+  dplyr::mutate(version = factor(version, levels =  tftunw_versions)) %>%
+  dplyr::mutate(effect = factor(effect, levels =  c("+", "-", "?"))) %>%
+  dplyr::mutate(confidence = tolower(confidence)) %>%
+  dplyr::mutate(confidence = factor(confidence, levels = c("weak", "strong", "confirmed")))
+
+all_tftunw_by_evidence <- all_tftunw %>%
+  tidyr::separate_rows(evidence, sep = ",") %>%
+  dplyr::mutate(evidence = trimws(gsub("\\[|\\]", "", evidence))) %>% 
+  dplyr::mutate(evidence_code = "",
+                evidence_level = "",
+                evidence_name = "") %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(evidence_code = ifelse(grepl("\\|", evidence), stringr::str_split(evidence, "\\|")[[1]][1], evidence),
+                evidence_level = ifelse(grepl("\\|", evidence), stringr::str_split(evidence, "\\|")[[1]][2], NA),
+                evidence_name = ifelse(grepl("\\|", evidence), stringr::str_split(evidence, "\\|")[[1]][3], NA)
+                )
+
+
 ```
 
 **NB: additional TAB characters at the end of each line cause parsing issues**
 
-```{r total-tf-tu, fig.height=5, fig.width=6}
-tf_tu_summary <- list()
-for(v in versions_nw){
-	tf_tu_summary[[paste0("v", v)]] <- data.frame(version = paste0("v", v), count = nrow(get(paste0("network_tu_set_", v))))
-}
-tf_tu_summary_df <- data.table::rbindlist(tf_tu_summary)
-tf_gene_summary_df$version <- factor(tf_tu_summary_df$version, levels = paste0("v", versions_nw))
+## Releases
 
+Comparison of the network_tf_gene.txt file between the last releases.
 
-DT::datatable(tf_tu_summary_df, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10))
+| Release version     | Date           |
+|---------------------|----------------|
+| 10.6 (NA)                | 2019 July      |
+| 10.6.3              | -              |
+| 10.7                | 2020 April     |
+| 10.8                | 2020 October   |
+| 10.9                | 2021 April     |
+| 10.10 (NA)               | 2022 February  |
+| 11.0                | 2022 August    |
+| 11.0.1 (not public) | 2022 September |
 
-tf_tu_num <- simple_bar(tf_tu_summary_df, "version", "count") +
+```{r total-tftunw, fig.height=4, fig.width=6}
+tftunw_summary <- all_tftunw %>%
+  dplyr::group_by(version) %>%
+  dplyr::summarise(total = n()) %>%
+  dplyr::arrange(version)
+
+tftunw_num <- simple_bar(tftunw_summary, "version", "total") +
   scale_fill_viridis(discrete = T) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14)) +
-  labs(x = "Release version", y = "Number of entries", title = "")
+  labs(x = "Release version", y = "Number of TF-gene entries", title = "")
 
-tf_tu_num
+tftunw_num
+
+DT::datatable(tftunw_summary, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10))
+
 ```
 
-## TF-TU pairs 
 
-```{r tf-tu-ids-upset, fig.height=8}
-tf_tu_pairs <- list()
-for (v in versions_nw) {
-  pairs <- get(paste0("network_tu_set_", v)) %>%
-    rowwise() %>%
-    mutate(TF_TU = paste0(TF_name, "_", TU_name))
-	tf_tu_pairs[[paste0("v", v)]] <- unique(pairs$TF_TU)
+
+## TF-gene pairs 
+
+```{r tftu-pairs-shared}
+pairs <- list()
+for (v in tftunw_versions) {
+	pairs[[v]] <- unique( (get(paste0("tftunw_set_", v)))$pairs)
 }
-UpSetR::upset(fromList(tf_tu_pairs), sets = paste0("v", versions_nw), order.by = "freq", keep.order = T,
+UpSetR::upset(fromList(pairs), sets = tftunw_versions, order.by = "freq", keep.order = T,
               text.scale = c(2,2,2,2,2,2),
-              # queries = list(list(query = intersects, params = list("v10.6", "v10.6.3", "v10.7"), color = "red", active = T),
-              #                list(query = intersects, params = list("v10.9", "v10.10", "v11.0", "v11.0.1", "v11.0.2"), color = "blue", active = T))
+              # queries = list(
+              #                list(query = intersects, params = list("v10.9", "v10.10", "v11.0", "v11.0.1", "v11.0.2"), color = "blue", active = T),
+              #                list(query = intersects, params = list("v10.7", "v10.8"), color = "red", active = T)
+              #                )
               )
 ```
 
-### Duplicate TF-TU pairs 
-
-```{r tf-tu-dupli}
-pairs_tu_ids_dupli <- list()
-for (v in versions_nw) {
-	pairs_tu_ids_dupli[[paste0("v", v)]] <- get(paste0("network_tu_set_", v)) %>% 
-    rowwise() %>%
-    mutate(TF_TU = paste0(TF_name, "_", TU_name)) %>%
-	  group_by(TF_TU) %>% 
-	  summarise(occurrences = n()) %>% 
-	  group_by(occurrences) %>% 
-	  summarise(pairs_number = n()) %>%
-	  mutate(version = paste0("v", v))
-}
-
-pairs_tu_ids_dupli_df <- data.table::rbindlist(pairs_tu_ids_dupli) %>%
+```{r tftu-pairs-dupli}
+coords_dupli <- all_tftunw %>%
+  dplyr::group_by(version, pairs) %>%
+  dplyr::summarise(occurrences = n()) %>%
+	  group_by(version, occurrences) %>% 
+	  summarise(pairs_number = n())%>%
   dplyr::mutate(occurrences = factor(occurrences))
 
-pairs_tu_ids_dupli_df$version <- factor(pairs_tu_ids_dupli_df$version, levels = paste0("v", versions_nw))
-
 ###
-dodge <- ggplot(pairs_tu_ids_dupli_df, aes(fill = occurrences, y = pairs_number, x = version)) + 
+dodge <- ggplot(coords_dupli, aes(fill = occurrences, y = pairs_number, x = version)) + 
   geom_bar(position = position_dodge(preserve = "single"), stat = "identity") +
   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14)) +
-  labs(x = "", y = "Number of pairs", title = "TF-TU pairs duplication in network_tf_gene.txt across versions")
+  labs(x = "", y = "Number of unique TF-gene pairs", title = "TF-gene pairs duplication in network_tf_gene.txt across versions")
+
 
 dodge 
+
 ```
 
-## Evidence in network TF-TU
 
-**NB: evidence is formatted in different ways between versions of downloadable file, which can cause parsing issues**
 
-```{r network-evidence2, fig.width=10}
-tf_tu_evidence <- bind_rows(network_tu_set_10.7, network_tu_set_10.8, network_tu_set_10.9, network_tu_set_11.0) %>%
-  tidyr::separate_rows(evidence, sep = ",") %>%
-  dplyr::mutate(evidence_code = gsub("\\[|\\]", "", evidence)) 
 
-last <- network_tu_set_11.0.1 %>%
-  dplyr::mutate(evidence_function = gsub("\\[\\]", "\\[\\|\\|\\]", evidence_function)) %>%
-  dplyr::mutate(evidence = gsub("\\[\\]", "\\[\\|\\|\\]", evidence)) %>%
-  dplyr::rowwise() %>%
-  dplyr::mutate(evidence = paste0(evidence, ",", evidence_function)) %>%
-  tidyr::separate_rows(evidence, sep = ",") %>%
-  dplyr::mutate(evidence = gsub("\\[|\\]", "", evidence)) %>%
-  tidyr::separate(evidence, c("evidence_code", "evidence_level", "evidence_name"), sep = "\\|") 
-  # dplyr::mutate(fevidence = gsub("\\[|\\]", "", evidence_function)) %>%
-  # tidyr::separate(fevidence, c("fevidence_code", "fevidence_level", "fevidence_name"), sep = "\\|")
 
-tf_tu_evidence <- bind_rows(tf_tu_evidence, last)%>%
-  dplyr::mutate(evidence_code = trimws(evidence_code)) 
 
-tf_tu_evidence$version <- factor(tf_tu_evidence$version, levels = paste0("v", versions_nw))
 
-##
-tf_tu_evidence_long <- tf_tu_evidence %>% 
-  group_by(version, evidence_code) %>% 
+## TFs
+
+```{r tfs-shared-tftunw}
+tf_names <- list()
+for (v in tftunw_versions) {
+	tf_names[[v]] <- unique( (get(paste0("tftunw_set_", v)))$TF_name)
+}
+UpSetR::upset(fromList(tf_names), sets = tftunw_versions, order.by = "freq", keep.order = T,
+              text.scale = c(2,2,2,2,2,2),
+              sets.x.label  = "Number of unique TF names",
+              # queries = list(list(query = intersects, params = list("v10.7", "v10.8", "v10.9"), color = "red", active = T))
+              )
+```
+
+
+
+## Genes
+
+```{r genes-shared-tftunw}
+TU_names <- list()
+for (v in tftunw_versions) {
+	TU_names[[v]] <- unique( (get(paste0("tftunw_set_", v)))$TU_name)
+}
+UpSetR::upset(fromList(TU_names), sets = tftunw_versions, order.by = "freq", keep.order = T,
+              text.scale = c(2,2,2,2,2,2),
+              sets.x.label  = "Number of unique TU names",
+              # queries = list(list(query = intersects, params = list("v10.7", "v10.8", "v10.9"), color = "red", active = T))
+              )
+
+```
+
+
+
+## Effect
+
+```{r tftunw-effect, fig.width=10}
+tftunw_effect_long <- all_tftunw %>% 
+  group_by(version, effect) %>% 
   summarise(value = n()) 
 
-dodge <- ggplot(tf_tu_evidence_long, aes(fill = evidence_code, y = value, x = version, group = evidence_code)) + 
+dodge <- ggplot(tftunw_effect_long, aes(fill = effect, y = value, x = version)) + 
   geom_bar(position = position_dodge(preserve = "single"), stat = "identity") +
   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") +
-  labs(x = "", y = "Number of entries", title = "")
+  labs(x = "", y = "Number of tftunw", title = "")
 
-stack <- ggplot(tf_tu_evidence_long, aes(fill = evidence_code, y = value, x = version, group = evidence_code)) + 
+stack <- ggplot(tftunw_effect_long, aes(fill = effect, y = value, x = version)) + 
   geom_bar(position = "stack", stat = "identity") +
   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") +
-  labs(x = "", y = "Number of evidence", title = "")
+  labs(x = "", y = "Number of tftunw", title = "")
 
-line <-  ggplot(tf_tu_evidence_long, aes(y = value, x = version, group = evidence_code)) + 
-  geom_line(aes(color = evidence_code)) +
-  geom_point(size = 2, aes(color = evidence_code)) +
+line <-  ggplot(tftunw_effect_long, aes(group = effect, y = value, x = version)) + 
+  geom_line(aes(color = effect)) +
+  geom_point(size = 2, aes(color = effect)) +
   scale_color_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
+  theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") +
+  labs(x = "Release version", y = "Number of tftunw", title = "")
+
+## ggplotly to make it interactive
+# fig0 <- ggplotly(tftunw_num)
+fig1 <- ggplotly(dodge)
+fig2 <- ggplotly(stack)
+fig3 <- ggplotly(line)
+
+subplot(fig1, fig2, fig3, nrows=3)
+```
+
+
+```{r tftunw-effect-summary}
+effect_summary <- all_tftunw %>% 
+  group_by(version, effect) %>% 
+  summarise(value = n())  %>%
+  data.frame() %>%
+  pivot_wider(names_from = version, values_from = c(value)) %>%
+   arrange(effect)
+
+DT::datatable(effect_summary, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10))
+
+```
+
+## Evidence 
+
+```{r tftunw-evidence}
+tftunw_evidence_long <- all_tftunw_by_evidence %>% 
+  group_by(version, evidence_code) %>% 
+  summarise(value = n(), evidence_name = concat_uniq(evidence_name)) ## ojo que solo la 11.0.1 tiene evidence name
+
+evidence_palette <- random_palette(length(unique(all_tftunw_by_evidence$evidence_code)))
+
+##----
+dodge <- ggplot(tftunw_evidence_long, aes(fill = evidence_code, y = value, x = version, group = evidence_code)) + 
+  geom_bar(position = position_dodge(preserve = "single"), stat = "identity") +
+    scale_fill_manual(values = evidence_palette, drop = F, na.value = "gray") +
+  # scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
+  theme_minimal() +
+  theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") +
+  labs(x = "", y = "Number of tftunws", title = "")
+
+stack <- ggplot(tftunw_evidence_long, aes(fill = evidence_code, y = value, x = version, group = evidence_code)) + 
+  geom_bar(position = "stack", stat = "identity") +
+    scale_fill_manual(values = evidence_palette, drop = F, na.value = "gray") +
+  # scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
+  theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") +
-  labs(x = "Release version", y = "Number of entries", title = "")
+  labs(x = "", y = "Number of evidence", title = "")
 
-fig0 <- ggplotly(tf_tu_num)
-fig1<-ggplotly(dodge)
-fig2<-ggplotly(stack)
-fig3<-ggplotly(line)
+line <-  ggplot(tftunw_evidence_long, aes(group = evidence_code, y = value, x = version)) + 
+  geom_line(aes(color = evidence_code)) +
+  scale_color_manual(values = evidence_palette, drop = F, na.value = "gray") +
+  geom_point(size = 2, aes(color = evidence_code)) +
+  # scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
+  theme_minimal() +
+  theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") +
+  labs(x = "Release version", y = "Number of tftunw", title = "")
 
-subplot(fig0, fig1, fig2, fig3, nrows=4, shareY = TRUE)
+fig0 <- ggplotly(tftunw_num)
+fig1 <- ggplotly(dodge)
+fig2 <- ggplotly(stack)
+fig3 <- ggplotly(line)
 
+subplot(fig0, fig1, fig2, fig3, nrows=4)
 
+```
 
+```{r tftunw-evidence-table}
+
+tftunw_evidence_table <- all_tftunw_by_evidence %>% 
+  group_by(evidence_code) %>% 
+  summarise(value = n(), evidence_name = concat_uniq(evidence_name), version = concat_uniq(version)) ## ojo que solo la 11.0.1 tiene evidence name
+
+DT::datatable(tftunw_evidence_table, rownames= FALSE, options = list(searching = TRUE, lengthChange = FALSE, pageLength = 10))
+
+## to do remove empty string from evidence table
+```
+
+```{r tftunw-evidence-upset}
+
+tftunw_evidence_shared <- list()
+for (v in tftunw_versions) {
+	tftunw_evidence_shared[[v]] <- unique((all_tftunw_by_evidence %>% dplyr::filter(version == v))$evidence_code)
+}
+
+UpSetR::upset(fromList(tftunw_evidence_shared), sets = tftunw_versions, order.by = "freq", keep.order = T,
+              text.scale = c(2,2,2,2,2,2),
+              # queries = list(list(query = intersects, params = list("v10.7"), color = "red", active = T),
+              #                list(query = intersects, params = list("v10.9", "v10.10", "v11.0", "v11.0.1", "v11.0.2"), color = "blue", active = T))
+              )
+
+## Revise congruency between table and upset plot (table has CE listed as only present in 10.8, shjould have 10.7 too)
 ```
 
 
 ## Confidence 
 
-**NB: confidence is now written in the downloadable file in all caps, which can cause mapping issues**
+```{r tftunw-confidence, fig.width=10}
+tftunw_confidence_long <- all_tftunw %>% 
+  group_by(version, confidence) %>% 
+  summarise(value = n()) 
 
-#### OJO confidence evolution is weired compared to tf-gene and TFBSseeet
-
-```{r tfnw-confidence2, fig.width=10}
-confidence_nw_all_versions <- list()
-for(v in versions_nw){
-  confidence_nw_all_versions[[v]] <- get(paste0("network_set_", v)) %>% 
-    group_by(version, confidence) %>% 
-    summarise(value = n())
-}
-confidence_nw_all_versions_df <- data.table::rbindlist(confidence_nw_all_versions) %>%
-  dplyr::mutate(confidence = tolower(confidence)) 
-confidence_nw_all_versions_df$confidence <- factor(confidence_nw_all_versions_df$confidence, levels = c("weak", "strong", "confirmed"))
-confidence_nw_all_versions_df$version <- factor(confidence_nw_all_versions_df$version, levels = paste0("v", versions_nw))
-
-##
-tf_gene_confidence_long <- confidence_nw_all_versions_df
-
-dodge <- ggplot(tf_gene_confidence_long, aes(fill = confidence, y = value, x = version)) + 
+dodge <- ggplot(tftunw_confidence_long, aes(fill = confidence, y = value, x = version)) + 
   geom_bar(position = position_dodge(preserve = "single"), stat = "identity") +
   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") +
-  labs(x = "", y = "Number of entries", title = "")
+  labs(x = "", y = "Number of tftunw", title = "")
 
-stack <- ggplot(tf_gene_confidence_long, aes(fill = confidence, y = value, x = version)) + 
+stack <- ggplot(tftunw_confidence_long, aes(fill = confidence, y = value, x = version)) + 
   geom_bar(position = "stack", stat = "identity") +
   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") +
-  labs(x = "", y = "Number of TFBS", title = "")
+  labs(x = "", y = "Number of tftunw", title = "")
 
-line <-  ggplot(tf_gene_confidence_long, aes(group = confidence, y = value, x = version)) + 
+line <-  ggplot(tftunw_confidence_long, aes(group = confidence, y = value, x = version)) + 
   geom_line(aes(color = confidence)) +
   geom_point(size = 2, aes(color = confidence)) +
   scale_color_viridis(discrete = T, na.value = "gray", drop = F) +
   theme_minimal() +
-  theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") +
-  labs(x = "Release version", y = "Number of entries", title = "")
+  theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") +
+  labs(x = "Release version", y = "Number of tftunw", title = "")
 
-fig0 <- ggplotly(tf_gene_num)
-fig1<-ggplotly(dodge)
-fig2<-ggplotly(stack)
-fig3<-ggplotly(line)
+## ggplotly to make it interactive
+# fig0 <- ggplotly(tftunw_num)
+fig1 <- ggplotly(dodge)
+fig2 <- ggplotly(stack)
+fig3 <- ggplotly(line)
 
-subplot(fig0, fig1, fig2, fig3, nrows=4, shareY = T)
+subplot(fig1, fig2, fig3, nrows=3)
 ```
 
 
-```{r evidence-level-tfbs-tab1}
-confidence_nw_summary <- confidence_nw_all_versions_df %>%
-  arrange(confidence) %>%
+```{r confidence-summary-tftunw}
+confidence_summary <- all_tftunw %>% 
+  group_by(version, confidence) %>% 
+  summarise(value = n())  %>%
   mutate(confidence = ifelse(is.na(confidence), "null", as.character(confidence))) %>%
-  # mutate(value = ifelse(is.na(value), 0, value)) %>%
   data.frame() %>%
   pivot_wider(names_from = version, values_from = c(value)) %>%
   mutate(across(starts_with('v'), ~replace_na(.,0))) %>%
   bind_rows(summarise(.,
                       across(where(is.numeric), sum),
-                      across(where(is.character), ~"total")))
+                      across(where(is.character), ~"total"))) %>%
+   mutate(confidence = factor(confidence, levels = c("weak", "strong", "confirmed", "null", "total"))) %>%
+   arrange(confidence)
 
-DT::datatable(confidence_nw_summary, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10))
+DT::datatable(confidence_summary, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10))
 
 ```
+
+
+<!-- <!-- NEWWW --> -->
+<!-- ## Evidence in network TF-gene -->
+
+<!-- **NB: evidence is formatted in different ways between versions of downloadable file, which can cause parsing issues** -->
+
+<!-- ```{r network-evidence1, fig.width=10} -->
+<!-- # tf_gene_evidence <- bind_rows(network_set_10.6.3, network_set_10.7, network_set_10.8, network_set_10.9, network_set_11.0) %>% -->
+<!-- #   tidyr::separate_rows(evidence, sep = ",") %>% -->
+<!-- #   dplyr::mutate(evidence_code = gsub("\\[|\\]", "", evidence))  -->
+<!-- #  -->
+<!-- # last <- network_set_11.0.1 %>% -->
+<!-- #   dplyr::mutate(evidence_function = gsub("\\[\\]", "\\[\\|\\|\\]", evidence_function)) %>% -->
+<!-- #   dplyr::mutate(evidence = gsub("\\[\\]", "\\[\\|\\|\\]", evidence)) %>% -->
+<!-- #   dplyr::rowwise() %>% -->
+<!-- #   dplyr::mutate(evidence = concat_uniq(evidence, evidence_function)) %>% -->
+<!-- #   tidyr::separate_rows(evidence, sep = ",") %>% -->
+<!-- #   dplyr::mutate(evidence = gsub("\\[|\\]", "", evidence)) %>% -->
+<!-- #   tidyr::separate(evidence, c("evidence_code", "evidence_level", "evidence_name"), sep = "\\|")  -->
+<!-- #   # dplyr::mutate(fevidence = gsub("\\[|\\]", "", evidence_function)) %>% -->
+<!-- #   # tidyr::separate(fevidence, c("fevidence_code", "fevidence_level", "fevidence_name"), sep = "\\|") -->
+<!-- #  -->
+<!-- # tf_gene_evidence <- bind_rows(tf_gene_evidence, last) -->
+<!-- # tf_gene_evidence$version <- factor(tf_gene_evidence$version, levels = paste0("v", tfgnw_versions)) -->
+
+
+<!-- tf_gene_evidence <- bind_rows(network_set_10.7, network_set_10.8, network_set_10.9, network_set_11.0) %>% -->
+<!--   tidyr::separate_rows(evidence, sep = ",") %>% -->
+<!--   dplyr::mutate(evidence_code = gsub("\\[|\\]", "", evidence))  -->
+
+<!-- last <- network_set_11.0.1 %>% -->
+<!--   dplyr::mutate(evidence_function = gsub("\\[\\]", "\\[\\|\\|\\]", evidence_function)) %>% -->
+<!--   dplyr::mutate(evidence = gsub("\\[\\]", "\\[\\|\\|\\]", evidence)) %>% -->
+<!--   dplyr::rowwise() %>% -->
+<!--   dplyr::mutate(evidence = paste0(evidence, ",", evidence_function)) %>% -->
+<!--   tidyr::separate_rows(evidence, sep = ",") %>% -->
+<!--   dplyr::mutate(evidence = gsub("\\[|\\]", "", evidence)) %>% -->
+<!--   tidyr::separate(evidence, c("evidence_code", "evidence_level", "evidence_name"), sep = "\\|")  -->
+<!--   # dplyr::mutate(fevidence = gsub("\\[|\\]", "", evidence_function)) %>% -->
+<!--   # tidyr::separate(fevidence, c("fevidence_code", "fevidence_level", "fevidence_name"), sep = "\\|") -->
+
+<!-- tf_gene_evidence <- bind_rows(tf_gene_evidence, last)%>% -->
+<!--   dplyr::mutate(evidence_code = trimws(evidence_code))  -->
+
+<!-- tf_gene_evidence$version <- factor(tf_gene_evidence$version, levels = paste0("v", tfgnw_versions)) -->
+
+<!-- # -->
+<!-- ## -->
+<!-- tf_gene_evidence_long <- tf_gene_evidence %>%  -->
+<!--   group_by(version, evidence_code) %>%  -->
+<!--   summarise(value = n())  -->
+
+<!-- dodge <- ggplot(tf_gene_evidence_long, aes(fill = evidence_code, y = value, x = version, group = evidence_code)) +  -->
+<!--   geom_bar(position = position_dodge(preserve = "single"), stat = "identity") + -->
+<!--   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") + -->
+<!--   labs(x = "", y = "Number of entries", title = "") -->
+
+<!-- stack <- ggplot(tf_gene_evidence_long, aes(fill = evidence_code, y = value, x = version, group = evidence_code)) +  -->
+<!--   geom_bar(position = "stack", stat = "identity") + -->
+<!--   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") + -->
+<!--   labs(x = "", y = "Number of evidence", title = "") -->
+
+<!-- line <-  ggplot(tf_gene_evidence_long, aes(y = value, x = version, group = evidence_code)) +  -->
+<!--   geom_line(aes(color = evidence_code)) + -->
+<!--   geom_point(size = 2, aes(color = evidence_code)) + -->
+<!--   scale_color_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") + -->
+<!--   labs(x = "Release version", y = "Number of entries", title = "") -->
+
+<!-- fig0 <- ggplotly(tf_gene_num) -->
+<!-- fig1<-ggplotly(dodge) -->
+<!-- fig2<-ggplotly(stack) -->
+<!-- fig3<-ggplotly(line) -->
+
+<!-- subplot(fig0, fig1, fig2, fig3, nrows=4, shareY = TRUE) -->
+
+
+
+<!-- ``` -->
+
+
+<!-- ## Confidence  -->
+
+<!-- **NB: confidence is now written in the downloadable file in all caps, which can cause mapping issues** -->
+
+
+<!-- ```{r tfgenebs-confidence, fig.width=10} -->
+<!-- confidence_nw_all_versions <- list() -->
+<!-- for(v in tfgnw_versions){ -->
+<!--   confidence_nw_all_versions[[v]] <- get(paste0("network_set_", v)) %>%  -->
+<!--     group_by(version, confidence) %>%  -->
+<!--     summarise(value = n()) -->
+<!-- } -->
+<!-- confidence_nw_all_versions_df <- data.table::rbindlist(confidence_nw_all_versions) %>% -->
+<!--   dplyr::mutate(confidence = tolower(confidence))  -->
+<!-- confidence_nw_all_versions_df$confidence <- factor(confidence_nw_all_versions_df$confidence, levels = c("weak", "strong", "confirmed")) -->
+<!-- confidence_nw_all_versions_df$version <- factor(confidence_nw_all_versions_df$version, levels = paste0("v", tfgnw_versions)) -->
+
+<!-- ## -->
+<!-- tf_gene_confidence_long <- confidence_nw_all_versions_df -->
+
+<!-- dodge <- ggplot(tf_gene_confidence_long, aes(fill = confidence, y = value, x = version)) +  -->
+<!--   geom_bar(position = position_dodge(preserve = "single"), stat = "identity") + -->
+<!--   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") + -->
+<!--   labs(x = "", y = "Number of entries", title = "") -->
+
+<!-- stack <- ggplot(tf_gene_confidence_long, aes(fill = confidence, y = value, x = version)) +  -->
+<!--   geom_bar(position = "stack", stat = "identity") + -->
+<!--   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") + -->
+<!--   labs(x = "", y = "Number of TFBS", title = "") -->
+
+<!-- line <-  ggplot(tf_gene_confidence_long, aes(group = confidence, y = value, x = version)) +  -->
+<!--   geom_line(aes(color = confidence)) + -->
+<!--   geom_point(size = 2, aes(color = confidence)) + -->
+<!--   scale_color_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") + -->
+<!--   labs(x = "Release version", y = "Number of entries", title = "") -->
+
+<!-- fig0 <- ggplotly(tf_gene_num) -->
+<!-- fig1<-ggplotly(dodge) -->
+<!-- fig2<-ggplotly(stack) -->
+<!-- fig3<-ggplotly(line) -->
+
+<!-- subplot(fig0, fig1, fig2, fig3, nrows=4, shareY = T) -->
+<!-- ``` -->
+
+
+<!-- ```{r evidence-level-tfbs-3tab} -->
+<!-- confidence_nw_summary <- confidence_nw_all_versions_df %>% -->
+<!--   arrange(confidence) %>% -->
+<!--   mutate(confidence = ifelse(is.na(confidence), "null", as.character(confidence))) %>% -->
+<!--   # mutate(value = ifelse(is.na(value), 0, value)) %>% -->
+<!--   data.frame() %>% -->
+<!--   pivot_wider(names_from = version, values_from = c(value)) %>% -->
+<!--   mutate(across(starts_with('v'), ~replace_na(.,0))) %>% -->
+<!--   bind_rows(summarise(., -->
+<!--                       across(where(is.numeric), sum), -->
+<!--                       across(where(is.character), ~"total"))) -->
+
+<!-- DT::datatable(confidence_nw_summary, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10)) -->
+
+<!-- ``` -->
+
+
+
+<!-- ## Mapping -->
+
+<!-- ```{r tf-gene-mapping, eval = F} -->
+<!-- all_tf_gene <- network_set_10.6.3 %>% -->
+<!--   dplyr::full_join(network_set_10.7 %>% dplyr::select(TF_name, gene_name, effect, evidence, confidence),  -->
+<!--                    by = c("TF_name", "gene_name", "effect"), suffix = c("_10.6.3", "_10.7")) %>% -->
+<!--   dplyr::full_join(network_set_10.8 %>% dplyr::select(TF_name, gene_name, effect, evidence, confidence),  -->
+<!--                    by = c("TF_name", "gene_name", "effect"), suffix = c("_10.7", "_10.8")) %>% -->
+<!--   dplyr::full_join(network_set_10.9 %>% dplyr::select(TF_name, gene_name, effect, evidence, confidence),  -->
+<!--                    by = c("TF_name", "gene_name", "effect"), suffix = c("_10.8", "_10.9")) %>% -->
+<!--   dplyr::full_join(network_set_11.0 %>% dplyr::select(TF_name, gene_name, effect, evidence, confidence),  -->
+<!--                    by = c("TF_name", "gene_name", "effect"), suffix = c("_10.9", "_11.0")) %>% -->
+<!--   dplyr::full_join(network_set_11.0.1 %>% dplyr::select(TF_name, gene_name, effect, evidence, evidence_function, confidence),  -->
+<!--                    by = c("TF_name", "gene_name", "effect"), suffix = c("_11.0", "_11.0.1")) %>% -->
+<!--   dplyr::arrange(TF_name, gene_name) -->
+<!--   # distinct() -->
+<!--   # dplyr::rename(confidence_11.0.2 = confidence, evidence_11.0.2 = evidence) -->
+
+<!-- write.table(all_tf_gene, file = "all_tf_gene.tsv", quote = F, row.names = F, col.names = T, sep = "\t") -->
+<!-- ``` -->
+
+<!-- # network_tf_tu.txt {.tabset} -->
+
+<!-- ## Data -->
+
+<!-- ```{r network-tf-gene-data2} -->
+<!-- tfgnw_versions <- setdiff(dir_versions, c("10.10", "11.0.2")) -->
+<!-- for(v in tfgnw_versions){ -->
+<!--   assign(paste0("network_tu_set_", v), read.delim(paste0(dir_releases, "/", v, "/network_tf_tu.tsv"), comment.char = "#", header = T, stringsAsFactors = F, na.strings = "")%>% dplyr::mutate(version = paste0("v", v)))  -->
+<!-- } -->
+<!-- ``` -->
+
+<!-- **NB: additional TAB characters at the end of each line cause parsing issues** -->
+
+<!-- ```{r total-tf-tu, fig.height=5, fig.width=6} -->
+<!-- tf_tu_summary <- list() -->
+<!-- for(v in tfgnw_versions){ -->
+<!-- 	tf_tu_summary[[paste0("v", v)]] <- data.frame(version = paste0("v", v), count = nrow(get(paste0("network_tu_set_", v)))) -->
+<!-- } -->
+<!-- tf_tu_summary_df <- data.table::rbindlist(tf_tu_summary) -->
+<!-- tf_gene_summary_df$version <- factor(tf_tu_summary_df$version, levels = paste0("v", tfgnw_versions)) -->
+
+
+<!-- DT::datatable(tf_tu_summary_df, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10)) -->
+
+<!-- tf_tu_num <- simple_bar(tf_tu_summary_df, "version", "count") + -->
+<!--   scale_fill_viridis(discrete = T) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14)) + -->
+<!--   labs(x = "Release version", y = "Number of entries", title = "") -->
+
+<!-- tf_tu_num -->
+<!-- ``` -->
+
+<!-- ## TF-TU pairs  -->
+
+<!-- ```{r tf-tu-ids-upset, fig.height=8} -->
+<!-- tf_tu_pairs <- list() -->
+<!-- for (v in tfgnw_versions) { -->
+<!--   pairs <- get(paste0("network_tu_set_", v)) %>% -->
+<!--     rowwise() %>% -->
+<!--     mutate(TF_TU = paste0(TF_name, "_", TU_name)) -->
+<!-- 	tf_tu_pairs[[paste0("v", v)]] <- unique(pairs$TF_TU) -->
+<!-- } -->
+<!-- UpSetR::upset(fromList(tf_tu_pairs), sets = paste0("v", tfgnw_versions), order.by = "freq", keep.order = T, -->
+<!--               text.scale = c(2,2,2,2,2,2), -->
+<!--               # queries = list(list(query = intersects, params = list("v10.6", "v10.6.3", "v10.7"), color = "red", active = T), -->
+<!--               #                list(query = intersects, params = list("v10.9", "v10.10", "v11.0", "v11.0.1", "v11.0.2"), color = "blue", active = T)) -->
+<!--               ) -->
+<!-- ``` -->
+
+<!-- ### Duplicate TF-TU pairs  -->
+
+<!-- ```{r tf-tu-dupli} -->
+<!-- pairs_tu_ids_dupli <- list() -->
+<!-- for (v in tfgnw_versions) { -->
+<!-- 	pairs_tu_ids_dupli[[paste0("v", v)]] <- get(paste0("network_tu_set_", v)) %>%  -->
+<!--     rowwise() %>% -->
+<!--     mutate(TF_TU = paste0(TF_name, "_", TU_name)) %>% -->
+<!-- 	  group_by(TF_TU) %>%  -->
+<!-- 	  summarise(occurrences = n()) %>%  -->
+<!-- 	  group_by(occurrences) %>%  -->
+<!-- 	  summarise(pairs_number = n()) %>% -->
+<!-- 	  mutate(version = paste0("v", v)) -->
+<!-- } -->
+
+<!-- pairs_tu_ids_dupli_df <- data.table::rbindlist(pairs_tu_ids_dupli) %>% -->
+<!--   dplyr::mutate(occurrences = factor(occurrences)) -->
+
+<!-- pairs_tu_ids_dupli_df$version <- factor(pairs_tu_ids_dupli_df$version, levels = paste0("v", tfgnw_versions)) -->
+
+<!-- ### -->
+<!-- dodge <- ggplot(pairs_tu_ids_dupli_df, aes(fill = occurrences, y = pairs_number, x = version)) +  -->
+<!--   geom_bar(position = position_dodge(preserve = "single"), stat = "identity") + -->
+<!--   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14)) + -->
+<!--   labs(x = "", y = "Number of pairs", title = "TF-TU pairs duplication in network_tf_gene.txt across versions") -->
+
+<!-- dodge  -->
+<!-- ``` -->
+
+<!-- ## Evidence in network TF-TU -->
+
+<!-- **NB: evidence is formatted in different ways between versions of downloadable file, which can cause parsing issues** -->
+
+<!-- ```{r network-evidence2, fig.width=10} -->
+<!-- tf_tu_evidence <- bind_rows(network_tu_set_10.7, network_tu_set_10.8, network_tu_set_10.9, network_tu_set_11.0) %>% -->
+<!--   tidyr::separate_rows(evidence, sep = ",") %>% -->
+<!--   dplyr::mutate(evidence_code = gsub("\\[|\\]", "", evidence))  -->
+
+<!-- last <- network_tu_set_11.0.1 %>% -->
+<!--   dplyr::mutate(evidence_function = gsub("\\[\\]", "\\[\\|\\|\\]", evidence_function)) %>% -->
+<!--   dplyr::mutate(evidence = gsub("\\[\\]", "\\[\\|\\|\\]", evidence)) %>% -->
+<!--   dplyr::rowwise() %>% -->
+<!--   dplyr::mutate(evidence = paste0(evidence, ",", evidence_function)) %>% -->
+<!--   tidyr::separate_rows(evidence, sep = ",") %>% -->
+<!--   dplyr::mutate(evidence = gsub("\\[|\\]", "", evidence)) %>% -->
+<!--   tidyr::separate(evidence, c("evidence_code", "evidence_level", "evidence_name"), sep = "\\|")  -->
+<!--   # dplyr::mutate(fevidence = gsub("\\[|\\]", "", evidence_function)) %>% -->
+<!--   # tidyr::separate(fevidence, c("fevidence_code", "fevidence_level", "fevidence_name"), sep = "\\|") -->
+
+<!-- tf_tu_evidence <- bind_rows(tf_tu_evidence, last)%>% -->
+<!--   dplyr::mutate(evidence_code = trimws(evidence_code))  -->
+
+<!-- tf_tu_evidence$version <- factor(tf_tu_evidence$version, levels = paste0("v", tfgnw_versions)) -->
+
+<!-- ## -->
+<!-- tf_tu_evidence_long <- tf_tu_evidence %>%  -->
+<!--   group_by(version, evidence_code) %>%  -->
+<!--   summarise(value = n())  -->
+
+<!-- dodge <- ggplot(tf_tu_evidence_long, aes(fill = evidence_code, y = value, x = version, group = evidence_code)) +  -->
+<!--   geom_bar(position = position_dodge(preserve = "single"), stat = "identity") + -->
+<!--   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") + -->
+<!--   labs(x = "", y = "Number of entries", title = "") -->
+
+<!-- stack <- ggplot(tf_tu_evidence_long, aes(fill = evidence_code, y = value, x = version, group = evidence_code)) +  -->
+<!--   geom_bar(position = "stack", stat = "identity") + -->
+<!--   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") + -->
+<!--   labs(x = "", y = "Number of evidence", title = "") -->
+
+<!-- line <-  ggplot(tf_tu_evidence_long, aes(y = value, x = version, group = evidence_code)) +  -->
+<!--   geom_line(aes(color = evidence_code)) + -->
+<!--   geom_point(size = 2, aes(color = evidence_code)) + -->
+<!--   scale_color_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") + -->
+<!--   labs(x = "Release version", y = "Number of entries", title = "") -->
+
+<!-- fig0 <- ggplotly(tf_tu_num) -->
+<!-- fig1<-ggplotly(dodge) -->
+<!-- fig2<-ggplotly(stack) -->
+<!-- fig3<-ggplotly(line) -->
+
+<!-- subplot(fig0, fig1, fig2, fig3, nrows=4, shareY = TRUE) -->
+
+
+
+<!-- ``` -->
+
+
+<!-- ## Confidence  -->
+
+<!-- **NB: confidence is now written in the downloadable file in all caps, which can cause mapping issues** -->
+
+<!-- #### OJO confidence evolution is weired compared to tf-gene and TFBSseeet -->
+
+<!-- ```{r tfnw-confidence2, fig.width=10} -->
+<!-- confidence_nw_all_versions <- list() -->
+<!-- for(v in tfgnw_versions){ -->
+<!--   confidence_nw_all_versions[[v]] <- get(paste0("network_set_", v)) %>%  -->
+<!--     group_by(version, confidence) %>%  -->
+<!--     summarise(value = n()) -->
+<!-- } -->
+<!-- confidence_nw_all_versions_df <- data.table::rbindlist(confidence_nw_all_versions) %>% -->
+<!--   dplyr::mutate(confidence = tolower(confidence))  -->
+<!-- confidence_nw_all_versions_df$confidence <- factor(confidence_nw_all_versions_df$confidence, levels = c("weak", "strong", "confirmed")) -->
+<!-- confidence_nw_all_versions_df$version <- factor(confidence_nw_all_versions_df$version, levels = paste0("v", tfgnw_versions)) -->
+
+<!-- ## -->
+<!-- tf_gene_confidence_long <- confidence_nw_all_versions_df -->
+
+<!-- dodge <- ggplot(tf_gene_confidence_long, aes(fill = confidence, y = value, x = version)) +  -->
+<!--   geom_bar(position = position_dodge(preserve = "single"), stat = "identity") + -->
+<!--   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "right") + -->
+<!--   labs(x = "", y = "Number of entries", title = "") -->
+
+<!-- stack <- ggplot(tf_gene_confidence_long, aes(fill = confidence, y = value, x = version)) +  -->
+<!--   geom_bar(position = "stack", stat = "identity") + -->
+<!--   scale_fill_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") + -->
+<!--   labs(x = "", y = "Number of TFBS", title = "") -->
+
+<!-- line <-  ggplot(tf_gene_confidence_long, aes(group = confidence, y = value, x = version)) +  -->
+<!--   geom_line(aes(color = confidence)) + -->
+<!--   geom_point(size = 2, aes(color = confidence)) + -->
+<!--   scale_color_viridis(discrete = T, na.value = "gray", drop = F) + -->
+<!--   theme_minimal() + -->
+<!--   theme(axis.text = element_text(size = 14), axis.title.y = element_text(size = 14), title = element_text(size = 14), legend.position = "none") + -->
+<!--   labs(x = "Release version", y = "Number of entries", title = "") -->
+
+<!-- fig0 <- ggplotly(tf_gene_num) -->
+<!-- fig1<-ggplotly(dodge) -->
+<!-- fig2<-ggplotly(stack) -->
+<!-- fig3<-ggplotly(line) -->
+
+<!-- subplot(fig0, fig1, fig2, fig3, nrows=4, shareY = T) -->
+<!-- ``` -->
+
+
+<!-- ```{r evidence-level-tfbs-tab1} -->
+<!-- confidence_nw_summary <- confidence_nw_all_versions_df %>% -->
+<!--   arrange(confidence) %>% -->
+<!--   mutate(confidence = ifelse(is.na(confidence), "null", as.character(confidence))) %>% -->
+<!--   # mutate(value = ifelse(is.na(value), 0, value)) %>% -->
+<!--   data.frame() %>% -->
+<!--   pivot_wider(names_from = version, values_from = c(value)) %>% -->
+<!--   mutate(across(starts_with('v'), ~replace_na(.,0))) %>% -->
+<!--   bind_rows(summarise(., -->
+<!--                       across(where(is.numeric), sum), -->
+<!--                       across(where(is.character), ~"total"))) -->
+
+<!-- DT::datatable(confidence_nw_summary, rownames= FALSE, options = list(searching = FALSE, lengthChange = FALSE, pageLength = 10)) -->
+
+<!-- ``` -->
 
 
 
