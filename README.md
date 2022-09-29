@@ -5,8 +5,6 @@
 ```
 ├── Binding_dataset_report.Rdata
 ├── README.md
-├── TFBS_differences_107_1102.tsv
-├── TFBS_full_join_107_1102.tsv
 ├── TFBS_report.Rmd
 ├── TFBS_report.html
 ├── _Databases
@@ -21,6 +19,9 @@
 │           ├── 11.0
 │           ├── 11.0.1
 │           └── 11.0.2
+├── _Results
+│   ├── TFBS_differences_107_1102.tsv
+│   └── TFBS_full_join_107_1102.tsv
 └── utils.r
 ```
 
@@ -37,6 +38,4 @@
 
 **_Databases:** source data downloaded from RegulonDB and processed by the Rmd file
 
-**TFBS_full_join_107_1102.tsv:** mapping of the TFBSs from versions 10.7 and 11.0.1 (generated automatically by the RmD)
-
-**TFBS_differences_107_1102.tsv:** differences between the TFBSs from versions 10.7 and 11.0.1 (generated automatically by the RmD)           
+**_Results:** mapping of the TFBSs from versions 10.7 and 11.0.1 (generated automatically by the RmD)

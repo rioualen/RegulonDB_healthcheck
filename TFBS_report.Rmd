@@ -36,6 +36,10 @@ library(cowplot)
 library(plotly)
 
 source(file = "utils.r")
+
+dir_releases <- "_Databases/RegulonDB/releases"
+dir_results <- "_Results"
+
 ```
 
 # BindingSiteSet.txt  {.tabset}
@@ -63,7 +67,6 @@ Notes:
 * Starting v11.0.1 there are 2 evidence columns (site evidence and function evidence), here I merged them so I can compare with older versions
 
 ```{r binding-sites-data-per-version}
-dir_releases <- "_Databases/RegulonDB/releases"
 
 ## V10.6 excluded because it doesn't include TU_ID, only TU names which are not unique; otherwise it's almost the same as v10.7 which is included
 ## Some formatting is done in order to uniformize columns like strand and confidence (uppercase/lowercase, word or symbol +- for the strand, etc)
@@ -646,8 +649,8 @@ tfbs_matches_107_1102 <- tfbs_join_107_1102 %>% na.omit
 
 tfbs_differences_107_1102 <- dplyr::setdiff(tfbs_join_107_1102, tfbs_matches_107_1102)
 
-write.table(tfbs_join_107_1102, file = "TFBS_full_join_107_1102.tsv", quote = F, row.names = F, col.names = T, sep = "\t")
-write.table(tfbs_differences_107_1102, file = "TFBS_differences_107_1102.tsv", quote = F, row.names = F, col.names = T, sep = "\t")
+write.table(tfbs_join_107_1102, file = paste0(dir_results, "/TFBS_full_join_107_1102.tsv"), quote = F, row.names = F, col.names = T, sep = "\t")
+write.table(tfbs_differences_107_1102, file = paste0(dir_results, "/TFBS_differences_107_1102.tsv"), quote = F, row.names = F, col.names = T, sep = "\t")
 
 
 ## display selection of columns
