@@ -1,0 +1,2070 @@
+# Copies and Copyright-Notice
+#
+#      RegulonDB is free for academic/noncommercial use
+#
+#      User is not entitled to change or erase data sets of the RegulonDB
+#      database or to eliminate copyright notices from RegulonDB. Furthermore,
+#      User is not entitled to expand RegulonDB or to integrate RegulonDB partly
+#      or as a whole into other databank systems, without prior written consent
+#      from CCG-UNAM.
+#
+#      Please check the license at http://regulondb.ccg.unam.mx/menu/download/full_version/terms_and_conditions.jsp
+#
+# Citation
+#
+#      Santos-Zavaleta A et al. (2019). RegulonDB v 10.5: tackling challenges to unify classic and high throughput knowledge of gene regulation in E. coli K-12.,
+#      Nucleic Acids Res. 2019 Jan 8;47(D1):D212-D220. doi: 10.1093/nar/gky1077.
+#
+#
+# Contact
+#
+#      Person: RegulonDB Team
+#      Web Page: http://regulondb.ccg.unam.mx/menu/about_regulondb/contact_us/index.jsp
+#          (regulondb@ccg.unam.mx)
+#
+#
+# Release: 10.7 Date: 05/04/2020
+# ___________________________________________________________________________
+#
+# Columns:
+#  (1) Transcription Factor (TF) name
+#  (2) TUName (regulated)
+#  (3) Regulatory effect of the TF on the regulated gene (+ activator, - repressor, +- dual, ? unknown)
+#  (4) Evidence that supports the existence of the regulatory interaction
+#  (5) Evidence Type [Weak, Strong, Confirmed] For details see: http://regulondb.ccg.unam.mx/evidenceclassification
+#
+AccB	accBC[accBp]	repressor	[GEA, IMP]	Weak
+AcrR	acrAB[acrAp]	repressor	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+AcrR	acrR[acrRp]	repressor	[APIORCISFBSCS, AIBSCS, BCE, BPP, GEA]	Strong
+AcrR	flhDC[flhDp]	repressor	[APIORCISFBSCS, GEA]	Weak
+AcrR	marRAB[marRp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+AcrR	micF[micFp]	repressor	[AIBSCS]	Weak
+AcrR	soxR[soxRp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+AcrR	soxS[soxSp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Ada	ada-alkB[adap]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Ada	aidB[aidBp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+Ada	alkA[alkAp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+AdiY	adiA[adiAp]	activator	[BPP, GEA]	Strong
+AdiY	gadAX[gadAp]	activator	[BPP]	Strong
+AdiY	gadBC[gadBp]	activator	[BPP]	Strong
+AdiY	gltBDF[gltBp]	activator	[BPP]	Strong
+AgaR	agaR[agaRp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+AgaR	agaSYBCDI[agaSp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+AgaR	kbaZ-agaVWA[kbaZp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+AidB	aidB[aidBp]	repressor	[BPP, GEA]	Strong
+AlaS	alaS[alaSp]	repressor	[BPP, GEA]	Strong
+AllR	allA[allAp]	repressor	[BCE, BPP, GEA, SM]	Strong
+AllR	allS[allSp]	repressor	[BCE, BPP, GEA, SM]	Strong
+AllR	gcl-hyi-glxR-ybbVW-allB-ybbY-glxK[gclp]	repressor	[BCE, BPP, GEA, SM]	Strong
+AllS	allDC-ylbA[allDp]	activator	[APIORCISFBSCS, BCE]	Weak
+AlsR	alsRBACE[alsRp2]	repressor	[GEA, CV(GEA/GS), GS]	Strong
+AlsR	alsRBACE[alsRp1]	repressor	[GEA, CV(GEA/GS), GS]	Strong
+AlsR	rpiB[rpiBp]	repressor	[GEA, CV(GEA/GS), GS]	Strong
+AppY	appCBA-yccB[appCp]	activator	[GEA]	Weak
+AppY	hyaABCDEF[hyaAp]	activator	[GEA]	Weak
+AraC	araBAD[araBp]	activator	[APIORCISFBSCS, BPP, GEA, SM, BCE]	Strong
+AraC	araC[araCp]	activator	[APIORCISFBSCS, BPP, GEA, SM, BCE]	Strong
+AraC	araE[araEp]	activator	[APIORCISFBSCS, BPP]	Strong
+AraC	araE-ygeA[araEp]	activator	[APIORCISFBSCS, BPP]	Strong
+AraC	araFGH[araFp]	activator	[APIORCISFBSCS, AIBSCS, BPP, SM]	Strong
+AraC	araJ[araJp]	activator	[APIORCISFBSCS, AIBSCS, BPP]	Strong
+AraC	xylAB[xylAp]	repressor	[APIORCISFBSCS, BCE, GEA]	Weak
+ArcA	aceBAK[aceBp]	repressor	[RBM]	Weak
+ArcA	aceEF[aceEp]	repressor	[GEA]	Weak
+ArcA	ackA[ackAp]	activator	[GEA]	Weak
+ArcA	acnA[acnAp2]	repressor	[APIORCISFBSCS, GEA]	Weak
+ArcA	acnB[acnBp]	repressor	[APIORCISFBSCS, GEA]	Weak
+ArcA	aldA[aldAp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, SM]	Strong
+ArcA	appCBA-yccB[appCp]	activator	[GEA]	Weak
+ArcA	appY[appYp2]	activator	[AIBSCS]	Weak
+ArcA	arcZ[arcZp]	repressor	[APIORCISFBSCS, GEA]	Weak
+ArcA	betIBA[betIp]	repressor	[BCE, GEA]	Weak
+ArcA	betT[betTp]	repressor	[BCE, GEA]	Weak
+ArcA	cadBA[cadBp]	repressor	[AIBSCS, GEA]	Weak
+ArcA	caiTABCDE[caiTp]	activator	[AIBSCS, GEA]	Weak
+ArcA	citCDEFXG[citCp1]	repressor	[AIBSCS]	Weak
+ArcA	cydAB[cydAp3]	activator	[AIBSCS, GEA]	Weak
+ArcA	cydAB[cydAp4]	activator	[AIBSCS, GEA]	Weak
+ArcA	cydAB[cydAp1]	activator	[APIORCISFBSCS, AIBSCS, BCE, BPP, GEA]	Strong
+ArcA	cydAB[cydAp2]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+ArcA	cydDC[cydDp]	activator	[GEA]	Weak
+ArcA	cyoABCDE[cyoAp]	repressor	[BCE, GEA]	Weak
+ArcA	dctA[dctAp]	repressor	[GEA]	Weak
+ArcA	dcuC[dcuCp]	activator	[APIORCISFBSCS, GEA]	Weak
+ArcA	dpiBA[dpiBp]	activator	[AIBSCS]	Weak
+ArcA	fadBA[fadBp]	repressor	[AIBSCS, BPP, GEA]	Strong
+ArcA	fadD-sroD[fadDp]	repressor	[AIBSCS, BPP]	Strong
+ArcA	fadE[fadEp]	repressor	[AIBSCS, BPP, GEA]	Strong
+ArcA	fadIJ[fadIp]	repressor	[AIBSCS, BPP, GEA]	Strong
+ArcA	fadL[fadLp]	repressor	[AIBSCS, BPP]	Strong
+ArcA	fnr[fnrp]	repressor	[GEA]	Weak
+ArcA	focA-pflB[focAp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+ArcA	focA-pflB[focAp2]	activator	[APIORCISFBSCS, GEA]	Weak
+ArcA	fumA[fumAp]	repressor	[GEA]	Weak
+ArcA	fumAC[fumAp]	repressor	[GEA]	Weak
+ArcA	fumB[fumBp]	activator	[GEA]	Weak
+ArcA	fumC[fumCp]	repressor	[GEA]	Weak
+ArcA	gadAX[gadAp]	activator	[AIBSCS, GEA]	Weak
+ArcA	gadE[gadEp1]	activator	[BPP, GEA]	Strong
+ArcA	gadE[gadEp3]	activator	[BPP, GEA]	Strong
+ArcA	gatYZABCD[gatYp]	repressor	[AIBSCS, GEA]	Weak
+ArcA	glcDEFGBA[glcDp]	repressor	[AIBSCS, BPP, GEA]	Strong
+ArcA	glpABC[glpABCp]	repressor	[GEA]	Weak
+ArcA	glpD[glpDp]	repressor	[GEA]	Weak
+ArcA	gltA[gltAp1]	repressor	[APIORCISFBSCS, BCE, GEA]	Weak
+ArcA	grcA[grcAp1]	activator	[APIORCISFBSCS, GEA]	Weak
+ArcA	hemA-prfA-prmC[hemAp1]	activator	[GEA]	Weak
+ArcA	hyaABCDEF[hyaAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+ArcA	hybOABCDEFG[hybOp1]	repressor	[APIORCISFBSCS, GEA]	Weak
+ArcA	icd[icdAp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+ArcA	lldPRD[lldPp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+ArcA	lpdA[lpdAp]	repressor	[AIBSCS, BPP, GEA]	Strong
+ArcA	mdh[mdhp1]	repressor	[BCE, GEA]	Weak
+ArcA	moeAB[moeAp]	activator	[BPP, GEA]	Strong
+ArcA	ndh[ndhp]	repressor	[AIBSCS, GEA]	Weak
+ArcA	nuoABCEFGHIJKLMN[nuoAp2]	repressor	[BCE, GEA, SM]	Strong
+ArcA	ompW[ompWp]	repressor	[AIBSCS, BPP, GEA]	Strong
+ArcA	oppABCDF[oppAp]	repressor	[AIBSCS, GEA]	Weak
+ArcA	ptsG[ptsGp1]	repressor	[BPP, GEA]	Strong
+ArcA	puuAP[puuAp]	repressor	[AIBSCS, GEA]	Weak
+ArcA	puuDRCBE[puuDp]	repressor	[AIBSCS, GEA]	Weak
+ArcA	rhaT[rhaTp]	repressor	[AIBSCS, GEA]	Weak
+ArcA	rmf[rmfp]	repressor	[BPP, GEA, CV(GEA/GS), GS]	Strong
+ArcA	rpoS[rpoSp]	repressor	[BPP, GEA]	Strong
+ArcA	rpsJ-rplCDWB-rpsS-rplV-rpsC-rplP-rpmC-rpsQ[rpsJp]	repressor	[AIBSCS, GEA]	Weak
+ArcA	rsd[rsdp2]	repressor	[BPP, GEA, CV(GEA/GS), GS]	Strong
+ArcA	rutABCDEFG[rutAp]	activator	[AIBSCS, GEA]	Weak
+ArcA	sdhCDAB-sucABCD-sdhX[sdhCp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+ArcA	sodA[sodAp]	repressor	[APIORCISFBSCS, AIBSCS, BCE]	Weak
+ArcA	ssb[ssbp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+ArcA	ssb[ssbp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+ArcA	ssb[ssbp3]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+ArcA	sucAB[sucAp]	repressor	[BPP, GEA]	Strong
+ArcA	sucABCD[sucAp]	repressor	[BPP, GEA]	Strong
+ArcA	tpx[tpxp]	repressor	[APIORCISFBSCS, GEA]	Weak
+ArcA	treBC[treBp]	activator	[AIBSCS, GEA]	Weak
+ArcA	ubiCA[ubiCp]	repressor	[GEA]	Weak
+ArcA	uvrA[uvrAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+ArcA	xylR[xylRp]	activator	[AIBSCS, GEA]	Weak
+ArcA	ydeA[ydeAp]	repressor	[AIBSCS, GEA]	Weak
+ArgP	argP[argPp]	repressor	[APIORCISFBSCS, GEA, IC]	Weak
+ArgP	dapB[dapBp1]	activator	[APIORCISFBSCS, BCE, BPP, GEA, IC, SM]	Strong
+ArgP	dapD[dapDp]	activator	[BPP, GEA]	Strong
+ArgP	dnaAN-recF[dnaAp1]	activator	[BPP, GEA, IC]	Strong
+ArgP	gdhA[gdhAp1]	activator	[BPP, GEA, SM]	Strong
+ArgP	lysA[lysAp]	activator	[BPP, GEA]	Strong
+ArgP	lysC[lysCp1]	activator	[BPP, GEA]	Strong
+ArgP	lysP[lysPp]	activator	[APIORCISFBSCS, BPP, GEA, IC, SM]	Strong
+ArgP	nrdAB-yfaE[nrdAp]	activator	[BPP, GEA, IC]	Strong
+ArgR	argA[argAp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+ArgR	argCBH[argCp]	repressor	[AIBSCS, BCE, BPP, GEA, SM]	Strong
+ArgR	argD[argDp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+ArgR	argE[argEp1]	repressor	[AIBSCS, BCE, BPP, GEA, SM]	Strong
+ArgR	argF[argFp]	repressor	[AIBSCS, BCE, BPP, GEA, SM]	Strong
+ArgR	argG[argGp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+ArgR	argI[argIp]	repressor	[AIBSCS, BCE, BPP, GEA]	Strong
+ArgR	argR[argRp1]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+ArgR	artJ[artJp]	repressor	[AIBSCS, BPP, GEA, SM]	Strong
+ArgR	artPIQM[artPp]	repressor	[AIBSCS, BPP, GEA, SM]	Strong
+ArgR	astCADBE[astCp2]	activator	[AIBSCS, BPP, GEA]	Strong
+ArgR	carAB[carAp2]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+ArgR	gltBDF[gltBp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+ArgR	hisJQMP[hisJp]	repressor	[AIBSCS, BPP, GEA, SM]	Strong
+ArgR	metY[metYp2]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+ArgR	metY-yhbC-nusA-infB-rbfA-truB-rpsO-pnp[metYp2]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+ArsR	arsRBC[arsRp]	repressor	[AIBSCS, BPP, GEA]	Strong
+AscG	ascFB[ascFp]	repressor	[AIBSCS, BPP, GEA]	Strong
+AscG	htpG[htpGp1]	repressor	[AIBSCS, BPP]	Strong
+AscG	prpR[prpRp]	repressor	[AIBSCS, BPP, GEA]	Strong
+AscG	ybiT[ybiTp]	repressor	[AIBSCS, BPP]	Strong
+AsnC	asnA[asnAp]	activator	[AIBSCS, GEA]	Weak
+AsnC	asnC[asnCp]	repressor	[AIBSCS, GEA]	Weak
+AsnC	asnC-mioC[asnCp]	repressor	[AIBSCS, GEA]	Weak
+AsnC	asnC-mioC-mnmG[asnCp]	repressor	[AIBSCS, GEA]	Weak
+AtoC	atoDAEB[atoDp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+BaeR	acrD[acrDp2]	activator	[BPP, GEA, IC]	Strong
+BaeR	mdtABCD-baeSR[mdtAp]	activator	[AIBSCS, BPP, GEA]	Strong
+BaeR	spy[spyp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, IC]	Strong
+BasR	csgDEFG[csgDp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+BasR	cspI[cspIp]	activator	[APIORCISFBSCS, BPP]	Strong
+BasR	dgkA[dgkAp1]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+BasR	fimB[fimBp2]	activator	[APIORCISFBSCS, BPP]	Strong
+BasR	putA[putAp]	repressor	[APIORCISFBSCS, BPP]	Strong
+BasR	qseBC[qseBp2]	activator	[BPP, GEA]	Strong
+BasR	yrbL[yrbLp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+BetI	betIBA[betIp]	repressor	[APIORCISFBSCS, BPP, GEA, CV(GEA/GS), GS]	Strong
+BetI	betT[betTp]	repressor	[APIORCISFBSCS, BPP, GEA, CV(GEA/GS), GS]	Strong
+BirA	bioA[bioAp]	repressor	[SM]	Strong
+BirA	bioBFCD[bioBp]	repressor	[SM]	Strong
+BluR	ycgZ-ymgA-ariR-ymgC[ycgZp]	repressor	[BPP, GEA, SM]	Strong
+BolA	ampC[ampCp]	activator	[GEA, IMP]	Weak
+BolA	dacC[dacCp]	activator	[GEA, IMP]	Weak
+BolA	mreB[mreBp1]	repressor	[BPP, GEA]	Strong
+BolA	mreBCD[mreBp1]	repressor	[BPP, GEA]	Strong
+BtsR	yjiY[yjiYp]	activator	[BPP, GEA, SM]	Strong
+CRP	aaeR[aaeRp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	aceBAK[aceBp]	repressor	[AIBSCS, GEA]	Weak
+CRP	acnA[acnAp2]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	acnB[acnBp]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	acs-yjcHG[acsp2]	activator	[AIBSCS, BPP, GEA, SM]	Strong
+CRP	aer[aerp]	activator	[AIBSCS, BCE, BPP, GEA, SM]	Strong
+CRP	agp[agpp]	activator	[AIBSCS, GEA]	Weak
+CRP	aldA[aldAp]	activator	[BCE, GEA]	Weak
+CRP	aldB[aldBp]	activator	[AIBSCS, BPP]	Strong
+CRP	ampDE[ampD]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	ansB[ansBp2]	activator	[BCE, SM]	Strong
+CRP	araBAD[araBp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	araC[araCp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	araE[araEp]	activator	[AIBSCS, BPP]	Strong
+CRP	araE-ygeA[araEp]	activator	[AIBSCS, BPP]	Strong
+CRP	araFGH[araFp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	araJ[araJp]	activator	[APIORCISFBSCS, BPP]	Strong
+CRP	argG[argGp]	activator	[BPP, GEA, SM]	Strong
+CRP	ascFB[ascFp]	activator	[BPP, ICWHO]	Strong
+CRP	aspA[aspAp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	aspA-dcuA[aspAp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	azuC[azuCp]	repressor	[APIORCISFBSCS, GEA]	Weak
+CRP	bglG[bglGp]	activator	[AIBSCS, BPP, GEA, SM]	Strong
+CRP	bglG[bglGp2]	activator	[AIBSCS, BPP, GEA, SM]	Strong
+CRP	bglGFB[bglGp]	activator	[AIBSCS, BPP, GEA, SM]	Strong
+CRP	caiF[caiFp]	activator	[BCE, GEA]	Weak
+CRP	caiTABCDE[caiTp]	activator	[APIORCISFBSCS, AIBSCS, BCE, GEA]	Weak
+CRP	cdd[cddp]	activator	[BPP, GEA, SM]	Strong
+CRP	chbBCARFG[chbBp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+CRP	chiP-ybfN[chiPp]	activator	[APIORCISFBSCS]	Weak
+CRP	cirA[cirAp2]	activator	[]	null
+CRP	cirA[cirAp1]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	citCDEFXG[citCp2]	repressor	[AIBSCS]	Weak
+CRP	cpdB[cpdBp]	activator	[BCE, SM]	Strong
+CRP	crp[crpp1]	activator	[APIORCISFBSCS, BPP, SM, AIBSCS, GEA]	Strong
+CRP	csgDEFG[csgDp1]	activator	[AIBSCS, GEA]	Weak
+CRP	csiD-ygaF-gabDTP[csiDp]	activator	[AIBSCS, BPP, GEA]	Strong
+CRP	csiE[csiEp]	activator	[GEA]	Weak
+CRP	cspD[cspDp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+CRP	cspE[cspEp2]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	csrC[csrCp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	cstA[cstAp1]	activator	[GEA, SM]	Strong
+CRP	cyaA[cyaAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	cyaR[cyaRp]	activator	[AIBSCS, BPP, GEA, SM]	Strong
+CRP	cyoABCDE[cyoAp]	activator	[AIBSCS, GEA]	Weak
+CRP	cytR[cytRp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	dadAX[dadAp2]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	dadAX[dadAp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	dadAX[dadAp3]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	dctA[dctAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	dcuB-fumB[dcuBp]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	dcuR[dcuRp]	activator	[APIORCISFBSCS, BPP]	Strong
+CRP	deoCABD[deoCp2]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+CRP	dpiBA[dpiBp]	repressor	[AIBSCS]	Weak
+CRP	dsdA[dsdAp]	activator	[APIORCISFBSCS]	Weak
+CRP	dsdXA[dsdXp]	activator	[BCE]	Weak
+CRP	dusB-fis[dusBp]	activator	[AIBSCS, BPP, GEA]	Strong
+CRP	ebgAC[ebgAp]	activator	[APIORCISFBSCS]	Weak
+CRP	entCEBA-ybdB[entCp]	activator	[AIBSCS, GEA]	Weak
+CRP	epd-pgk[epdp]	activator	[APIORCISFBSCS, BCE, GEA, SM]	Strong
+CRP	epd-pgk-fbaA[epdp]	activator	[APIORCISFBSCS, BCE, GEA, SM]	Strong
+CRP	exuR[exuRp2]	repressor	[APIORCISFBSCS, GEA]	Weak
+CRP	exuT[exuTp2]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	fadD-sroD[fadDp]	activator	[AIBSCS, BPP, GEA]	Strong
+CRP	fadL[fadLp]	activator	[BPP, GEA]	Strong
+CRP	feaB[feaBp1]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	feaR[feaRp2]	activator	[APIORCISFBSCS]	Weak
+CRP	fecABCDE[fecAp]	activator	[GEA]	Weak
+CRP	fepA-entD[fepAp]	activator	[AIBSCS, GEA]	Weak
+CRP	fiu[fiup]	activator	[AIBSCS, GEA]	Weak
+CRP	fixABCX[fixAp]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	flhDC[flhDp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	focA-pflB[focAp1]	activator	[APIORCISFBSCS, AIBSCS, BCE, GEA, SM]	Strong
+CRP	fucAO[fucAp]	activator	[AIBSCS, GEA, IMP]	Weak
+CRP	fucPIKUR[fucPp]	activator	[AIBSCS, BPP, GEA, SM]	Strong
+CRP	fumA[fumAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+CRP	fumAC[fumAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+CRP	fumC[fumCp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	fur[furpb]	activator	[APIORCISFBSCS, SM]	Strong
+CRP	fur[furpa]	activator	[APIORCISFBSCS, SM]	Strong
+CRP	gadAX[gadAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+CRP	gadBC[gadBp]	repressor	[APIORCISFBSCS, GEA]	Weak
+CRP	gadEF-mdtEF[gadEp]	repressor	[APIORCISFBSCS, BPP]	Strong
+CRP	galE[galEp1]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+CRP	galE[galEp2]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+CRP	galET[galEp1]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+CRP	galET[galEp2]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+CRP	galETK[galEp1]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+CRP	galETK[galEp2]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+CRP	galETKM[galEp1]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+CRP	galETKM[galEp2]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+CRP	galP[galPp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	galS[galSp]	activator	[APIORCISFBSCS, AIBSCS, BCE, GEA]	Weak
+CRP	gapA[gapAp3]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	gatYZABCD[gatYp]	activator	[AIBSCS, BCE, GEA, SM]	Strong
+CRP	gcd[gcdp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	gcvTHP[gcvTp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	gdhA[gdhAp1]	repressor	[APIORCISFBSCS]	Weak
+CRP	glcC[glcCp]	activator	[AIBSCS, GEA]	Weak
+CRP	glgCAP[glgCp1]	activator	[BPP, GEA]	Strong
+CRP	glgS[glgSp1]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	glnA[glnAp1]	activator	[APIORCISFBSCS]	Weak
+CRP	glnA[glnAp2]	repressor	[AIBSCS, BPP, GEA]	Strong
+CRP	glnALG[glnAp1]	activator	[APIORCISFBSCS]	Weak
+CRP	glnALG[glnAp2]	repressor	[AIBSCS, BPP, GEA]	Strong
+CRP	glpABC[glpABCp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+CRP	glpD[glpDp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	glpEGR[glpEp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	glpFKX[glpFp]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	glpTQ[glpTQp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+CRP	gltA[gltAp1]	activator	[AIBSCS, BCE, GEA]	Weak
+CRP	gltBDF[gltBp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	gntK[gntKp]	activator	[APIORCISFBSCS, BCE, GEA]	Weak
+CRP	gntKU[gntKp]	activator	[APIORCISFBSCS, BCE, GEA]	Weak
+CRP	gntP[gntPp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+CRP	gntT[gntTp3]	activator	[APIORCISFBSCS, BPP, GEA, SM, TASES]	Strong
+CRP	gntT[gntTp2]	activator	[APIORCISFBSCS, BPP, GEA, SM, TASES]	Strong
+CRP	gntT[gntTp1]	activator	[APIORCISFBSCS, BPP, GEA, SM, TASES]	Strong
+CRP	gntXY[gntXp]	activator	[AIBSCS]	Weak
+CRP	grcA[grcAp1]	activator	[AIBSCS, GEA]	Weak
+CRP	grpE[grpEp]	activator	[AIBSCS, GEA]	Weak
+CRP	guaBA[guaBp]	activator	[BPP, GEA, SM]	Strong
+CRP	gyrA[gyrAp]	activator	[GEA]	Weak
+CRP	hfq-hflXKC[hfqp3]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	hlyE[hlyEp]	activator	[BPP, GEA, SM]	Strong
+CRP	hpt[hptp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	hupA[hupAp]	activator	[BPP, GEA]	Strong
+CRP	hupB[hupBp3]	activator	[BPP, GEA]	Strong
+CRP	hyfABCDEFGHIJR-focB[hyfAp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	idnDOTR[idnDp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	idnK[idnKp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	isrA[mcaSp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	ivbL[ivbLp]	activator	[APIORCISFBSCS, BPP]	Strong
+CRP	ivbL-ilvBN[ivbLp]	activator	[APIORCISFBSCS, BPP]	Strong
+CRP	kbaZ-agaVWA[kbaZp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	lacZYA[lacZp3]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	lacZYA[lacZp2]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	lacZYA[lacZp1]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	ldtB[ldtBp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	lpdA[lpdAp]	repressor	[AIBSCS, GEA]	Weak
+CRP	lsrACDBFG-tam[lsrAp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	lsrRK[lsrRp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	malEFG[malEp]	activator	[APIORCISFBSCS, AIBSCS, BPP, SM]	Strong
+CRP	malI[malIp]	activator	[AIBSCS, BCE, BPP, GEA, SM]	Strong
+CRP	malK-lamB-malM[malKp]	activator	[APIORCISFBSCS, AIBSCS, BPP, SM]	Strong
+CRP	malS[malSp]	activator	[AIBSCS, GEA]	Weak
+CRP	malT[malTp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	malXY[malXp]	activator	[AIBSCS, BCE, BPP, GEA, SM]	Strong
+CRP	manA[manAp]	activator	[APIORCISFBSCS]	Weak
+CRP	manXYZ[manXp]	activator	[APIORCISFBSCS, AIBSCS, BCE, GEA]	Weak
+CRP	marRAB[marRp]	activator	[AIBSCS, GEA, IMP]	Weak
+CRP	mdh[mdhp1]	activator	[BCE, GEA]	Weak
+CRP	melAB[melAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+CRP	melR[melRp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+CRP	metK[metKp]	repressor	[AIBSCS, GEA]	Weak
+CRP	metY[metYp2]	repressor	[BPP, GEA, SM]	Strong
+CRP	metY-yhbC-nusA-infB-rbfA-truB-rpsO-pnp[metYp2]	repressor	[BPP, GEA, SM]	Strong
+CRP	mglBAC[mglBp]	activator	[AIBSCS, BCE, BPP, GEA, SM]	Strong
+CRP	mhpABCDFE[mhpAp]	activator	[APIORCISFBSCS, BCE, GEA]	Weak
+CRP	mhpR-lacI[mhpRp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	mlc[mlcp1]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	mlc-ynfK[mlcp2]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	modABC[modAp]	activator	[AIBSCS, GEA]	Weak
+CRP	mpl[mplp1]	activator	[AIBSCS]	Weak
+CRP	mtlADR[mtlAp]	activator	[APIORCISFBSCS, BPP]	Strong
+CRP	murQP[murQp1]	activator	[AIBSCS, BPP, GEA]	Strong
+CRP	murQP[murQp2]	activator	[AIBSCS, BPP, GEA]	Strong
+CRP	nagBACD[nagBp]	activator	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+CRP	nagE[nagEp]	activator	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+CRP	nanA[nanAp]	activator	[BPP]	Strong
+CRP	nanATEK-yhcH[nanAp]	activator	[BPP]	Strong
+CRP	nanCMS[nanCp]	activator	[AIBSCS, BPP, GEA]	Strong
+CRP	nirBDC-cysG[nirBp]	repressor	[AIBSCS, GEA]	Weak
+CRP	nmpC[nmpCp]	activator	[APIORCISFBSCS, SM]	Strong
+CRP	nrdAB-yfaE[nrdAp]	activator	[AIBSCS, GEA]	Weak
+CRP	nupC[nupCp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	nupG[nupGp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM, BCE]	Strong
+CRP	ompA[ompAp1]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	ompF[ompFp]	activator	[AIBSCS, GEA]	Weak
+CRP	ompR-envZ[ompRp2]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+CRP	ompR-envZ[ompRp1]	repressor	[APIORCISFBSCS, BPP, SM]	Strong
+CRP	ompR-envZ[ompRp3]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+CRP	ompR-envZ[ompRp4]	repressor	[APIORCISFBSCS, BPP, SM]	Strong
+CRP	ompW[ompWp]	repressor	[AIBSCS, BPP, GEA]	Strong
+CRP	osmY[osmYp]	repressor	[APIORCISFBSCS, GEA, IHBCE]	Weak
+CRP	oxyR[oxyRp]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	paaABCDEFGHIJK[paaAp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	paaZ[paaZp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	pck[pckp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	pdhR-aceEF-lpdA[pdhRp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	pka[pkap]	activator	[AIBSCS, GEA]	Weak
+CRP	pncB[pncBp]	repressor	[AIBSCS, GEA]	Weak
+CRP	ppiA[ppiAp2]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	ppiA[ppiAp3]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	ppiA[ppiAp4]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	preTA[preTp]	activator	[AIBSCS, GEA]	Weak
+CRP	proP[proPp2]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	proP[proPp1]	repressor	[BCE, GEA, SM]	Strong
+CRP	prpBCDE[prpBp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	prpR[prpRp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	psiE[psiEp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	ptsG[ptsGp1]	activator	[AIBSCS, BPP, GEA]	Strong
+CRP	ptsHI-crr[ptsHp4]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	ptsHI-crr[ptsHp5]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	ptsHI-crr[ptsHp2]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	ptsHI-crr[ptsHp1]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	putP[putPp4]	repressor	[APIORCISFBSCS, GEA]	Weak
+CRP	puuDRCBE[puuDp]	repressor	[APIORCISFBSCS, IEP]	Weak
+CRP	rbsDACBKR[rbsDp]	activator	[AIBSCS, GEA]	Weak
+CRP	relA-mazEF[relAp2]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+CRP	rhaBAD[rhaBp]	activator	[APIORCISFBSCS, AIBSCS, BCE, GEA]	Weak
+CRP	rhaSR[rhaSp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+CRP	rhaT[rhaTp]	activator	[AIBSCS, GEA]	Weak
+CRP	rmf[rmfp]	activator	[AIBSCS, BPP, GEA]	Strong
+CRP	rplM-rpsI[rplMp]	repressor	[AIBSCS, BPP, GEA]	Strong
+CRP	rpoE-rseABC[rpoEp2b]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	rpoH[rpoHp5]	activator	[AIBSCS, BCE, BPP, GEA]	Strong
+CRP	rpoH[rpoHp4]	repressor	[AIBSCS, BPP, GEA]	Strong
+CRP	rpoH[rpoHp3]	repressor	[AIBSCS, BPP, GEA]	Strong
+CRP	rpoS[rpoSp]	repressor	[BCE, GEA, SM]	Strong
+CRP	rpsF-priB-rpsR-rplI[rpsFp]	activator	[AIBSCS, BPP, GEA]	Strong
+CRP	sdhCDAB-sucABCD-sdhX[sdhCp]	activator	[AIBSCS, BCE, GEA]	Weak
+CRP	sdhDAB[sdhDp2]	activator	[BCE]	Weak
+CRP	serA[serAp2]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	serC[serCp]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+CRP	serC-aroA[serCp]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+CRP	sfsA-dksA[sfsAp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	sodA[sodAp]	activator	[AIBSCS, GEA]	Weak
+CRP	sodB[sodBp]	repressor	[AIBSCS, GEA]	Weak
+CRP	sohB[sohBp1]	repressor	[AIBSCS]	Weak
+CRP	sohB[sohBp2]	repressor	[AIBSCS]	Weak
+CRP	speC[speCp]	repressor	[GEA, IMP]	Weak
+CRP	spf[spfp]	repressor	[APIORCISFBSCS]	Weak
+CRP	srlAEBD-gutM-srlR-gutQ[srlAp]	activator	[AIBSCS, GEA]	Weak
+CRP	tdcABCDEFG[tdcAp]	activator	[APIORCISFBSCS, BCE, BPP, GEA, SM]	Strong
+CRP	tnaC[tnaCp]	activator	[APIORCISFBSCS, AIBSCS, BCE, GEA]	Weak
+CRP	tnaCAB[tnaCp]	activator	[APIORCISFBSCS, AIBSCS, BCE, GEA]	Weak
+CRP	treBC[treBp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	trxA[trxAp1]	repressor	[BPP, GEA]	Strong
+CRP	tsx[tsxp2]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+CRP	ubiG[ubiGp]	activator	[GEA]	Weak
+CRP	udp[udpP]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CRP	ugpBAECQ[ugpBp2]	activator	[APIORCISFBSCS, BPP]	Strong
+CRP	uhpT[uhpTp]	activator	[APIORCISFBSCS, BCE, BPP, GEA, SM]	Strong
+CRP	uidABC[uidAp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	ulaABCDEF[ulaAp]	activator	[BCE, GEA, SM]	Strong
+CRP	uxaB[uxaBp]	activator	[APIORCISFBSCS]	Weak
+CRP	uxaCA[uxaCp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	uxuAB[uxuAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+CRP	uxuR[uxuRp]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	xseA[xseAp]	repressor	[BPP, GEA, SM]	Strong
+CRP	xylAB[xylAp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	xylFGHR[xylFp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	ybiT[ybiTp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+CRP	ycfQ[comRp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	ycfR[bhsAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	ychH[ychHp]	activator	[AIBSCS, BCE, GEA, SM]	Strong
+CRP	yhfA[yhfAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+CRP	yiaJ[yiaJp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	yiaKLMNO-lyx-sgbHUE[yiaKp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CRP	yihW[csqRp]	activator	[BPP, GEA, MCIBSPD]	Strong
+CRP	yjiY[yjiYp]	activator	[AIBSCS, GEA, SM]	Strong
+CRP	ykgR[ykgRp]	activator	[APIORCISFBSCS, GEA]	Weak
+CRP	zraSR[zraSp]	activator	[AIBSCS, GEA]	Weak
+CRP-Sxy	yccR[sxyp]	activator	[APIORCISFBSCS, GEA]	Weak
+CadC	cadBA[cadBp]	activator	[BPP, GEA]	Strong
+CadC	cadC[cadCp]	activator	[GEA]	Weak
+CaiF	caiTABCDE[caiTp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CaiF	fixABCX[fixAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+Cbl	ssuEADCB[ssuEp]	activator	[BPP, GEA]	Strong
+Cbl	tauABCD[tauAp]	activator	[BPP, GEA]	Strong
+CdaR	cdaR[cdaRp]	activator	[GEA]	Weak
+CdaR	garD[garDp]	activator	[GEA]	Weak
+CdaR	garPLRK-rnpB[garPp]	activator	[GEA]	Weak
+CdaR	gudPXD[gudPp]	activator	[GEA]	Weak
+ChbR	chbBCARFG[chbBp]	activator	[BPP, GEA]	Strong
+ComR	ycfR[bhsAp]	repressor	[BPP, GEA]	Strong
+CpxR	acrD[acrDp2]	activator	[BPP, GEA, IC]	Strong
+CpxR	aroG[aroGp]	activator	[APIORCISFBSCS, BPP]	Strong
+CpxR	bacA[bacAp]	activator	[ICA]	Weak
+CpxR	cpxPQ[cpxPp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CpxR	cpxRA[cpxRp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CpxR	csgBAC[csgBp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+CpxR	csgDEFG[csgDp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CpxR	cyaR[cyaRp]	repressor	[BPP, GEA]	Strong
+CpxR	degP[degPp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+CpxR	dsbC[dsbCp]	activator	[APIORCISFBSCS, GEA]	Weak
+CpxR	ftnB[ftnBp2]	activator	[APIORCISFBSCS, BPP]	Strong
+CpxR	hlpA-lpxD-fabZ-lpxA[hlpAp]	activator	[APIORCISFBSCS, GEA]	Weak
+CpxR	marRAB[marRp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CpxR	mdtABCD-baeSR[mdtAp]	activator	[BPP, GEA, IC]	Strong
+CpxR	motAB-cheAW[motAp]	repressor	[BPP, GEA]	Strong
+CpxR	ompC[ompCp1]	activator	[AIBSCS, BPP, GEA]	Strong
+CpxR	ompF[ompFp]	repressor	[AIBSCS, BPP, GEA]	Strong
+CpxR	ppiA[ppiAp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CpxR	ppiD[ppiDp2]	activator	[APIORCISFBSCS, SM]	Strong
+CpxR	rpoE-rseABC[rpoEp1a]	repressor	[AIBSCS, GEA]	Weak
+CpxR	rpoH[rpoHp1]	activator	[GEA]	Weak
+CpxR	rprA[rprAp]	activator	[BPP, GEA]	Strong
+CpxR	sbmA-yaiW[sbmAp]	activator	[AIBSCS, GEA]	Weak
+CpxR	smpA[bamEp]	repressor	[ICA]	Weak
+CpxR	spy[spyp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CpxR	srkA-dsbA[srkAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CpxR	tsr[tsrp1]	repressor	[BPP]	Strong
+CpxR	ung[ungp]	repressor	[BCE, BPP]	Strong
+CpxR	yidQ[yidQp]	activator	[APIORCISFBSCS, GEA]	Weak
+CpxR	yqaE-kbp[yqaEp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+CpxR	yqjA-mzrA[yqjAp1]	activator	[APIORCISFBSCS, BPP]	Strong
+Cra	aceBAK[aceBp]	activator	[BPP, GEA, SM]	Strong
+Cra	acnA[acnAp2]	activator	[GEA]	Weak
+Cra	acnB[acnBp]	repressor	[GEA]	Weak
+Cra	adhE[adhEp1]	repressor	[BCE, GEA, ICWHO, SM]	Strong
+Cra	aroP[aroPp1]	activator	[AIBSCS, GEA]	Weak
+Cra	aroP[aroPp2]	activator	[AIBSCS, GEA, ICWHO]	Weak
+Cra	betIBA[betIp]	activator	[GEA]	Weak
+Cra	betT[betTp]	activator	[GEA]	Weak
+Cra	crp[crpp1]	activator	[BPP, GEA, SM]	Strong
+Cra	csgDEFG[csgDp1]	activator	[AIBSCS, BPP, GEA, SM]	Strong
+Cra	cydAB[cydAp5]	activator	[AIBSCS, BPP, GEA]	Strong
+Cra	cyoABCDE[cyoAp]	repressor	[AIBSCS, GEA]	Weak
+Cra	edd-eda[eddp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Cra	eno[enop1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Cra	eno[enop2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Cra	eno[enop3]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Cra	epd-pgk[epdp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Cra	epd-pgk-fbaA[epdp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Cra	fbaB[fbaBp]	repressor	[AIBSCS, GEA]	Weak
+Cra	fruBKA[fruBp]	repressor	[AIBSCS, GEA, NAS]	Weak
+Cra	gapA[gapAp1]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Cra	gapA[gapAp3]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Cra	gapA[gapAp4]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Cra	gapA-yeaD[gapAp2]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Cra	glcC[glcCp]	repressor	[AIBSCS, GEA]	Weak
+Cra	glk[glkp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+Cra	hypF[hypFp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Cra	hypF[hypFp3]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Cra	icd[icdAp2]	activator	[BPP]	Strong
+Cra	manXYZ[manXp]	repressor	[AIBSCS, GEA]	Weak
+Cra	marRAB[marRp]	repressor	[AIBSCS, GEA]	Weak
+Cra	mpl[mplp1]	repressor	[AIBSCS, GEA]	Weak
+Cra	mtlADR[mtlAp]	repressor	[BPP, GEA]	Strong
+Cra	nirBDC-cysG[nirBp]	repressor	[APIORCISFBSCS, BCE, GEA]	Weak
+Cra	pck[pckp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Cra	pdhR-aceEF-lpdA[pdhRp]	repressor	[AIBSCS, GEA]	Weak
+Cra	pfkA[pfkAp2]	repressor	[BPP]	Strong
+Cra	poxB[poxBp]	activator	[GEA]	Weak
+Cra	ppc[ppcp]	repressor	[AIBSCS, GEA]	Weak
+Cra	pps[ppsp]	activator	[AIBSCS, BPP, GEA, ICWHO]	Strong
+Cra	prpBCDE[prpBp]	repressor	[AIBSCS, GEA]	Weak
+Cra	ptsHI-crr[ptsHp2]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Cra	ptsHI-crr[ptsHp1]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Cra	pykF[pykFp]	repressor	[BCE, SM]	Strong
+Cra	sgrST-setA[sgrSp]	repressor	[AIBSCS, GEA]	Weak
+Cra	yahA[pdeLp1]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Cra	zwf[zwfp]	repressor	[AIBSCS, GEA]	Weak
+CreB	creD[creDp]	activator	[AIBSCS, BPP, GEA]	Strong
+CreB	malEFG[malEp]	repressor	[AIBSCS, GEA]	Weak
+CsgD	adrA[adrAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+CsgD	csgBAC[csgBp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+CsgD	csgDEFG[csgDp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CsgD	flgMN[flgMp]	repressor	[APIORCISFBSCS, BPP]	Strong
+CsgD	fliAZY[fliAp1]	repressor	[AIBSCS, BPP]	Strong
+CsgD	fliE[fliEp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CsgD	fliE[fliEp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CsgD	fliFGHIJK[fliFp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CsgD	nlpA[nlpAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CsgD	pepD[pepDp3]	repressor	[AIBSCS, GEA]	Weak
+CsgD	yccT[yccTp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CspA	gyrA[gyrAp]	activator	[APIORCISFBSCS]	Weak
+CspA	hns[hnsp]	activator	[BPP]	Strong
+CsqR	yihW[csqRp]	repressor	[BPP, GEA, CV(GEA/GS), GS]	Strong
+CueR	copA[copAp]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+CueR	cueO[cueOp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CueR	moaABCDE[moaAp1]	repressor	[APIORCISFBSCS, GEA]	Weak
+CusR	cusCFBA[cusCp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CusR	cusRS[cusRp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CusR	cyoABCDE[cyoAp]	activator	[APIORCISFBSCS]	Weak
+CynR	cynR[cynRp]	repressor	[APIORCISFBSCS, BPP]	Strong
+CynR	cynTS[cynTp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CynR	cynTSX[cynTp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+CysB	cbl[cblp]	activator	[BPP, GEA]	Strong
+CysB	cysB[cysBp]	repressor	[APIORCISFBSCS]	Weak
+CysB	cysDNC[cysDp]	activator	[BCE]	Weak
+CysB	cysJIH[cysJp]	activator	[APIORCISFBSCS]	Weak
+CysB	cysK[cysKp1]	activator	[APIORCISFBSCS, SM]	Strong
+CysB	cysPUWAM[cysPp]	activator	[BPP, GEA]	Strong
+CysB	ssuEADCB[ssuEp]	repressor	[BPP, GEA]	Strong
+CysB	tauABCD[tauAp]	activator	[BPP, GEA]	Strong
+CysB	tcyJ[tcyJp]	activator	[GEA]	Weak
+CysB	tcyP[tcyPp]	activator	[GEA]	Weak
+CytR	cdd[cddp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CytR	cytR[cytRp]	repressor	[APIORCISFBSCS, BPP, GEA, IC]	Strong
+CytR	deoCABD[deoCp2]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+CytR	nupC[nupCp]	repressor	[TAS]	Weak
+CytR	nupG[nupGp]	repressor	[APIORCISFBSCS, BPP]	Strong
+CytR	ppiA[ppiAp2]	repressor	[APIORCISFBSCS, BPP, GEA, IC]	Strong
+CytR	ppiA[ppiAp3]	repressor	[APIORCISFBSCS, BPP, GEA, IC]	Strong
+CytR	ppiA[ppiAp4]	repressor	[APIORCISFBSCS, BPP, GEA, IC]	Strong
+CytR	rpoH[rpoHp5]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CytR	rpoH[rpoHp4]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CytR	rpoH[rpoHp3]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+CytR	tsx[tsxp2]	repressor	[APIORCISFBSCS, BPP, GEA, IHBCE, IC, SM]	Strong
+CytR	udp[udpP]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Dan	ttdABT[ttdAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+Dan	ttdR[ttdRp]	activator	[BPP]	Strong
+DcuR	dctA[dctAp]	activator	[BPP, GEA]	Strong
+DcuR	dcuB-fumB[dcuBp2]	activator	[BPP, GEA]	Strong
+DcuR	dpiBA[dpiBp2]	activator	[APIORCISFBSCS, BPP]	Strong
+DcuR	frdABCD[frdAp]	activator	[BPP, GEA]	Strong
+DeoR	deoCABD[deoCp1]	repressor	[APIORCISFBSCS, SM]	Strong
+DeoR	deoCABD[deoCp2]	repressor	[APIORCISFBSCS, SM]	Strong
+DeoR	nupG[nupGp]	repressor	[APIORCISFBSCS, GEA]	Weak
+DeoR	tsx[tsxp1]	repressor	[BCE, GEA]	Weak
+DhaR	dhaKLM[dhaKp]	activator	[GEA]	Weak
+DhaR	dhaR[dhaRp]	repressor	[GEA]	Weak
+DicA	dicB-ydfDE-insD-intQ[dicBp]	repressor	[GEA]	Weak
+DinJ-YafQ	cspE[cspEp1]	repressor	[BPP, GEA, SM]	Strong
+DnaA	aldA[aldAp]	repressor	[BPP, GEA]	Strong
+DnaA	dnaAN-recF[dnaAp1]	repressor	[BPP, GEA]	Strong
+DnaA	dnaAN-recF[dnaAp2]	activator	[BPP, SM, GEA]	Strong
+DnaA	guaBA[guaBp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+DnaA	nrdAB-yfaE[nrdAp]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+DnaA	polA[polAp]	activator	[BPP, GEA]	Strong
+DnaA	recN[recNp]	repressor	[GEA, ICA]	Weak
+DnaA	rpoH[rpoHp4]	repressor	[APIORCISFBSCS, BCE]	Weak
+DnaA	rpoH[rpoHp3]	repressor	[APIORCISFBSCS, BCE]	Weak
+DnaA	uvrB[uvrBp3]	repressor	[BPP, GEA, ICA, SM]	Strong
+DnaA	uvrB[uvrBp2]	repressor	[BPP, GEA, ICA]	Strong
+DnaA	yjeV[yjeVp]	repressor	[BPP, GEA]	Strong
+DpiA	appY[appYp]	repressor	[APIORCISFBSCS, GEA]	Weak
+DpiA	citCDEFXG[citCp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+DpiA	citCDEFXG[citCp2]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+DpiA	dpiBA[dpiBp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+DpiA	exuT[exuTp2]	activator	[BPP, GEA]	Strong
+DpiA	exuT[exuTp1]	activator	[BPP, GEA]	Strong
+DpiA	mdh[mdhp1]	activator	[BPP, GEA]	Strong
+DpiA	mdh[mdhp2]	activator	[BPP, GEA]	Strong
+DsdC	dsdA[dsdAp]	activator	[GEA]	Weak
+DsdC	dsdC[dsdCp]	repressor	[GEA]	Weak
+DsdC	dsdXA[dsdXp]	activator	[GEA]	Weak
+EbgR	ebgAC[ebgAp]	repressor	[GEA]	Weak
+EnvR	acrAB[acrAp]	repressor	[AIBSCS, BPP, GEA]	Strong
+EnvY	ompC[ompCp1]	activator	[IMP]	Weak
+EnvY	ompF[ompFp]	activator	[IMP]	Weak
+EvgA	acrD[acrDp]	activator	[AIBSCS, GEA]	Weak
+EvgA	emrKY[emrKp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+EvgA	evgAS[evgAp2]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+EvgA	evgAS[evgAp1]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+EvgA	frc[frcp]	activator	[AIBSCS, BPP, GEA]	Strong
+EvgA	gadEF-mdtEF[gadEp]	activator	[BPP, GEA]	Strong
+EvgA	safA-ydeO[safAp]	activator	[AIBSCS, BPP, GEA]	Strong
+EvgA	ydeP[ydePp]	activator	[AIBSCS, BPP, GEA]	Strong
+EvgA	yegRZ[yegRp]	activator	[AIBSCS, BPP, GEA]	Strong
+EvgA	yfdX[yfdXp]	activator	[AIBSCS, BPP, GEA]	Strong
+ExuR	exuR[exuRp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+ExuR	exuT[exuTp2]	repressor	[AIBSCS, GEA]	Weak
+ExuR	uxaB[uxaBp]	repressor	[APIORCISFBSCS, GEA]	Weak
+ExuR	uxaCA[uxaCp]	repressor	[AIBSCS, GEA]	Weak
+ExuR	uxuAB[uxuAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+ExuR	uxuR[uxuRp]	repressor	[AIBSCS, GEA]	Weak
+FNR	aceEF[aceEp]	repressor	[GEA]	Weak
+FNR	ackA[ackAp]	activator	[GEA]	Weak
+FNR	acnA[acnAp2]	repressor	[APIORCISFBSCS, GEA]	Weak
+FNR	acrEF[acrEp]	activator	[AIBSCS, GEA]	Weak
+FNR	adhE[adhEp2]	activator	[APIORCISFBSCS, GEA]	Weak
+FNR	aer[aerp]	activator	[AIBSCS, GEA]	Weak
+FNR	aldA[aldAp]	repressor	[AIBSCS, GEA]	Weak
+FNR	ansB[ansBp2]	activator	[BCE, SM]	Strong
+FNR	arcA[arcAp1]	activator	[APIORCISFBSCS, GEA]	Weak
+FNR	arcA[arcAp3]	repressor	[APIORCISFBSCS, GEA]	Weak
+FNR	aspA[aspAp]	activator	[APIORCISFBSCS, GEA]	Weak
+FNR	aspA-dcuA[aspAp]	activator	[APIORCISFBSCS, GEA]	Weak
+FNR	aspC[aspCp]	activator	[GEA]	Weak
+FNR	bcsBZ[bcsBp]	activator	[AIBSCS, GEA]	Weak
+FNR	cadC[cadCp]	activator	[AIBSCS, GEA]	Weak
+FNR	caiF[caiFp]	activator	[BCE, GEA]	Weak
+FNR	caiTABCDE[caiTp]	activator	[AIBSCS, GEA]	Weak
+FNR	citCDEFXG[citCp2]	repressor	[AIBSCS]	Weak
+FNR	cydAB[cydAp3]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+FNR	cydAB[cydAp4]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+FNR	cydAB[cydAp1]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+FNR	cydAB[cydAp2]	activator	[AIBSCS, BPP, GEA, APIORCISFBSCS]	Strong
+FNR	cydDC[cydDp]	activator	[APIORCISFBSCS, GEA]	Weak
+FNR	cyoABCDE[cyoAp]	repressor	[AIBSCS, GEA]	Weak
+FNR	dcuB-fumB[dcuBp]	activator	[APIORCISFBSCS, GEA]	Weak
+FNR	dcuC[dcuCp]	activator	[APIORCISFBSCS, GEA]	Weak
+FNR	dcuSR[dcuSp]	activator	[AIBSCS, GEA]	Weak
+FNR	dmsABC[dmsAp1]	activator	[BCE, BPP, GEA, SM]	Strong
+FNR	dpiBA[dpiBp]	repressor	[AIBSCS]	Weak
+FNR	dppABCDF[dppAp]	repressor	[AIBSCS, GEA]	Weak
+FNR	emrKY[emrKp]	activator	[AIBSCS, GEA]	Weak
+FNR	fdhF[fdhFp]	activator	[GEA]	Weak
+FNR	fdnGHI[fdnGp]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+FNR	feoABC[feoAp]	activator	[APIORCISFBSCS, GEA]	Weak
+FNR	fes-ybdZ-entF-fepE[fesp]	activator	[AIBSCS, GEA]	Weak
+FNR	fixABCX[fixAp]	activator	[AIBSCS, GEA]	Weak
+FNR	fnr[fnrp]	repressor	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+FNR	fnrS[fnrSp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FNR	focA-pflB[focAp1]	activator	[APIORCISFBSCS, BCE, GEA, SM]	Strong
+FNR	focA-pflB[focAp3]	activator	[BCE, GEA, SM]	Strong
+FNR	frdABCD[frdAp]	activator	[BCE, GEA]	Weak
+FNR	fumA[fumAp]	repressor	[GEA]	Weak
+FNR	fumAC[fumAp]	repressor	[GEA]	Weak
+FNR	fumB[fumBp]	activator	[BCE, GEA]	Weak
+FNR	fumC[fumCp]	repressor	[GEA]	Weak
+FNR	gadAX[gadAp]	repressor	[AIBSCS, GEA]	Weak
+FNR	gadX[gadXp]	repressor	[AIBSCS, GEA]	Weak
+FNR	gadXW[gadXp]	repressor	[AIBSCS, GEA]	Weak
+FNR	garPLRK-rnpB[garPp]	activator	[AIBSCS, GEA]	Weak
+FNR	gcvTHP[gcvTp]	activator	[AIBSCS, GEA]	Weak
+FNR	gdhA[gdhAp1]	activator	[GEA]	Weak
+FNR	glnD[glnDp]	activator	[GEA]	Weak
+FNR	glnK-amtB[glnKp]	activator	[GEA]	Weak
+FNR	glpABC[glpABCp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+FNR	glpTQ[glpTQp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+FNR	gltBDF[gltBp]	repressor	[AIBSCS, GEA]	Weak
+FNR	gnd[gndp]	repressor	[GEA]	Weak
+FNR	grcA[grcAp1]	activator	[BPP, GEA, SM]	Strong
+FNR	hcp-hcr[hcpp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+FNR	hcp-hcr-poxB[hcpp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+FNR	hemA-prfA-prmC[hemAp1]	repressor	[BPP, GEA]	Strong
+FNR	hlyE[hlyEp]	activator	[BPP, GEA]	Strong
+FNR	hmp[hmpp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+FNR	hyfABCDEFGHIJR-focB[hyfAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+FNR	hypBCDE[hypBp]	activator	[BCE, BPP, GEA]	Strong
+FNR	hypBCDE-fhlA[hypBp]	activator	[BCE, BPP, GEA]	Strong
+FNR	iraD[iraDp2]	activator	[AIBSCS, GEA]	Weak
+FNR	katG[katGp]	activator	[AIBSCS, GEA]	Weak
+FNR	lpdA[lpdAp]	activator	[AIBSCS, GEA]	Weak
+FNR	malPQ[malPp]	activator	[AIBSCS, GEA]	Weak
+FNR	moaABCDE[moaAp1]	activator	[APIORCISFBSCS, GEA]	Weak
+FNR	moeAB[moeAp]	repressor	[BPP, GEA]	Strong
+FNR	nac[nacp]	repressor	[GEA]	Weak
+FNR	napFDAGHBC-ccmABCDEFGH[napFp1]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+FNR	narGHJI[narGp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+FNR	narK[narKp1]	activator	[BCE, BPP, GEA, SM]	Strong
+FNR	narXL[narXp]	repressor	[APIORCISFBSCS, BCE, BPP]	Strong
+FNR	ndh[ndhp]	repressor	[BCE, GEA, SM]	Strong
+FNR	nikABCDER[nikAp1]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+FNR	nirBDC-cysG[nirBp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+FNR	norVW[norVp]	repressor	[APIORCISFBSCS, GEA]	Weak
+FNR	nrdDG[nrdDp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+FNR	nrfABCDEFG[nrfAp]	activator	[BCE, BPP, GEA]	Strong
+FNR	nuoABCEFGHIJKLMN[nuoAp2]	repressor	[BCE, GEA, SM]	Strong
+FNR	ompW[ompWp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+FNR	ompX[ompXp2]	repressor	[AIBSCS, GEA]	Weak
+FNR	pdhR-aceEF-lpdA[pdhRp]	activator	[AIBSCS, BCE, GEA]	Weak
+FNR	pepT[pepTp]	activator	[AIBSCS, GEA]	Weak
+FNR	pitA[pitAp]	activator	[AIBSCS, GEA]	Weak
+FNR	pstS[pstSp]	activator	[AIBSCS, GEA]	Weak
+FNR	pstSCA[pstSp]	activator	[AIBSCS, GEA]	Weak
+FNR	pstSCAB-phoU[pstSp]	activator	[AIBSCS, GEA]	Weak
+FNR	purMN[purMp]	repressor	[APIORCISFBSCS, AIBSCS, GEA, SM]	Strong
+FNR	puuAP[puuAp]	repressor	[AIBSCS, GEA]	Weak
+FNR	rplM-rpsI[rplMp]	repressor	[AIBSCS, GEA]	Weak
+FNR	rplT[rplTp]	repressor	[GEA]	Weak
+FNR	rplT-pheM[rplTp]	repressor	[GEA]	Weak
+FNR	rpsJ-rplCDWB-rpsS-rplV-rpsC-rplP-rpmC-rpsQ[rpsJp]	activator	[GEA]	Weak
+FNR	rpsP-rimM-trmD-rplS[rpsPp]	repressor	[GEA]	Weak
+FNR	sdhCDAB-sucABCD-sdhX[sdhCp]	repressor	[GEA]	Weak
+FNR	sodA[sodAp]	repressor	[BCE, GEA]	Weak
+FNR	soxR[soxRp]	repressor	[GEA]	Weak
+FNR	soxS[soxSp]	repressor	[GEA]	Weak
+FNR	ssuEADCB[ssuEp]	activator	[AIBSCS, GEA]	Weak
+FNR	sucAB[sucAp]	repressor	[AIBSCS, GEA]	Weak
+FNR	sucABCD[sucAp]	repressor	[AIBSCS, GEA]	Weak
+FNR	tar-tap-cheRBYZ[tarp]	activator	[AIBSCS, GEA]	Weak
+FNR	tdcABCDEFG[tdcAp]	activator	[AIBSCS, GEA]	Weak
+FNR	tpx[tpxp]	repressor	[APIORCISFBSCS, GEA]	Weak
+FNR	ubiCA[ubiCp]	repressor	[APIORCISFBSCS, GEA]	Weak
+FNR	upp-uraA[uppp]	activator	[AIBSCS, GEA]	Weak
+FNR	uxaCA[uxaCp]	activator	[AIBSCS, GEA]	Weak
+FNR	ychO[ychOp]	repressor	[AIBSCS, GEA]	Weak
+FNR	ydeJ[ydeJp]	activator	[AIBSCS]	Weak
+FNR	ydhYVWXUT[ydhYp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+FNR	yecR[yecRp]	activator	[AIBSCS, GEA]	Weak
+FNR	yeiL[yeiLp]	repressor	[APIORCISFBSCS, GEA]	Weak
+FNR	yfgF[yfgFp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FNR	ygbA[ygbAp]	repressor	[AIBSCS, GEA]	Weak
+FNR	yhjA[yhjAp]	activator	[AIBSCS, BPP]	Strong
+FNR	ynfEFGH-dmsD[ynfEp]	activator	[AIBSCS, BPP, GEA, SM]	Strong
+FNR	yqjI[yqjIp]	activator	[AIBSCS, GEA]	Weak
+FNR	ysgA[ysgAp]	repressor	[AIBSCS, GEA]	Weak
+FNR	ytfE[ytfEp]	repressor	[GEA]	Weak
+FNR	zwf[zwfp]	repressor	[GEA]	Weak
+FabR	fabA[fabAp]	repressor	[APIORCISFBSCS, AIBSCS, BCE, BPP, GEA]	Strong
+FabR	fabB[fabBp]	repressor	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+FadR	accA[accAp2]	activator	[AIBSCS, BPP, GEA]	Strong
+FadR	accBC[accBp2]	activator	[AIBSCS, BPP, GEA]	Strong
+FadR	accD[accDp]	activator	[AIBSCS, BPP, GEA]	Strong
+FadR	fabA[fabAp]	activator	[APIORCISFBSCS, BCE, GEA]	Weak
+FadR	fabB[fabBp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FadR	fabHDG[fabHp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+FadR	fabI[fabIp]	activator	[AIBSCS, BPP, GEA]	Strong
+FadR	fadBA[fadBp]	repressor	[APIORCISFBSCS, BCE]	Weak
+FadR	fadD-sroD[fadDp]	repressor	[BPP]	Strong
+FadR	fadE[fadEp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+FadR	fadIJ[fadIp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+FadR	fadL[fadLp]	repressor	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+FadR	fadR[fadRp]	activator	[AIBSCS]	Weak
+FadR	iclR[iclRp]	activator	[BPP, GEA, SM]	Strong
+FadR	uspA[uspAp1]	repressor	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+FeaR	feaB[feaBp1]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+FeaR	tynA[tynAp1]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+FhlA	fdhF[fdhFp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FhlA	hycABCDEFGHI[hycAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FhlA	hydN-hypF[hydNp]	activator	[BPP, GEA]	Strong
+FhlA	hyfABCDEFGHIJR-focB[hyfAp]	activator	[GEA]	Weak
+FhlA	hypABCDE[hypAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FhlA	hypABCDE-fhlA[hypAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+Fis	acnB[acnBp]	repressor	[APIORCISFBSCS, GEA]	Weak
+Fis	acs-yjcHG[acsp1]	repressor	[BPP, GEA]	Strong
+Fis	acs-yjcHG[acsp2]	repressor	[AIBSCS, BPP, GEA, SM]	Strong
+Fis	adhE[adhEp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+Fis	alaWX[alaWp]	activator	[BCE]	Weak
+Fis	aldB[aldBp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Fis	ansB[ansBp1]	repressor	[AIBSCS, GEA]	Weak
+Fis	argU[argUp]	activator	[IHBCE]	Weak
+Fis	argW[argWp]	activator	[BCE]	Weak
+Fis	argX-hisR-leuT-proM[argXp]	activator	[BCE]	Weak
+Fis	aspV[aspVp]	activator	[BCE]	Weak
+Fis	bglG[bglGp]	repressor	[BPP]	Strong
+Fis	bglGFB[bglGp]	repressor	[BPP]	Strong
+Fis	carAB[carAp1]	activator	[AIBSCS, GEA]	Weak
+Fis	cbpA-cbpM[cbpAp6]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Fis	cbpA-cbpM[cbpAp4]	repressor	[]	null
+Fis	crp[crpp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Fis	crp[crpp3]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Fis	crp[crpp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Fis	cspA[cspAp1]	activator	[AIBSCS, BPP, GEA]	Strong
+Fis	cspI[cspIp]	repressor	[AIBSCS, GEA]	Weak
+Fis	cyoABCDE[cyoAp]	activator	[GEA]	Weak
+Fis	deoCABD[deoCp2]	activator	[AIBSCS, GEA]	Weak
+Fis	dmsABC[dmsAp1]	repressor	[AIBSCS, GEA]	Weak
+Fis	dps[dpsp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Fis	dusB-fis[dusBp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Fis	fadBA[fadBp]	activator	[AIBSCS, GEA]	Weak
+Fis	flxA[flxAp]	activator	[AIBSCS, GEA]	Weak
+Fis	fumB[fumBp]	repressor	[GEA]	Weak
+Fis	gadAX[gadAp]	repressor	[AIBSCS, GEA]	Weak
+Fis	gadBC[gadBp]	repressor	[AIBSCS, GEA]	Weak
+Fis	glcC[glcCp]	repressor	[AIBSCS, GEA]	Weak
+Fis	glnA[glnAp2]	activator	[AIBSCS, BPP, GEA]	Strong
+Fis	glnALG[glnAp2]	activator	[AIBSCS, BPP, GEA]	Strong
+Fis	glnQ[glnQp]	repressor	[GEA]	Weak
+Fis	glpABC[glpABCp]	activator	[AIBSCS, GEA]	Weak
+Fis	glpTQ[glpTQp]	activator	[AIBSCS, GEA]	Weak
+Fis	gltX[gltXp3]	repressor	[APIORCISFBSCS, AIBSCS, BCE, BPP, SM]	Strong
+Fis	glyU[glyUp]	activator	[BCE]	Weak
+Fis	grcA[grcAp1]	activator	[AIBSCS, GEA]	Weak
+Fis	guaBA[guaBp]	repressor	[AIBSCS, BPP, SM]	Strong
+Fis	gyrA[gyrAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Fis	gyrB[gyrBp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Fis	hlyE[hlyEp]	repressor	[AIBSCS, GEA]	Weak
+Fis	hns[hnsp]	activator	[BPP]	Strong
+Fis	hupA[hupAp]	activator	[BPP, GEA]	Strong
+Fis	hupB[hupBp2]	repressor	[BPP, GEA]	Strong
+Fis	hupB[hupBp3]	repressor	[BPP, GEA]	Strong
+Fis	hyaABCDEF[hyaAp]	repressor	[AIBSCS, GEA]	Weak
+Fis	katE[katEp]	repressor	[AIBSCS, GEA]	Weak
+Fis	leuQPV[leuQp]	activator	[APIORCISFBSCS, BCE, GEA, IHBCE]	Weak
+Fis	leuX[leuXp]	activator	[BCE]	Weak
+Fis	lpdA[lpdAp]	activator	[BCE, BPP]	Strong
+Fis	lysT-valT-lysW[lysTp]	activator	[IHBCE]	Weak
+Fis	malEFG[malEp]	activator	[AIBSCS, GEA]	Weak
+Fis	marRAB[marRp]	activator	[BPP, GEA, SM]	Strong
+Fis	mazEFG[mazEp1]	activator	[BPP, GEA, SM]	Strong
+Fis	mazEFG[mazEp2]	activator	[BPP, GEA, SM]	Strong
+Fis	metT-leuW-glnUW-metU-glnVX[metTp]	activator	[IHBCE]	Weak
+Fis	metY[metYp1]	activator	[BCE, IHBCE]	Weak
+Fis	metY-yhbC-nusA-infB[metYp1]	activator	[BCE, IHBCE]	Weak
+Fis	metY-yhbC-nusA-infB-rbfA-truB-rpsO-pnp[metYp1]	activator	[BCE, IHBCE]	Weak
+Fis	mglAC[mglAp]	repressor	[GEA]	Weak
+Fis	msrA[msrAp]	repressor	[AIBSCS, GEA]	Weak
+Fis	mtlADR[mtlAp]	repressor	[AIBSCS, GEA]	Weak
+Fis	nanA[nanAp]	repressor	[AIBSCS, GEA]	Weak
+Fis	nanATEK-yhcH[nanAp]	repressor	[AIBSCS, GEA]	Weak
+Fis	narGHJI[narGp]	repressor	[AIBSCS, GEA]	Weak
+Fis	narK[narKp1]	repressor	[AIBSCS, GEA]	Weak
+Fis	ndh[ndhp]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+Fis	nirBDC-cysG[nirBp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Fis	nrdAB-yfaE[nrdAp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Fis	nrfABCDEFG[nrfAp]	repressor	[BPP, GEA]	Strong
+Fis	nuoABCEFGHIJKLMN[nuoAp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+Fis	ogt[ogtp]	repressor	[BPP]	Strong
+Fis	osmE[osmEp]	repressor	[BPP]	Strong
+Fis	osmY[osmYp]	repressor	[AIBSCS, GEA]	Weak
+Fis	patA[patAp]	unknown	[AIBSCS]	Weak
+Fis	pdxA-rsmA[pdxAp]	activator	[GEA]	Weak
+Fis	pdxA-rsmA-apaGH[pdxAp]	activator	[GEA]	Weak
+Fis	pflB[pflBp1]	repressor	[AIBSCS, GEA]	Weak
+Fis	pheU[pheUp]	activator	[IHBCE]	Weak
+Fis	pheV[pheVp]	activator	[BCE]	Weak
+Fis	proK[proKp]	activator	[BCE]	Weak
+Fis	proL[proLp]	activator	[BCE]	Weak
+Fis	proP[proPp2]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+Fis	ptsG[ptsGp1]	activator	[BPP, GEA]	Strong
+Fis	ptsG[ptsGp2]	repressor	[BPP, GEA]	Strong
+Fis	pyrD[pyrDp]	repressor	[AIBSCS, GEA]	Weak
+Fis	queA[queAp]	activator	[BPP, GEA]	Strong
+Fis	rnpB[rnpBp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+Fis	rplM-rpsI[rplMp]	repressor	[APIORCISFBSCS, AIBSCS]	Weak
+Fis	rrsA-ileT-alaT-rrlA-rrfA[rrsAp1]	activator	[BPP, GEA]	Strong
+Fis	rrsB-gltT-rrlB-rrfB[rrsBp1]	activator	[BPP, GEA]	Strong
+Fis	rrsC-gltU-rrlC-rrfC[rrsCp1]	activator	[BPP, GEA]	Strong
+Fis	rrsD-ileU-alaU-rrlD-rrfD-thrV-rrfF[rrsDp1]	activator	[BPP, GEA]	Strong
+Fis	rrsE-gltV-rrlE-rrfE[rrsEp]	activator	[BPP, GEA]	Strong
+Fis	rrsG-gltW-rrlG-rrfG[rrsGp1]	activator	[BPP, GEA]	Strong
+Fis	rrsH-ileV-alaV-rrlH-rrfH[rrsHp1]	activator	[BPP, GEA]	Strong
+Fis	serT[serTp]	activator	[IHBCE]	Weak
+Fis	serX[serXp]	activator	[BCE]	Weak
+Fis	sra[srap]	activator	[GEA]	Weak
+Fis	ssrS[ssrSp1]	activator	[BPP, GEA]	Strong
+Fis	ssrS[ssrSp2]	repressor	[BPP, GEA]	Strong
+Fis	ssrS-ygfA[ssrSp1]	activator	[BPP, GEA]	Strong
+Fis	ssrS-ygfA[ssrSp2]	repressor	[BPP, GEA]	Strong
+Fis	thrU-tyrU-glyT-thrT-tufB[thrUp]	activator	[APIORCISFBSCS, BPP, GEA, IHBCE]	Strong
+Fis	thrW[thrWp]	activator	[BCE]	Weak
+Fis	topA[topAp1]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Fis	topA[topAp4]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Fis	trmA[trmAp]	activator	[APIORCISFBSCS]	Weak
+Fis	tyrTV-tpr[tyrTp]	activator	[AIBSCS, BCE, BPP, GEA]	Strong
+Fis	valUXY-lysV[valUp]	activator	[APIORCISFBSCS, AIBSCS, BCE, BPP, SM]	Strong
+Fis	xylFGHR[xylFp]	repressor	[AIBSCS, GEA]	Weak
+FlhDC	flgAMN[flgAp]	activator	[APIORCISFBSCS, GEA]	Weak
+FlhDC	flgBCDEFGHIJ[flgBp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FlhDC	flgK[flgKp]	activator	[BPP, GEA]	Strong
+FlhDC	flhBAE[flhBp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FlhDC	fliAZY[fliAp1]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+FlhDC	fliDST[fliDp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FlhDC	fliE[fliEp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FlhDC	fliFGHIJK[fliFp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FlhDC	fliLMNOPQR[fliLp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FlhDC	glpABC[glpABCp]	activator	[GEA]	Weak
+FlhDC	gltIJKL-sroC[gltIp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FlhDC	hydN-hypF[hydNp]	activator	[GEA]	Weak
+FlhDC	mdh[mdhp1]	repressor	[GEA]	Weak
+FlhDC	mglBAC[mglBp]	repressor	[GEA]	Weak
+FlhDC	napFDAGHBC-ccmABCDEFGH[napFp1]	activator	[GEA]	Weak
+FlhDC	napFDAGHBC-ccmABCDEFGH[napFp2]	activator	[GEA]	Weak
+FlhDC	nrfABCDEFG[nrfAp]	activator	[GEA]	Weak
+FlhDC	ppdAB-ygdB-ppdC-recC[ppdAp]	activator	[GEA]	Weak
+FlhDC	ycgR[ycgRp]	activator	[GEA]	Weak
+FlhDC	yecR[yecRp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+FlhDC	ygbK[ygbKp]	activator	[GEA]	Weak
+FlhDC	yhjH[yhjHp]	activator	[GEA]	Weak
+FliZ	csgBAC[csgBp]	repressor	[GEA]	Weak
+FliZ	csgDEFG[csgDp1]	repressor	[BPP, GEA]	Strong
+FliZ	csgDEFG[csgDp2]	repressor	[BPP, GEA]	Strong
+FliZ	flhDC[flhDp]	repressor	[BPP, GEA]	Strong
+FliZ	gadBC[gadBp]	repressor	[BPP, GEA]	Strong
+FliZ	gadEF-mdtEF[gadEp]	repressor	[BPP, GEA, SM]	Strong
+FliZ	hdeAB-yhiD[hdeAp]	repressor	[BPP, GEA]	Strong
+FliZ	osmY[osmYp]	repressor	[BPP, GEA]	Strong
+FliZ	pdeR[pdeRp]	repressor	[BPP, GEA, SM]	Strong
+FucR	fucAO[fucAp]	activator	[GEA, IMP]	Weak
+FucR	fucPIKUR[fucPp]	activator	[GEA]	Weak
+Fur	aspC[aspCp]	repressor	[GEA]	Weak
+Fur	cirA[cirAp2]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Fur	cirA[cirAp1]	repressor	[APIORCISFBSCS, AIBSCS, BCE, BPP, GEA]	Strong
+Fur	cyoABCDE[cyoAp]	repressor	[AIBSCS, GEA]	Weak
+Fur	entCEBA-ybdB[entCp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Fur	entS[entSp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+Fur	exbBD[exbBp]	repressor	[APIORCISFBSCS, AIBSCS, BPP]	Strong
+Fur	exbD[exbDp]	repressor	[APIORCISFBSCS]	Weak
+Fur	fecABCDE[fecAp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Fur	fecIR[fecIp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+Fur	feoABC[feoAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+Fur	fepA-entD[fepAp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Fur	fepB[fepBp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+Fur	fepDGC[fepDp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Fur	fes-ybdZ-entF-fepE[fesp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Fur	fhuACDB[fhuAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Fur	fhuE[fhuEp]	repressor	[APIORCISFBSCS, AIBSCS]	Weak
+Fur	fhuF[fhuFp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Fur	fiu[fiup]	repressor	[APIORCISFBSCS]	Weak
+Fur	flhDC[flhDp]	repressor	[AIBSCS]	Weak
+Fur	fnr[fnrp]	repressor	[GEA]	Weak
+Fur	fumB[fumBp]	activator	[GEA]	Weak
+Fur	fumC[fumCp]	repressor	[GEA]	Weak
+Fur	fur[furpb]	repressor	[APIORCISFBSCS, BPP]	Strong
+Fur	fur[furpa]	repressor	[APIORCISFBSCS, BPP]	Strong
+Fur	garPLRK-rnpB[garPp]	repressor	[APIORCISFBSCS, BPP]	Strong
+Fur	gdhA[gdhAp1]	activator	[GEA]	Weak
+Fur	glnD[glnDp]	repressor	[GEA]	Weak
+Fur	glnK-amtB[glnKp]	activator	[GEA]	Weak
+Fur	gltBDF[gltBp]	repressor	[GEA]	Weak
+Fur	gnd[gndp]	repressor	[GEA]	Weak
+Fur	gpmA[gpmAp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Fur	grcA[grcAp1]	repressor	[GEA]	Weak
+Fur	hmp[hmpp]	repressor	[APIORCISFBSCS, AS, GEA, IMP]	Weak
+Fur	katE[katEp]	activator	[IEP]	Weak
+Fur	katG[katGp]	activator	[IEP]	Weak
+Fur	lpdA[lpdAp]	activator	[GEA]	Weak
+Fur	metH[metHp]	repressor	[AIBSCS]	Weak
+Fur	metJ[metJp2]	repressor	[AIBSCS]	Weak
+Fur	mntH[mntHp]	repressor	[APIORCISFBSCS, AIBSCS, IGI]	Weak
+Fur	nac[nacp]	repressor	[GEA]	Weak
+Fur	ndh[ndhp]	repressor	[GEA]	Weak
+Fur	nrdHIEF[nrdHp]	repressor	[AIBSCS, GEA]	Weak
+Fur	ompF[ompFp]	activator	[GEA]	Weak
+Fur	oppABCDF[oppAp]	repressor	[APIORCISFBSCS, BPP]	Strong
+Fur	purR[purRp]	repressor	[AIBSCS]	Weak
+Fur	pyrC[pyrCp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Fur	rcnAB[rcnAp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+Fur	rpoS[rpoSp]	repressor	[GEA, IEP]	Weak
+Fur	ryhB[yhhXp5]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Fur	sdhCDAB-sucABCD-sdhX[sdhCp]	activator	[AIBSCS, GEA]	Weak
+Fur	sodA[sodAp]	repressor	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+Fur	soxR[soxRp]	repressor	[GEA]	Weak
+Fur	soxS[soxSp]	repressor	[GEA]	Weak
+Fur	sufABCDSE[sufAp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Fur	tonB[tonBp]	activator	[APIORCISFBSCS, AIBSCS, BPP, BCE]	Strong
+Fur	ygaC[ygaCp]	repressor	[AIBSCS, GEA]	Weak
+Fur	yhhY[yhhYp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+Fur	yjjZ[yjjZp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Fur	yqjH[yqjHp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+Fur	zinT[zinTp]	activator	[GEA]	Weak
+Fur	zwf[zwfp]	repressor	[GEA]	Weak
+GadE	cyoABCDE[cyoAp]	activator	[GEA]	Weak
+GadE	fliC[fliCp]	activator	[GEA]	Weak
+GadE	gadBC[gadBp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+GadE	gadE[gadEp1]	activator	[GEA]	Weak
+GadE	gadEF-mdtEF[gadEp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+GadE	gadX[gadXp]	activator	[BPP, GEA]	Strong
+GadE	gadXW[gadXp]	activator	[BPP, GEA]	Strong
+GadE	gltBDF[gltBp]	activator	[BPP, CEUMA, GEA, IHBCE, RE]	Strong
+GadE	gnd[gndp]	activator	[GEA]	Weak
+GadE	hdeAB-yhiD[hdeAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+GadE	hdeD[hdeDp]	activator	[APIORCISFBSCS, AIBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+GadE	hlpA-lpxD-fabZ-lpxA[hlpAp]	activator	[GEA]	Weak
+GadE	lrp[lrpp]	activator	[GEA]	Weak
+GadE	purA[purAp]	activator	[GEA]	Weak
+GadE	rcsA[rcsAp]	activator	[BPP, GEA]	Strong
+GadE	yhiM[yhiMp]	activator	[CEUMA, IHBCE, RE]	Weak
+GadE-RcsB	aslB[aslBp]	activator	[BPP]	Strong
+GadE-RcsB	cadBA[cadBp]	activator	[BPP, GEA]	Strong
+GadE-RcsB	gadAX[gadAp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE, SM]	Strong
+GadE-RcsB	slp-dctR[slpp]	activator	[BPP, GEA]	Strong
+GadE-RcsB	yhiM[yhiMp]	activator	[BPP]	Strong
+GadW	gadAX[gadAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+GadW	gadBC[gadBp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+GadW	gadEF-mdtEF[gadEp]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+GadW	gadW[gadWp2]	repressor	[GEA]	Weak
+GadW	gadX[gadXp]	repressor	[GEA]	Weak
+GadW	gadXW[gadXp]	repressor	[GEA]	Weak
+GadW	gadY[gadYp]	repressor	[GEA]	Weak
+GadW	hdeAB-yhiD[hdeAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+GadW	slp-dctR[slpp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+GadX	asnB[asnBp]	activator	[GEA]	Weak
+GadX	cadBA[cadBp]	activator	[GEA]	Weak
+GadX	gadAX[gadAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+GadX	gadBC[gadBp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+GadX	gadE[gadEp3]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+GadX	gadEF-mdtEF[gadEp]	activator	[APIORCISFBSCS, GEA]	Weak
+GadX	gadW[gadWp2]	repressor	[CEUMA, GEA, IHBCE, RE]	Weak
+GadX	gadX[gadXp]	activator	[GEA]	Weak
+GadX	gadXW[gadXp]	activator	[GEA]	Weak
+GadX	gadY[gadYp]	activator	[GEA]	Weak
+GadX	glnK-amtB[glnKp]	activator	[GEA]	Weak
+GadX	glsA-ybaT[glsAp]	activator	[CEUMA, GEA, IHBCE, RE]	Weak
+GadX	hdeAB-yhiD[hdeAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+GadX	hdeD[hdeDp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+GadX	hns[hnsp]	activator	[GEA]	Weak
+GadX	lon[lonp]	activator	[GEA]	Weak
+GadX	rpoS[rpoSp]	activator	[GEA]	Weak
+GadX	slp-dctR[slpp]	activator	[APIORCISFBSCS, AIBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+GadX	tppB[tppBp]	repressor	[CEUMA, IHBCE, RE]	Weak
+GalR	galE[galEp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+GalR	galE[galEp2]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+GalR	galET[galEp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+GalR	galET[galEp2]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+GalR	galETK[galEp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+GalR	galETK[galEp2]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+GalR	galETKM[galEp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+GalR	galETKM[galEp2]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+GalR	galP[galPp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+GalR	galR[galRp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+GalR	galS[galSp]	repressor	[APIORCISFBSCS, GEA]	Weak
+GalR	mglBAC[mglBp]	repressor	[APIORCISFBSCS, GEA]	Weak
+GalS	galE[galEp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+GalS	galE[galEp2]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+GalS	galET[galEp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+GalS	galET[galEp2]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+GalS	galETK[galEp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+GalS	galETK[galEp2]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+GalS	galETKM[galEp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+GalS	galETKM[galEp2]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+GalS	galP[galPp]	repressor	[AIBSCS, BPP, GEA, SM]	Strong
+GalS	galR[galRp]	repressor	[APIORCISFBSCS, GEA]	Weak
+GalS	galS[galSp]	repressor	[BCE, GEA]	Weak
+GalS	mglBAC[mglBp]	repressor	[APIORCISFBSCS, GEA]	Weak
+GatR	gatYZABCD[gatYp]	repressor	[GEA]	Weak
+GcvA	gcvA[gcvAp]	repressor	[APIORCISFBSCS, AIBSCS, BCE, BPP, GEA, IC, SM]	Strong
+GcvA	gcvB[gcvBp]	activator	[APIORCISFBSCS, AIBSCS, BCE, BPP, GEA, IC, SM]	Strong
+GcvA	gcvTHP[gcvTp]	activator	[APIORCISFBSCS, BCE, BPP, GEA, SM, IC]	Strong
+GlaR	csiD-ygaF-gabDTP[csiDp]	repressor	[BPP, GEA, IEP]	Strong
+GlcC	glcC[glcCp]	repressor	[BCE, GEA, SM]	Strong
+GlcC	glcDEFGBA[glcDp]	activator	[BCE, GEA, SM]	Strong
+GlpR	glpABC[glpABCp]	repressor	[APIORCISFBSCS, BPP, SM]	Strong
+GlpR	glpD[glpDp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+GlpR	glpFKX[glpFp]	repressor	[APIORCISFBSCS, BPP]	Strong
+GlpR	glpTQ[glpTQp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+GlrR	glmY[glmYp1]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+GlrR	rpoE-rseABC[rpoEp2b]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+GntR	edd-eda[eddp1]	repressor	[APIORCISFBSCS, AIBSCS, BPP, SM]	Strong
+GntR	gntK[gntKp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+GntR	gntKU[gntKp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+GntR	gntT[gntTp3]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, TASES]	Strong
+GntR	gntT[gntTp2]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, TASES]	Strong
+GntR	gntT[gntTp1]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, TASES]	Strong
+GntR	gntXY[gntXp]	repressor	[AIBSCS]	Weak
+GntR	idnDOTR[idnDp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+GntR	idnK[idnKp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+GutM	srlAEBD-gutM-srlR-gutQ[srlAp]	activator	[GEA]	Weak
+H-NS	acrEF[acrEp]	repressor	[GEA]	Weak
+H-NS	ade[adep]	repressor	[GEA]	Weak
+H-NS	adiA[adiAp]	repressor	[GEA]	Weak
+H-NS	adiY[adiYp]	repressor	[BPP]	Strong
+H-NS	appY[appYp]	repressor	[BPP, GEA]	Strong
+H-NS	asr[asrp]	repressor	[GEA, IMP]	Weak
+H-NS	bglG[bglGp]	repressor	[BPP, GEA]	Strong
+H-NS	bglGFB[bglGp]	repressor	[BPP, GEA]	Strong
+H-NS	bolA[bolAp1]	repressor	[GEA]	Weak
+H-NS	cadBA[cadBp]	repressor	[AIBSCS, BPP, GEA]	Strong
+H-NS	cadC[cadCp]	repressor	[BPP]	Strong
+H-NS	caiF[caiFp]	repressor	[GEA]	Weak
+H-NS	caiTABCDE[caiTp]	repressor	[IMP]	Weak
+H-NS	chiA[chiAp]	repressor	[BPP, GEA]	Strong
+H-NS	csgDEFG[csgDp1]	repressor	[BPP, GEA]	Strong
+H-NS	csiD-ygaF-gabDTP[csiDp]	activator	[GEA]	Weak
+H-NS	csiE[csiEp]	activator	[GEA]	Weak
+H-NS	cspA[cspAp1]	repressor	[AIBSCS, BPP, GEA]	Strong
+H-NS	cspD[cspDp]	activator	[GEA]	Weak
+H-NS	cydAB[cydAp3]	repressor	[BPP, GEA]	Strong
+H-NS	cydAB[cydAp4]	repressor	[BPP, GEA]	Strong
+H-NS	cydAB[cydAp1]	repressor	[BPP, GEA]	Strong
+H-NS	cydAB[cydAp2]	repressor	[BPP, GEA]	Strong
+H-NS	cysPUWAM[cysPp]	repressor	[GEA]	Weak
+H-NS	degP[degPp]	repressor	[GEA]	Weak
+H-NS	dps[dpsp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+H-NS	evgAS[evgAp2]	repressor	[BPP]	Strong
+H-NS	evgAS[evgAp1]	repressor	[BPP]	Strong
+H-NS	fes-ybdZ-entF-fepE[fesp]	activator	[GEA]	Weak
+H-NS	fimAICDFGH[fimAp]	activator	[BPP, GEA]	Strong
+H-NS	fimB[fimBp1]	repressor	[BPP, GEA]	Strong
+H-NS	fimB[fimBp2]	repressor	[BPP, GEA]	Strong
+H-NS	fimE[fimEp]	repressor	[BPP, GEA]	Strong
+H-NS	flhDC[flhDp]	activator	[BPP, GEA]	Strong
+H-NS	fliAZY[fliAp1]	activator	[GEA, IMP]	Weak
+H-NS	fliC[fliCp]	activator	[GEA]	Weak
+H-NS	gadAX[gadAp]	repressor	[BPP, GEA]	Strong
+H-NS	gadEF-mdtEF[gadEp]	repressor	[BPP]	Strong
+H-NS	gadW[gadWp2]	repressor	[BPP]	Strong
+H-NS	gadX[gadXp]	repressor	[BPP, GEA]	Strong
+H-NS	gadXW[gadXp]	repressor	[BPP, GEA]	Strong
+H-NS	galE[galEp1]	repressor	[BPP]	Strong
+H-NS	galET[galEp1]	repressor	[BPP]	Strong
+H-NS	galETK[galEp1]	repressor	[BPP]	Strong
+H-NS	galETKM[galEp1]	repressor	[BPP]	Strong
+H-NS	garPLRK-rnpB[garPp]	repressor	[GEA]	Weak
+H-NS	hchA[hchAp]	repressor	[BPP, GEA]	Strong
+H-NS	hchA[hchAp2]	repressor	[BPP, GEA]	Strong
+H-NS	hdeAB-yhiD[hdeAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+H-NS	hdeD[hdeDp]	repressor	[BPP, GEA]	Strong
+H-NS	hdfR[hdfRp]	repressor	[BPP]	Strong
+H-NS	hisJQMP[hisJp]	activator	[GEA]	Weak
+H-NS	hlyE[hlyEp]	activator	[BPP, GEA]	Strong
+H-NS	hns[hnsp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+H-NS	ilvIH[ilvIHp1]	repressor	[GEA]	Weak
+H-NS	lacZYA[lacZp1]	repressor	[BPP]	Strong
+H-NS	leuO[leuOp]	repressor	[APIORCISFBSCS, GEA]	Weak
+H-NS	leuO[leuOp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+H-NS	lrp[lrpp]	repressor	[BPP, GEA]	Strong
+H-NS	micF[micFp]	repressor	[GEA]	Weak
+H-NS	nhaAR[nhaAp1]	repressor	[GEA]	Weak
+H-NS	nirBDC-cysG[nirBp]	repressor	[BPP, GEA]	Strong
+H-NS	nrdAB-yfaE[nrdAp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+H-NS	nrdDG[nrdDp]	repressor	[BPP, GEA]	Strong
+H-NS	osmC[osmCp1]	repressor	[GEA]	Weak
+H-NS	osmC[osmCp2]	repressor	[GEA]	Weak
+H-NS	proVWX[proVp1]	repressor	[BPP, GEA]	Strong
+H-NS	proVWX[proVp3]	repressor	[AIBSCS, BPP, GEA]	Strong
+H-NS	rcsA[rcsAp]	repressor	[GEA, ICWHO]	Weak
+H-NS	rcsDB[rcsDp]	repressor	[BPP]	Strong
+H-NS	relA-mazEF[relAp2]	activator	[GEA]	Weak
+H-NS	rrsB-gltT-rrlB-rrfB[rrsBp1]	repressor	[BPP]	Strong
+H-NS	rrsC-gltU-rrlC-rrfC[rrsCp1]	repressor	[GEA]	Weak
+H-NS	rrsD-ileU-alaU-rrlD-rrfD-thrV-rrfF[rrsDp1]	repressor	[GEA]	Weak
+H-NS	rrsG-gltW-rrlG-rrfG[rrsGp1]	repressor	[GEA, TAS]	Weak
+H-NS	rrsH-ileV-alaV-rrlH-rrfH[rrsHp1]	repressor	[GEA]	Weak
+H-NS	slp-dctR[slpp]	repressor	[BPP]	Strong
+H-NS	smtA-mukFEB[cmoMp]	activator	[GEA]	Weak
+H-NS	srlAEBD-gutM-srlR-gutQ[srlAp]	activator	[GEA]	Weak
+H-NS	ssrS[ssrSp1]	repressor	[BPP, GEA]	Strong
+H-NS	ssrS[ssrSp2]	repressor	[BPP, GEA]	Strong
+H-NS	ssrS-ygfA[ssrSp1]	repressor	[BPP, GEA]	Strong
+H-NS	ssrS-ygfA[ssrSp2]	repressor	[BPP, GEA]	Strong
+H-NS	stpA[stpAp1]	repressor	[BCE, BPP, GEA]	Strong
+H-NS	yciG[yciGp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+H-NS	yciGFE[yciGp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+H-NS	ydeO[ydeOp]	repressor	[BPP]	Strong
+H-NS	ydeP[ydePp]	repressor	[BPP]	Strong
+H-NS	yhiM[yhiMp]	repressor	[BPP]	Strong
+H-NS	yjjP[yjjPp]	repressor	[BPP]	Strong
+H-NS	yjjQ-bglJ[yjjQp]	repressor	[BPP]	Strong
+HU	galE[galEp1]	repressor	[BPP, GEA]	Strong
+HU	galE[galEp2]	repressor	[BPP, GEA]	Strong
+HU	galET[galEp1]	repressor	[BPP, GEA]	Strong
+HU	galET[galEp2]	repressor	[BPP, GEA]	Strong
+HU	galETK[galEp1]	repressor	[BPP, GEA]	Strong
+HU	galETK[galEp2]	repressor	[BPP, GEA]	Strong
+HU	galETKM[galEp1]	repressor	[BPP, GEA]	Strong
+HU	galETKM[galEp2]	repressor	[BPP, GEA]	Strong
+HU	micF[micFp]	activator	[GEA]	Weak
+HU	mtr[mtrp2]	repressor	[GEA]	Weak
+HU	seqA-pgm[seqAp]	repressor	[GEA]	Weak
+HU	tyrP[tyrPp1]	repressor	[GEA]	Weak
+HcaR	hcaEFCBD[hcaEp]	activator	[AIBSCS, BPP, GEA]	Strong
+HcaR	hcaR[hcaRp]	repressor	[AIBSCS, BPP, GEA]	Strong
+HdfR	flhDC[flhDp]	repressor	[BPP, GEA]	Strong
+HdfR	gltBDF[gltBp]	activator	[BPP]	Strong
+HicB	hicAB[hicAp2]	repressor	[BPP, GEA, SM]	Strong
+HipAB	hipBA[hipBp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+HipAB	relA-mazEF[relAp1]	repressor	[BPP, GEA]	Strong
+HipB	hipBA[hipBp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+HipB	relA-mazEF[relAp1]	repressor	[AIBSCS, BPP, GEA]	Strong
+HprR	cusCFBA[cusCp]	activator	[APIORCISFBSCS, BPP]	Strong
+HprR	cusRS[cusRp]	activator	[APIORCISFBSCS, BPP]	Strong
+HprR	cyoABCDE[cyoAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+HyfR	hyfABCDEFGHIJR-focB[hyfAp]	activator	[AIBSCS, GEA]	Weak
+HypT	cydAB[cydAp1]	activator	[BPP, GEA]	Strong
+HypT	cysH[cysHp]	activator	[GEA]	Weak
+HypT	fecABCDE[fecAp]	repressor	[GEA]	Weak
+HypT	metBL[metBp]	activator	[GEA]	Weak
+HypT	metNIQ[metNp]	activator	[BPP, GEA]	Strong
+IHF	aceBAK[aceBp]	activator	[BPP, GEA]	Strong
+IHF	acs-yjcHG[acsp1]	repressor	[BPP, GEA]	Strong
+IHF	acs-yjcHG[acsp2]	repressor	[AIBSCS, BPP, GEA, SM]	Strong
+IHF	adiA[adiAp]	activator	[GEA, SM]	Strong
+IHF	amiA-hemF[amiAp]	repressor	[APIORCISFBSCS]	Weak
+IHF	atoDAEB[atoDp]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+IHF	carAB[carAp1]	activator	[APIORCISFBSCS, BCE, BPP, GEA, SM]	Strong
+IHF	csgDEFG[csgDp1]	activator	[BPP, GEA]	Strong
+IHF	csrB[csrBp]	activator	[AIBSCS, GEA]	Weak
+IHF	cysJIH[cysJp]	activator	[BPP, GEA]	Strong
+IHF	dcuD[dcuDp2]	activator	[APIORCISFBSCS]	Weak
+IHF	dmsABC[dmsAp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+IHF	dppABCDF[dppAp]	activator	[BCE]	Weak
+IHF	dps[dpsp]	activator	[APIORCISFBSCS]	Weak
+IHF	dusB-fis[dusBp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+IHF	fimAICDFGH[fimAp]	activator	[APIORCISFBSCS, GEA]	Weak
+IHF	fimB[fimBp2]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+IHF	flhDC[flhDp]	repressor	[APIORCISFBSCS]	Weak
+IHF	fliAZY[fliAp1]	repressor	[GEA, IHBCE, SM]	Strong
+IHF	fnr[fnrp]	activator	[BPP, GEA, SM]	Strong
+IHF	focA-pflB[focAp1]	activator	[APIORCISFBSCS, BCE, BPP, GEA, SM]	Strong
+IHF	folA[folAp]	activator	[APIORCISFBSCS, GEA]	Weak
+IHF	gcd[gcdp1]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+IHF	glcDEFGBA[glcDp]	activator	[BCE, GEA]	Weak
+IHF	glmY[glmYp1]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+IHF	glnHPQ[glnHp2]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+IHF	glpTQ[glpTQp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+IHF	gltA[gltAp1]	activator	[AIBSCS, BCE, GEA]	Weak
+IHF	gltBDF[gltBp]	activator	[BPP, GEA]	Strong
+IHF	hemA-prfA-prmC[hemAp1]	activator	[GEA]	Weak
+IHF	hemF[hemFp]	repressor	[APIORCISFBSCS]	Weak
+IHF	hipBA[hipBp]	activator	[APIORCISFBSCS]	Weak
+IHF	hpt[hptp]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+IHF	hycABCDEFGHI[hycAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+IHF	hypABCDE[hypAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+IHF	hypABCDE-fhlA[hypAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+IHF	ibpB[ibpBp]	activator	[AIBSCS]	Weak
+IHF	ihfA[ihfAp4]	repressor	[APIORCISFBSCS, BPP]	Strong
+IHF	ihfB[ihfBp]	repressor	[BPP, GEA]	Strong
+IHF	ilvL[ilvLp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+IHF	ilvL[ilvLp2]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+IHF	ilvLXG_1G_2MEDA[ilvLp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+IHF	ilvLXG_1G_2MEDA[ilvLp2]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+IHF	micF[micFp]	repressor	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+IHF	mtr[mtrp2]	repressor	[GEA]	Weak
+IHF	narGHJI[narGp]	activator	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+IHF	narK[narKp1]	activator	[BPP, GEA]	Strong
+IHF	ndh[ndhp]	repressor	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+IHF	nirBDC-cysG[nirBp]	activator	[APIORCISFBSCS, BPP, GEA, BCE]	Strong
+IHF	nmpC[nmpCp]	repressor	[APIORCISFBSCS, SM]	Strong
+IHF	norVW[norVp]	activator	[BPP]	Strong
+IHF	nrfABCDEFG[nrfAp]	activator	[AIBSCS, BPP, GEA, SM]	Strong
+IHF	nuoABCEFGHIJKLMN[nuoAp2]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+IHF	ompC[ompCp1]	repressor	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+IHF	ompC[ompCp3]	repressor	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+IHF	ompF[ompFp]	activator	[APIORCISFBSCS, BCE]	Weak
+IHF	ompR-envZ[ompRp1]	repressor	[BPP, SM]	Strong
+IHF	osmE[osmEp]	repressor	[APIORCISFBSCS, GEA]	Weak
+IHF	osmY[osmYp]	repressor	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+IHF	paaABCDEFGHIJK[paaAp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+IHF	paaZ[paaZp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+IHF	patA[patAp]	unknown	[AIBSCS]	Weak
+IHF	proVWX[proVp3]	activator	[BPP, GEA]	Strong
+IHF	pspABCDE[pspAp]	activator	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+IHF	pspG[pspGp]	activator	[ICA]	Weak
+IHF	pstS[pstSp]	activator	[BPP, GEA]	Strong
+IHF	pstSCA[pstSp]	activator	[BPP, GEA]	Strong
+IHF	pstSCAB-phoU[pstSp]	activator	[BPP, GEA]	Strong
+IHF	rpoE-rseABC[rpoEp1b]	repressor	[APIORCISFBSCS, GEA, IC]	Weak
+IHF	rpoH[rpoHp6]	activator	[BPP, GEA]	Strong
+IHF	rtcBA[rtcBp]	activator	[AIBSCS]	Weak
+IHF	sodA[sodAp]	repressor	[APIORCISFBSCS, BPP]	Strong
+IHF	sodB[sodBp]	repressor	[AIBSCS, GEA]	Weak
+IHF	sra[srap]	activator	[GEA]	Weak
+IHF	ssuEADCB[ssuEp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+IHF	sucAB[sucAp]	repressor	[AIBSCS, GEA]	Weak
+IHF	sucABCD[sucAp]	repressor	[AIBSCS, GEA]	Weak
+IHF	sufABCDSE[sufAp]	activator	[BPP, SM]	Strong
+IHF	tdcABCDEFG[tdcAp]	activator	[APIORCISFBSCS, BCE, BPP, SM]	Strong
+IHF	tyrP[tyrPp1]	repressor	[GEA]	Weak
+IHF	ubiCA[ubiCp]	repressor	[APIORCISFBSCS, GEA]	Weak
+IHF	ulaABCDEF[ulaAp]	repressor	[BCE, NAS]	Weak
+IHF	ulaG[ulaGp]	repressor	[BCE, GEA]	Weak
+IHF	uspA[uspAp1]	activator	[APIORCISFBSCS, GEA]	Weak
+IHF	uspB[uspBp]	repressor	[APIORCISFBSCS, GEA]	Weak
+IHF	yadV-htrE[yadVp1]	activator	[GEA]	Weak
+IHF	yadV-htrE[yadVp2]	activator	[GEA]	Weak
+IHF	yadV-htrE[yadVp3]	activator	[GEA]	Weak
+IHF	yeiL[yeiLp]	activator	[APIORCISFBSCS, GEA]	Weak
+IHF	yiaJ[yiaJp]	repressor	[APIORCISFBSCS, BPP]	Strong
+IHF	yiaKLMNO-lyx-sgbHUE[yiaKp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+IHF	yjbE[yjbEp1]	activator	[APIORCISFBSCS, BPP]	Strong
+IHF	yjbEFGH[yjbEp1]	activator	[APIORCISFBSCS, BPP]	Strong
+IclR	aceBAK[aceBp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+IclR	iclR[iclRp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+IdnR	gntK[gntKp]	repressor	[GEA]	Weak
+IdnR	gntKU[gntKp]	repressor	[GEA]	Weak
+IdnR	idnDOTR[idnDp]	activator	[AIBSCS, GEA]	Weak
+IdnR	idnK[idnKp]	activator	[AIBSCS, GEA]	Weak
+IlvY	ilvC[ilvCp]	activator	[APIORCISFBSCS, BCE, BPP, GEA, IC]	Strong
+IlvY	ilvY[ilvYp]	repressor	[APIORCISFBSCS, BCE, BPP, GEA, IC]	Strong
+IscR	erpA[erpAp]	repressor	[BPP, GEA]	Strong
+IscR	hyaABCDEF[hyaAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+IscR	iscRSUA[iscRp]	repressor	[BPP, GEA, SM]	Strong
+IscR	napFDAGHBC[napFp3]	repressor	[BPP, GEA]	Strong
+IscR	nfuA[nfuAp1]	repressor	[BPP, GEA]	Strong
+IscR	nrdHIEF[nrdHp]	activator	[GEA]	Weak
+IscR	rnlAB[rnlAp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+IscR	sufABCDSE[sufAp]	activator	[APIORCISFBSCS, BPP, GEA, IMP, SM]	Strong
+IscR	ydiU[ydiUp]	activator	[BPP, GEA]	Strong
+KdgR	eda[edap1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+KdgR	edd-eda[eddp1]	repressor	[APIORCISFBSCS, AIBSCS]	Weak
+KdpE	kdpFABC[kdpFp]	activator	[APIORCISFBSCS, BPP, GEA, SM, CV(GEA/GS), CV(GEA/SM/GS), GS]	Confirmed
+LacI	lacZYA[lacZp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM, CV(GEA/GS), CV(GEA/SM/GS), GS]	Confirmed
+LeuO	bglG[bglGp]	activator	[BPP, GEA, IC]	Strong
+LeuO	bglGFB[bglGp]	activator	[BPP, GEA, IC]	Strong
+LeuO	cadC[cadCp]	repressor	[GEA]	Weak
+LeuO	dsrA[dsrAp]	repressor	[GEA]	Weak
+LeuO	leuL[leuLp]	activator	[GEA]	Weak
+LeuO	leuLABCD[leuLp]	activator	[GEA]	Weak
+LeuO	leuO[leuOp]	activator	[BPP, GEA, IC]	Strong
+LeuO	leuO[leuOp2]	activator	[AIBSCS, BPP, GEA, IC, CV(GEA/GS), GS]	Strong
+LeuO	yjjQ-bglJ[yjjQp]	activator	[BPP]	Strong
+LexA	cho[chop]	repressor	[APIORCISFBSCS, AIBSCS]	Weak
+LexA	dinB-yafNOP[dinBp]	repressor	[APIORCISFBSCS, AIBSCS, ICWHO]	Weak
+LexA	dinG-ybiB[dinGp]	repressor	[AIBSCS, BPP, GEA]	Strong
+LexA	dinQ[dinQp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+LexA	ftsK[ftsKp1]	repressor	[AIBSCS, BPP, GEA]	Strong
+LexA	ftsLI-murEF-mraY-murD-ftsW-murGC-ddlB-ftsQAZ-lpxC[ftsLp2]	repressor	[APIORCISFBSCS]	Weak
+LexA	hokE[hokEp]	repressor	[AIBSCS]	Weak
+LexA	insK[insKp]	repressor	[AIBSCS, GEA]	Weak
+LexA	lexA-dinF[lexAp]	repressor	[APIORCISFBSCS, BPP]	Strong
+LexA	phr[phrp]	repressor	[APIORCISFBSCS, GEA]	Weak
+LexA	polB[polBp]	repressor	[AIBSCS, BPP, GEA]	Strong
+LexA	ptrA[ptrAp]	repressor	[BPP, SM]	Strong
+LexA	recA[recAp]	repressor	[BPP]	Strong
+LexA	recAX[recAp]	repressor	[BPP]	Strong
+LexA	recN[recNp]	repressor	[AIBSCS, BPP, GEA]	Strong
+LexA	rpsU-dnaG-rpoD[rpsUp3]	repressor	[BCE, SM]	Strong
+LexA	ruvAB[ruvAp2]	repressor	[APIORCISFBSCS, BPP]	Strong
+LexA	ruvAB[ruvAp1]	repressor	[APIORCISFBSCS, BPP]	Strong
+LexA	ssb[ssbp3]	repressor	[APIORCISFBSCS, BCE]	Weak
+LexA	sulA[sulAp]	repressor	[BCE]	Weak
+LexA	symE[symEp]	repressor	[AIBSCS, BPP]	Strong
+LexA	tisB[tisBp]	repressor	[GEA, ICA]	Weak
+LexA	umuDC[umuDp]	repressor	[APIORCISFBSCS, BPP]	Strong
+LexA	uvrA[uvrAp]	repressor	[APIORCISFBSCS, BCE]	Weak
+LexA	uvrB[uvrBp3]	repressor	[BPP, GEA, ICA, SM]	Strong
+LexA	uvrB[uvrBp2]	repressor	[APIORCISFBSCS, BPP, GEA, ICA, SM]	Strong
+LexA	uvrB[uvrBp1]	repressor	[APIORCISFBSCS, BPP, GEA, ICA, SM]	Strong
+LexA	uvrC[uvrCp3]	repressor	[GEA]	Weak
+LexA	uvrD[uvrDp1]	repressor	[APIORCISFBSCS]	Weak
+LexA	uvrYC[uvrYp2]	repressor	[AIBSCS, GEA]	Weak
+LexA	yafNOP[yafNp]	repressor	[APIORCISFBSCS]	Weak
+LexA	ybfE[ybfEp]	repressor	[AIBSCS]	Weak
+LexA	ydjM[ydjMp]	repressor	[AIBSCS, BPP, GEA]	Strong
+LexA	yehF[yehFp]	repressor	[AIBSCS]	Weak
+LldR	lldPRD[lldPp]	activator	[AIBSCS, BPP, GEA, SM, APIORCISFBSCS]	Strong
+LrhA	fimE[fimEp]	activator	[BPP, GEA]	Strong
+LrhA	flhDC[flhDp]	repressor	[BPP, GEA]	Strong
+LrhA	leuO[leuOp]	activator	[BPP, GEA]	Strong
+LrhA	leuO[leuOp1]	activator	[BPP, GEA]	Strong
+LrhA	leuO[leuOp3]	activator	[BPP, GEA]	Strong
+LrhA	lrhA[lrhAp]	activator	[BPP, GEA]	Strong
+Lrp	adhE[adhEp1]	repressor	[AIBSCS, GEA]	Weak
+Lrp	aidB[aidBp]	repressor	[APIORCISFBSCS, BPP]	Strong
+Lrp	alaA[alaAp9]	repressor	[GEA]	Weak
+Lrp	alaE[alaEp]	activator	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+Lrp	cadBA[cadBp]	activator	[BPP, GEA]	Strong
+Lrp	csiD-ygaF-gabDTP[csiDp]	activator	[BPP, GEA]	Strong
+Lrp	dadAX[dadAp2]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Lrp	dadAX[dadAp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Lrp	dadAX[dadAp3]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Lrp	fimAICDFGH[fimAp]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+Lrp	fimE[fimEp]	activator	[GEA]	Weak
+Lrp	gcvTHP[gcvTp]	activator	[GEA, SM]	Strong
+Lrp	gltBDF[gltBp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+Lrp	hdeAB-yhiD[hdeAp]	repressor	[AIBSCS, GEA]	Weak
+Lrp	ilvIH[ilvIp2]	repressor	[APIORCISFBSCS, BCE, BPP, GEA, SM]	Strong
+Lrp	ilvIH[ilvIHp1]	activator	[APIORCISFBSCS, BCE, BPP, GEA, SM]	Strong
+Lrp	ilvL[ilvLp2]	repressor	[APIORCISFBSCS, SM]	Strong
+Lrp	ilvLXG_1G_2MEDA[ilvLp2]	repressor	[APIORCISFBSCS, SM]	Strong
+Lrp	kbl-tdh[kblp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+Lrp	leuE[leuEp]	repressor	[AIBSCS]	Weak
+Lrp	livJ[livJp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Lrp	livKHMGF[livKp1]	repressor	[GEA]	Weak
+Lrp	lrp[lrpp]	repressor	[APIORCISFBSCS, AIBSCS, BCE, GEA, SM]	Strong
+Lrp	lysP[lysPp]	activator	[BPP, GEA]	Strong
+Lrp	lysU[lysUp1]	repressor	[APIORCISFBSCS, SM]	Strong
+Lrp	malT[malTp]	activator	[GEA]	Weak
+Lrp	micF[micFp]	repressor	[BPP, GEA]	Strong
+Lrp	ompC[ompCp1]	repressor	[AIBSCS, BPP, GEA]	Strong
+Lrp	ompC[ompCp2]	repressor	[AIBSCS, BPP, GEA]	Strong
+Lrp	ompC[ompCp3]	repressor	[AIBSCS, BPP, GEA]	Strong
+Lrp	oppABCDF[oppAp]	repressor	[BPP]	Strong
+Lrp	osmC[osmCp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Lrp	osmC[osmCp2]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Lrp	osmY[osmYp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Lrp	rrsA-ileT-alaT-rrlA-rrfA[rrsAp1]	repressor	[BCE, BPP]	Strong
+Lrp	rrsB-gltT-rrlB-rrfB[rrsBp1]	repressor	[BPP, GEA, IEP]	Strong
+Lrp	rrsC-gltU-rrlC-rrfC[rrsCp1]	repressor	[BPP, IDA]	Strong
+Lrp	rrsD-ileU-alaU-rrlD-rrfD-thrV-rrfF[rrsDp1]	repressor	[GEA]	Weak
+Lrp	rrsE-gltV-rrlE-rrfE[rrsEp]	repressor	[GEA]	Weak
+Lrp	rrsG-gltW-rrlG-rrfG[rrsGp1]	repressor	[GEA]	Weak
+Lrp	rrsH-ileV-alaV-rrlH-rrfH[rrsHp1]	repressor	[GEA]	Weak
+Lrp	sdaA[sdaAp]	repressor	[AIBSCS]	Weak
+Lrp	serA[serAp2]	repressor	[BPP, GEA]	Strong
+Lrp	serA[serAp1]	activator	[BPP, GEA]	Strong
+Lrp	serC[serCp]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+Lrp	serC-aroA[serCp]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+Lrp	ssrS[ssrSp1]	repressor	[BPP, GEA]	Strong
+Lrp	ssrS[ssrSp2]	repressor	[BPP, GEA]	Strong
+Lrp	ssrS-ygfA[ssrSp1]	repressor	[BPP, GEA]	Strong
+Lrp	ssrS-ygfA[ssrSp2]	repressor	[BPP, GEA]	Strong
+Lrp	stpA[stpAp1]	activator	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+Lrp	yeiL[yeiLp]	activator	[APIORCISFBSCS, GEA]	Weak
+LsrR	lsrACDBFG-tam[lsrAp]	repressor	[BPP, GEA, SM]	Strong
+LsrR	lsrRK[lsrRp]	repressor	[BPP, GEA, SM]	Strong
+LysR	lysA[lysAp]	activator	[GEA]	Weak
+LysR	lysR[lysRp]	repressor	[GEA]	Weak
+MalI	malI[malIp]	repressor	[BCE, GEA, SM]	Strong
+MalI	malXY[malXp]	repressor	[BCE, GEA, SM]	Strong
+MalT	malEFG[malEp]	activator	[APIORCISFBSCS, AIBSCS, BPP, SM]	Strong
+MalT	malK-lamB-malM[malKp]	activator	[APIORCISFBSCS, AIBSCS, BPP, SM]	Strong
+MalT	malPQ[malPp]	activator	[AIBSCS, BPP, SM]	Strong
+MalT	malS[malSp]	activator	[AIBSCS, BCE]	Weak
+MalT	malZ[malZp]	activator	[AIBSCS]	Weak
+MarA	acnA[acnAp2]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+MarA	acrAB[acrAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+MarA	aldA[aldAp]	activator	[AIBSCS, GEA]	Weak
+MarA	fpr[fprp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+MarA	fumC[fumCp]	activator	[BPP, GEA]	Strong
+MarA	hdeAB-yhiD[hdeAp]	repressor	[APIORCISFBSCS, APPH, GEA, SM]	Strong
+MarA	inaA[inaAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+MarA	lacZYA[lacZp1]	repressor	[BPP, GEA, SM]	Strong
+MarA	marRAB[marRp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+MarA	micF[micFp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+MarA	nfo[nfop]	activator	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+MarA	nfsB[nfsBp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+MarA	poxB[poxBp]	activator	[APIORCISFBSCS, GEA]	Weak
+MarA	pqiABC[pqiAp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+MarA	purA[purAp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+MarA	putA[putAp]	activator	[GEA]	Weak
+MarA	rfaYZ[waaYp]	activator	[APIORCISFBSCS, GEA]	Weak
+MarA	rob[robp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+MarA	slp-dctR[slpp]	repressor	[APIORCISFBSCS, GEA]	Weak
+MarA	sodA[sodAp]	activator	[APIORCISFBSCS, BPP]	Strong
+MarA	tolC-ygiBC[tolCp4]	activator	[AIBSCS, GEA]	Weak
+MarA	tolC-ygiBC[tolCp3]	activator	[AIBSCS, GEA]	Weak
+MarA	xseA[xseAp]	activator	[BPP, GEA, ICWHO]	Strong
+MarA	ybjC-nfsA-rimK-ybjN[ybjCp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+MarA	yncE[yncEp]	activator	[APIORCISFBSCS, GEA]	Weak
+MarA	zwf[zwfp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+MarR	marRAB[marRp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM, CV(GEA/GS), CV(GEA/SM/GS), GS]	Confirmed
+MatA	flhDC[flhDp]	repressor	[BPP, GEA]	Strong
+MatA	flhDC[flhDp2]	repressor	[BPP, GEA]	Strong
+MatA	fliAZY[fliAp1]	repressor	[BPP]	Strong
+MatA	fliC[fliCp]	repressor	[BPP]	Strong
+MazE	mazEFG[mazEp1]	repressor	[BCE, GEA, SM]	Strong
+MazE	mazEFG[mazEp2]	repressor	[BCE, GEA, SM]	Strong
+MazE-MazF	mazEFG[mazEp1]	repressor	[BCE, GEA, SM]	Strong
+MazE-MazF	mazEFG[mazEp2]	repressor	[BCE, GEA, SM]	Strong
+McbR	rmf[rmfp]	activator	[BPP, GEA, CV(GEA/GS), GS]	Strong
+McbR	rsd[rsdp2]	activator	[BPP, GEA, CV(GEA/GS), GS]	Strong
+McbR	yciG[yciGp]	activator	[BPP, GEA]	Strong
+McbR	yciGFE[yciGp]	activator	[BPP, GEA]	Strong
+MelR	melAB[melAp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+MelR	melR[melRp]	activator	[BPP, GEA, SM, APIORCISFBSCS]	Strong
+MetJ	ahpCF[ahpCp]	repressor	[AIBSCS]	Weak
+MetJ	metA[metAp1]	repressor	[AIBSCS, BCE, BPP, GEA]	Strong
+MetJ	metBL[metBp]	repressor	[AIBSCS, GEA]	Weak
+MetJ	metC[metCp]	repressor	[BPP]	Strong
+MetJ	metE[metEp]	repressor	[BPP]	Strong
+MetJ	metF[metFp]	repressor	[AIBSCS, BCE, SM]	Strong
+MetJ	metK[metKp]	repressor	[AIBSCS]	Weak
+MetJ	metNIQ[metNp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+MetJ	metR[metRp1]	repressor	[BPP]	Strong
+MetJ	metR[metRp2]	repressor	[BPP]	Strong
+MetR	glyA[glyAp]	activator	[APIORCISFBSCS, BPP, GEA, IMP, SM]	Strong
+MetR	hmp[hmpp]	activator	[APIORCISFBSCS, BPP, GEA, IMP, SM]	Strong
+MetR	metE[metEp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+MetR	metH[metHp]	activator	[APIORCISFBSCS, GEA]	Weak
+MetR	metR[metRp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+MetR	metR[metRp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+MhpR	mhpABCDFE[mhpAp]	activator	[APIORCISFBSCS, BCE, GEA, SM]	Strong
+Mlc	malT[malTp]	repressor	[APIORCISFBSCS, BCE, GEA]	Weak
+Mlc	manXYZ[manXp]	repressor	[BCE, GEA]	Weak
+Mlc	mlc[mlcp1]	repressor	[APIORCISFBSCS, BCE, GEA]	Weak
+Mlc	mlc-ynfK[mlcp2]	repressor	[APIORCISFBSCS, BCE, GEA]	Weak
+Mlc	ptsG[ptsGp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Mlc	ptsG[ptsGp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Mlc	ptsHI-crr[ptsHp4]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+MlrA	cadC[cadCp]	activator	[APIORCISFBSCS, BPP]	Strong
+MlrA	csgDEFG[csgDp1]	activator	[BPP, GEA]	Strong
+MlrA	rplU-rpmA[rplUp]	activator	[APIORCISFBSCS, BPP]	Strong
+MlrA	rplU-rpmA-yhbE-obgE[rplUp]	activator	[APIORCISFBSCS, BPP]	Strong
+MngR	mngAB[mngAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+MngR	mngR[mngRp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+MntR	dps[dpsp]	repressor	[APIORCISFBSCS, GEA]	Weak
+MntR	mntH[mntHp]	repressor	[AIBSCS, BPP, GEA]	Strong
+MntR	rybA-mntS[rybAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+ModE	deoCABD[deoCp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+ModE	dmsABC[dmsAp2]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+ModE	hycABCDEFGHI[hycAp]	activator	[BPP, GEA]	Strong
+ModE	moaABCDE[moaAp2]	activator	[BPP, GEA]	Strong
+ModE	modABC[modAp]	repressor	[BPP, GEA, SM]	Strong
+ModE	napFDAGHBC-ccmABCDEFGH[napFp1]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+ModE	napFDAGHBC-ccmABCDEFGH[napFp2]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+ModE	narXL[narXp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+ModE	oppABCDF[oppAp]	repressor	[GEA]	Weak
+MprA	acrAB[acrAp]	repressor	[AIBSCS]	Weak
+MprA	emrRAB[mprAp]	repressor	[BPP]	Strong
+MprA	nmpC[nmpCp]	repressor	[AIBSCS]	Weak
+MqsA	csgDEFG[csgDp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+MqsA	cspD[cspDp]	repressor	[BPP, GEA]	Strong
+MqsA	rpoS[rpoSp]	repressor	[BPP, GEA, IHBCE, SM]	Strong
+MraZ	mraZW-ftsLI-murEF-mraY-murD-ftsW-murGC-ddlB-ftsQAZ-lpxC[mraZp]	repressor	[AIBSCS, BPP, GEA, SM]	Strong
+MurR	murQP[murQp1]	repressor	[BPP, GEA, ICWHO]	Strong
+MurR	murQP[murQp2]	repressor	[BPP, GEA, ICWHO]	Strong
+Nac	asnC[asnCp]	repressor	[APIORCISFBSCS, GEA]	Weak
+Nac	asnC-mioC[asnCp]	repressor	[APIORCISFBSCS, GEA]	Weak
+Nac	asnC-mioC-mnmG[asnCp]	repressor	[APIORCISFBSCS, GEA]	Weak
+Nac	codBA[codBp]	activator	[AIBSCS, BPP, GEA, SM]	Strong
+Nac	feaR[feaRp2]	activator	[IHBCE]	Weak
+Nac	fecABCDE[fecAp]	unknown	[]	null
+Nac	gabDTP[gabDp1]	activator	[APIORCISFBSCS, GEA]	Weak
+Nac	gdhA[gdhAp1]	repressor	[APIORCISFBSCS, GEA]	Weak
+Nac	gltBDF[gltBp]	repressor	[GEA]	Weak
+Nac	nac[nacp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Nac	nupC[nupCp]	activator	[GEA]	Weak
+Nac	serA[serAp1]	repressor	[APIORCISFBSCS, GEA]	Weak
+Nac	ydcSTUV-patD[ydcSp1]	activator	[APIORCISFBSCS, GEA, IDA]	Strong
+NadR	nadB[nadBp]	repressor	[AIBSCS, BPP, GEA, IMP]	Strong
+NadR	pncB[pncBp]	repressor	[AIBSCS]	Weak
+NagC	chbBCARFG[chbBp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+NagC	chiP-ybfN[chiPp]	repressor	[AIBSCS, BPP, GEA]	Strong
+NagC	creABCD[creAp]	repressor	[AIBSCS]	Weak
+NagC	feoABC[feoAp]	unknown	[AIBSCS]	Weak
+NagC	fimB[fimBp2]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+NagC	galP[galPp]	repressor	[AIBSCS, BPP, SM]	Strong
+NagC	glmUS[glmUp1]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+NagC	glmUS[glmUp2]	repressor	[APIORCISFBSCS, BPP, SM]	Strong
+NagC	manXYZ[manXp]	repressor	[APIORCISFBSCS, AIBSCS, BCE, GEA]	Weak
+NagC	nagBACD[nagBp]	repressor	[BPP, GEA, SM]	Strong
+NagC	nagE[nagEp]	repressor	[BPP, GEA, SM]	Strong
+NagC	nanCMS[nanCp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+NagC	ptsHI-crr[ptsHp4]	repressor	[AIBSCS]	Weak
+NagC	ptsHI-crr[ptsHp5]	repressor	[AIBSCS]	Weak
+NagC	ptsHI-crr[ptsHp3]	repressor	[AIBSCS]	Weak
+NagC	ydeP[ydePp]	repressor	[AIBSCS]	Weak
+NanR	fimB[fimBp2]	activator	[APIORCISFBSCS, BPP, GEA, SM, CV(GEA/GS), CV(GEA/SM/GS), GS]	Confirmed
+NanR	nanA[nanAp]	repressor	[BPP, GEA, SM]	Strong
+NanR	nanATEK-yhcH[nanAp]	repressor	[BPP, GEA, SM]	Strong
+NanR	nanCMS[nanCp]	repressor	[APIORCISFBSCS, BPP, GEA, SM, CV(GEA/GS), CV(GEA/SM/GS), GS]	Confirmed
+NarL	adhE[adhEp1]	repressor	[APIORCISFBSCS, GEA]	Weak
+NarL	adhE[adhEp2]	repressor	[APIORCISFBSCS, GEA]	Weak
+NarL	aspA[aspAp]	repressor	[BPP, GEA]	Strong
+NarL	aspA-dcuA[aspAp]	repressor	[BPP, GEA]	Strong
+NarL	caiF[caiFp]	repressor	[GEA]	Weak
+NarL	citCDEFXG[citCp2]	repressor	[AIBSCS]	Weak
+NarL	cydDC[cydDp]	activator	[APIORCISFBSCS, GEA]	Weak
+NarL	dcuB-fumB[dcuBp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NarL	dcuSR[dcuSp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+NarL	dmsABC[dmsAp1]	repressor	[APIORCISFBSCS, BCE, BPP]	Strong
+NarL	dpiBA[dpiBp]	repressor	[AIBSCS]	Weak
+NarL	dpiBA[dpiBp2]	repressor	[AIBSCS]	Weak
+NarL	fdhF[fdhFp]	repressor	[BPP, GEA]	Strong
+NarL	fdnGHI[fdnGp]	activator	[APIORCISFBSCS, BCE, BPP, GEA, SM]	Strong
+NarL	focA-pflB[focAp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+NarL	focA-pflB[focAp3]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+NarL	frdABCD[frdAp]	repressor	[APIORCISFBSCS, BPP]	Strong
+NarL	hcp-hcr[hcpp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+NarL	hcp-hcr-poxB[hcpp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+NarL	hyaABCDEF[hyaAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NarL	hybOABCDEFG[hybOp1]	repressor	[APIORCISFBSCS, GEA]	Weak
+NarL	moeAB[moeAp]	activator	[AIBSCS, GEA]	Weak
+NarL	napFDAGHBC-ccmABCDEFGH[napFp1]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+NarL	napFDAGHBC-ccmABCDEFGH[napFp2]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+NarL	narGHJI[narGp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+NarL	narK[narKp1]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+NarL	nikABCDER[nikAp1]	repressor	[GEA]	Weak
+NarL	nirBDC-cysG[nirBp]	activator	[BCE, BPP, GEA, SM]	Strong
+NarL	norVW[norVp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NarL	nrfABCDEFG[nrfAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+NarL	nuoABCEFGHIJKLMN[nuoAp2]	activator	[APIORCISFBSCS, GEA]	Weak
+NarL	ogt[ogtp]	activator	[BPP]	Strong
+NarL	ompW[ompWp]	repressor	[AIBSCS, BPP, GEA]	Strong
+NarL	torCAD[torCp]	repressor	[IMP]	Weak
+NarL	ubiCA[ubiCp]	repressor	[GEA]	Weak
+NarL	ydeP[ydePp]	activator	[BPP, GEA]	Strong
+NarL	ydhYVWXUT[ydhYp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+NarL	ynfEFGH-dmsD[ynfEp]	repressor	[AIBSCS, BPP]	Strong
+NarL	ytfE[ytfEp]	activator	[AIBSCS]	Weak
+NarP	fdhF[fdhFp]	activator	[GEA]	Weak
+NarP	fdnGHI[fdnGp]	repressor	[GEA, SM]	Strong
+NarP	hcp-hcr[hcpp]	activator	[APIORCISFBSCS, GEA]	Weak
+NarP	hcp-hcr-poxB[hcpp]	activator	[APIORCISFBSCS, GEA]	Weak
+NarP	hyaABCDEF[hyaAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NarP	napFDAGHBC-ccmABCDEFGH[napFp1]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+NarP	napFDAGHBC-ccmABCDEFGH[napFp2]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+NarP	nirBDC-cysG[nirBp]	activator	[BCE, BPP, GEA, SM]	Strong
+NarP	norVW[norVp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NarP	nrfABCDEFG[nrfAp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+NarP	ydeP[ydePp]	repressor	[BPP, GEA]	Strong
+NarP	ydhYVWXUT[ydhYp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+NarP	ytfE[ytfEp]	activator	[AIBSCS]	Weak
+NemR	nemRA[nemRp]	repressor	[AIBSCS, BPP, GEA]	Strong
+NemR	nemRA-gloA[nemRp]	repressor	[AIBSCS, BPP, GEA]	Strong
+NfeR	yqjH[yqjHp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+NfeR	yqjI[yqjIp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+NhaR	nhaAR[nhaAp1]	activator	[BCE, BPP, GEA]	Strong
+NhaR	osmC[osmCp1]	activator	[BCE, GEA, SM]	Strong
+NhaR	pgaABCD[pgaAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+NikR	nikABCDER[nikAp1]	repressor	[BPP]	Strong
+NimR	yeaM[nimRp]	repressor	[BPP, GEA, ICWHO, CV(GEA/GS), GS]	Strong
+NorR	norR[norRp]	repressor	[AIBSCS, BPP, GEA]	Strong
+NorR	norVW[norVp]	activator	[AIBSCS, BPP, GEA]	Strong
+NrdR	nrdAB-yfaE[nrdAp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+NrdR	nrdDG[nrdDp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+NrdR	nrdHIEF[nrdHp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+NsrR	aceEF[aceEp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	cdd[cddp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	dsdC[dsdCp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	feaB[feaBp1]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	feaR[feaRp2]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	fliAZY[fliAp1]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+NsrR	fliAZY[fliAp2]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	grxD[grxD]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	hcp-hcr[hcpp]	repressor	[APIORCISFBSCS, BCE, GEA, SM]	Strong
+NsrR	hcp-hcr-poxB[hcpp]	repressor	[APIORCISFBSCS, BCE, GEA, SM]	Strong
+NsrR	hmp[hmpp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+NsrR	hycABCDEFGHI[hycAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	hypABCDE[hypAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	hypABCDE-fhlA[hypAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	lrp[lrpp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	ndh[ndhp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	norR[norRp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	nrfABCDEFG[nrfAp]	repressor	[APIORCISFBSCS, BCE, GEA, SM]	Strong
+NsrR	rybB[rybBp]	repressor	[GEA]	Weak
+NsrR	smpA[bamEp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	sodB[sodBp]	repressor	[AIBSCS, GEA]	Weak
+NsrR	sufABCDSE[sufAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	tehAB[tehAp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+NsrR	thrS-infC[thrSp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	thrS-infC-rpmI-rplT-pheMST-ihfA[thrSp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	ydbD[ydbDp]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	ygbA[ygbAp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+NsrR	yibD[yibDp1]	repressor	[APIORCISFBSCS, GEA]	Weak
+NsrR	ytfE[ytfEp]	repressor	[APIORCISFBSCS, AIBSCS, GEA, SM]	Strong
+NtrC	argT-hisJQMP[argTp]	activator	[AIBSCS, GEA]	Weak
+NtrC	astCADBE[astCp2]	activator	[AIBSCS, BPP, GEA]	Strong
+NtrC	cbl[cblp]	activator	[GEA]	Weak
+NtrC	ddpXABCDF[ddpXp]	activator	[AIBSCS, GEA]	Weak
+NtrC	glnA[glnAp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+NtrC	glnA[glnAp2]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+NtrC	glnALG[glnAp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+NtrC	glnALG[glnAp2]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+NtrC	glnHPQ[glnHp2]	activator	[APIORCISFBSCS, BPP]	Strong
+NtrC	glnK-amtB[glnKp]	activator	[APIORCISFBSCS]	Weak
+NtrC	glnLG[glnLp]	repressor	[APIORCISFBSCS, BPP, SM]	Strong
+NtrC	nac[nacp]	activator	[APIORCISFBSCS]	Weak
+NtrC	patA[patAp]	activator	[AIBSCS, GEA, IEP]	Weak
+NtrC	potFGHI[potFp1]	activator	[GEA]	Weak
+NtrC	relA[relAp4]	activator	[BPP, GEA]	Strong
+NtrC	rpoE-rseABC[rpoEp2b]	activator	[APIORCISFBSCS, BPP]	Strong
+NtrC	rutABCDEFG[rutAp]	activator	[AIBSCS, GEA]	Weak
+NtrC	yeaGH[yeaGp1]	activator	[GEA]	Weak
+NtrC	yhdWXYZ[yhdWp]	activator	[AIBSCS, GEA]	Weak
+OmpR	bolA[bolAp1]	repressor	[APIORCISFBSCS, BPP]	Strong
+OmpR	cadBA[cadBp]	repressor	[BPP, GEA]	Strong
+OmpR	cadC[cadCp]	repressor	[BPP, GEA]	Strong
+OmpR	csgDEFG[csgDp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+OmpR	ecnB[ecnBp]	repressor	[APIORCISFBSCS]	Weak
+OmpR	fadL[fadLp]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+OmpR	flhDC[flhDp]	repressor	[APIORCISFBSCS]	Weak
+OmpR	micF[micFp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+OmpR	nmpC[nmpCp]	repressor	[APIORCISFBSCS, SM]	Strong
+OmpR	ompC[ompCp1]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+OmpR	ompF[ompFp]	activator	[APIORCISFBSCS, AIBSCS, BCE, BPP, GEA, SM]	Strong
+OmpR	omrA[omrAp]	activator	[APIORCISFBSCS, GEA]	Weak
+OmpR	omrB[omrBp]	activator	[APIORCISFBSCS, GEA]	Weak
+OmpR	pgaABCD[pgaAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+OmpR	sra[srap]	repressor	[GEA]	Weak
+OmpR	tppB[tppBp]	activator	[BPP, GEA]	Strong
+OxyR	ahpCF[ahpCp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+OxyR	ahpCF[ahpCp2]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+OxyR	dps[dpsp]	activator	[APIORCISFBSCS, CEUMA, IHBCE, RE]	Weak
+OxyR	elaB[elaBp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+OxyR	fhuF[fhuFp]	repressor	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+OxyR	flu[flup]	repressor	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE, SM]	Strong
+OxyR	gntP[gntPp]	repressor	[APIORCISFBSCS, GEA]	Weak
+OxyR	gor[gorp]	activator	[GEA]	Weak
+OxyR	grxA[grxAp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+OxyR	hcp-hcr[hcpp]	activator	[BPP, GEA]	Strong
+OxyR	hcp-hcr-poxB[hcpp]	activator	[BPP, GEA]	Strong
+OxyR	katG[katGp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+OxyR	metE[metEp]	activator	[CEUMA, IHBCE, RE]	Weak
+OxyR	metR[metRp1]	activator	[CEUMA, IHBCE, RE]	Weak
+OxyR	mntH[mntHp]	activator	[APIORCISFBSCS, AIBSCS, CEUMA, GEA, IHBCE, RE, SM]	Strong
+OxyR	oxyR[oxyRp]	repressor	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+OxyR	oxyS[oxySp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+OxyR	sufABCDSE[sufAp]	activator	[BPP, CEUMA, GEA, IHBCE, RE, SM]	Strong
+OxyR	trxC[trxCp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+OxyR	uof-fur[uofp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+OxyR	uxuAB[uxuAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+OxyR	ybjC-nfsA-rimK-ybjN[ybjCp]	repressor	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+OxyR	ychF[ychFp]	repressor	[APIORCISFBSCS, BPP]	Strong
+OxyR	yhjA[yhjAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, CEUMA, IHBCE, RE]	Strong
+OxyR	yjjZ[yjjZp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+OxyR	zinT[zinTp]	activator	[CEUMA, IHBCE, RE]	Weak
+OxyR	znuA[znuAp]	activator	[CEUMA, IHBCE, RE]	Weak
+OxyR	znuCB[znuCp]	activator	[CEUMA, IHBCE, RE]	Weak
+PaaX	paaABCDEFGHIJK[paaAp]	repressor	[APIORCISFBSCS, BCE, GEA, SM]	Strong
+PaaX	paaXY[paaXp]	repressor	[APIORCISFBSCS, BPP]	Strong
+PaaX	paaZ[paaZp]	repressor	[APIORCISFBSCS, BCE, GEA, SM]	Strong
+PdeL	yahA[pdeLp2]	activator	[BPP, GEA, IHBCE]	Strong
+PdhR	cyoABCDE[cyoAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+PdhR	fecABCDE[fecAp]	activator	[AIBSCS, GEA]	Weak
+PdhR	glcDEFGBA[glcDp]	repressor	[AIBSCS, BPP, GEA]	Strong
+PdhR	grcA[grcAp1]	repressor	[APIORCISFBSCS, GEA]	Weak
+PdhR	hemL[hemLp]	repressor	[AIBSCS]	Weak
+PdhR	mraZW-ftsLI-murEF-mraY-murD-ftsW-murGC-ddlB-ftsQAZ-lpxC[mraZp]	repressor	[AIBSCS, BPP, GEA]	Strong
+PdhR	ndh[ndhp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+PdhR	pdhR-aceEF-lpdA[pdhRp]	repressor	[APIORCISFBSCS, AIBSCS, BCE, BPP, GEA]	Strong
+PepA	carAB[carAp1]	repressor	[BPP, GEA, IMP]	Strong
+PgrR	tyrR[tyrRp]	repressor	[BPP, GEA, IGI]	Strong
+PgrR	ycjG[ycjGp]	repressor	[BPP, GEA, IGI]	Strong
+PgrR	ycjXF-tyrR[ycjXp]	repressor	[BPP, GEA, IGI]	Strong
+PgrR	ycjY-ymjDC-mpaA[ycjYp6]	repressor	[BPP, GEA, IGI]	Strong
+PhoB	amn[amnp1]	activator	[AIBSCS, GEA]	Weak
+PhoB	argP[argPp]	activator	[APIORCISFBSCS, GEA]	Weak
+PhoB	asr[asrp]	activator	[APIORCISFBSCS, BCE, GEA]	Weak
+PhoB	cusCFBA[cusCp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoB	cusRS[cusRp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoB	eda[edap3]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoB	feaR[feaRp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoB	gadX[gadXp]	activator	[GEA]	Weak
+PhoB	gadXW[gadXp]	activator	[GEA]	Weak
+PhoB	ompF[ompFp]	activator	[GEA]	Weak
+PhoB	phnCDEEFGHIJKLMNOP[phnCp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoB	phoA-psiF[phoAp]	activator	[BCE, GEA, SM]	Strong
+PhoB	phoBR[phoBp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoB	phoE[phoEp]	activator	[BCE, GEA, SM]	Strong
+PhoB	phoH[phoHp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoB	phoU[phoUp]	activator	[GEA]	Weak
+PhoB	pitB[pitBp]	repressor	[IMP]	Weak
+PhoB	prpR[prpRp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoB	psiE[psiEp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoB	pstS[pstSp]	activator	[APIORCISFBSCS, BCE, GEA, SM]	Strong
+PhoB	pstSCA[pstSp]	activator	[APIORCISFBSCS, BCE, GEA, SM]	Strong
+PhoB	pstSCAB-phoU[pstSp]	activator	[APIORCISFBSCS, BCE, GEA, SM]	Strong
+PhoB	tktB[tktBp]	activator	[GEA]	Weak
+PhoB	ugpBAECQ[ugpBp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoB	ugpBAECQ[ugpBp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoB	yegH[yegHp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoB	yibD[yibDp1]	activator	[AIBSCS, GEA]	Weak
+PhoB	ytfK[ytfKp]	activator	[APIORCISFBSCS, GEA]	Weak
+PhoP	acrAB[acrAp]	repressor	[GEA]	Weak
+PhoP	argD[argDp]	repressor	[AIBSCS, GEA]	Weak
+PhoP	borD[borDp]	activator	[APIORCISFBSCS, BPP]	Strong
+PhoP	clpS[clpSp]	repressor	[BCE, GEA, IHBCE]	Weak
+PhoP	cysB[cysBp]	activator	[APIORCISFBSCS, AIBSCS]	Weak
+PhoP	dcuD[dcuDp]	repressor	[AIBSCS, GEA]	Weak
+PhoP	fadL[fadLp]	activator	[AIBSCS, GEA]	Weak
+PhoP	gadE[gadEp1]	activator	[APIORCISFBSCS, GEA]	Weak
+PhoP	gadW[gadWp2]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoP	glgAP[glgAp]	activator	[GEA]	Weak
+PhoP	glgBXCAP[glgBp]	activator	[AIBSCS, GEA]	Weak
+PhoP	hdeAB-yhiD[hdeAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoP	hdeD[hdeDp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoP	hemL[hemLp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoP	iraM[iraMp2]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoP	malS[malSp]	activator	[AIBSCS, GEA]	Weak
+PhoP	metBL[metBp]	activator	[AIBSCS, GEA]	Weak
+PhoP	mgrB[mgrBp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoP	mgrR[mgrRp]	activator	[APIORCISFBSCS, GEA]	Weak
+PhoP	mgtA[mgtAp1]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+PhoP	nagA[nagAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoP	ompT[ompTp]	activator	[APIORCISFBSCS, GEA]	Weak
+PhoP	pagP[pagPp]	activator	[APIORCISFBSCS, GEA]	Weak
+PhoP	phoPQ[phoPp1]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+PhoP	phoPQ[phoPp2]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+PhoP	purHD[purHp]	activator	[AIBSCS, GEA]	Weak
+PhoP	rstAB[rstAp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+PhoP	rutABCDEFG[rutAp]	activator	[AIBSCS, GEA]	Weak
+PhoP	safA-ydeO[safAp]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+PhoP	slyB[slyBp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoP	slyB[slyBp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+PhoP	tolC-ygiBC[tolCp2]	activator	[APIORCISFBSCS, GEA]	Weak
+PhoP	treR[treRp3]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+PhoP	treR[treRp4]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+PhoP	ybjG[ybjGp]	activator	[APIORCISFBSCS, GEA]	Weak
+PhoP	ydeP[ydePp]	repressor	[APIORCISFBSCS, GEA]	Weak
+PhoP	yrbL[yrbLp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+PrpR	prpBCDE[prpBp]	activator	[APIORCISFBSCS, GEA]	Weak
+PrpR	prpR[prpRp]	repressor	[APIORCISFBSCS, GEA]	Weak
+PspF	pspABCDE[pspAp]	activator	[BCE, BPP, GEA]	Strong
+PspF	pspF[pspFp1]	repressor	[BCE, BPP, GEA]	Strong
+PspF	pspG[pspGp]	activator	[BPP, GEA, ICA]	Strong
+PurR	carAB[carAp1]	repressor	[AIBSCS, BPP, GEA]	Strong
+PurR	codBA[codBp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+PurR	cvpA-purF-ubiX[cvpAp1]	repressor	[APIORCISFBSCS, BCE, BPP, GEA, SM]	Strong
+PurR	gcvTHP[gcvTp]	repressor	[APIORCISFBSCS, AIBSCS, GEA]	Weak
+PurR	glnB[glnBp2]	repressor	[APIORCISFBSCS, BCE, GEA]	Weak
+PurR	glnB[glnBp1]	repressor	[APIORCISFBSCS, BCE, GEA]	Weak
+PurR	glyA[glyAp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+PurR	guaBA[guaBp]	repressor	[AIBSCS, BCE, GEA]	Weak
+PurR	hflD-purB[hflDp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+PurR	prs[prsp]	repressor	[APIORCISFBSCS, BCE, GEA]	Weak
+PurR	purA[purAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+PurR	purC[purCp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+PurR	purEK[purEp]	repressor	[APIORCISFBSCS, AIBSCS, BCE, GEA]	Weak
+PurR	purHD[purHp]	repressor	[APIORCISFBSCS, AIBSCS, BPP, GEA]	Strong
+PurR	purL[purLp]	repressor	[APIORCISFBSCS, AIBSCS, BCE, GEA]	Weak
+PurR	purMN[purMp]	repressor	[APIORCISFBSCS, AIBSCS, GEA, SM]	Strong
+PurR	purR[purRp]	repressor	[APIORCISFBSCS, BCE, BPP, GEA, SM]	Strong
+PurR	purT[purTp]	repressor	[AIBSCS, BPP, GEA, SM]	Strong
+PurR	pyrC[pyrCp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+PurR	pyrD[pyrDp]	repressor	[APIORCISFBSCS, AIBSCS, BCE, GEA]	Weak
+PurR	speAB[speAp]	repressor	[APIORCISFBSCS, BCE, GEA]	Weak
+PutA	putA[putAp]	repressor	[BPP, GEA, SM]	Strong
+PutA	putP[putPp1]	repressor	[BPP, GEA, SM]	Strong
+PuuR	puuAP[puuAp]	repressor	[BPP, GEA, IC, SM]	Strong
+PuuR	puuDRCBE[puuDp]	repressor	[BPP, GEA, IC, SM]	Strong
+PyrR	yhjX[yhjXp]	activator	[BPP, GEA, SM, CV(GEA/GS), CV(GEA/SM/GS), GS]	Confirmed
+QseB	feaR[feaRp1]	activator	[AIBSCS, GEA]	Weak
+QseB	feaR[feaRp2]	repressor	[AIBSCS, GEA]	Weak
+QseB	fimAICDFGH[fimAp]	activator	[GEA]	Weak
+QseB	flhDC[flhDp]	activator	[GEA]	Weak
+QseB	qseBC[qseBp2]	activator	[BPP, GEA]	Strong
+RbsR	purHD[purHp]	repressor	[AIBSCS, BPP, GEA]	Strong
+RbsR	rbsDACBKR[rbsDp]	repressor	[AIBSCS, BPP, GEA]	Strong
+RcdA	asr[asrp]	activator	[BPP, GEA, IC]	Strong
+RcdA	bluF[bluFp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+RcdA	csgDEFG[csgDp1]	activator	[BPP, GEA, IC]	Strong
+RcdA	rmf[rmfp]	activator	[BPP, GEA, CV(GEA/GS), GS]	Strong
+RcdA	rsd[rsdp2]	activator	[BPP, GEA, CV(GEA/GS), GS]	Strong
+RcdA	sulA[sulAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+RclR	rclABC[ykgCp1]	activator	[BPP, GEA]	Strong
+RcnR	rcnAB[rcnAp]	repressor	[BPP, GEA]	Strong
+RcsAB	csgDEFG[csgDp1]	repressor	[GEA]	Weak
+RcsAB	flhDC[flhDp]	repressor	[BPP, GEA, SM]	Strong
+RcsAB	rcsA[rcsAp]	activator	[AIBSCS, BCE, BPP, GEA, SM]	Strong
+RcsAB	wza-wzb-wzc-wcaAB[wzap]	activator	[AIBSCS, BPP, GEA, SM]	Strong
+RcsAB	yjbE[yjbEp1]	activator	[APIORCISFBSCS, GEA]	Weak
+RcsAB	yjbEFGH[yjbEp1]	activator	[APIORCISFBSCS, GEA]	Weak
+RcsB	bdm-sra[bdmp]	activator	[BPP, GEA]	Strong
+RcsB	ftsAZ[ftsAp1]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+RcsB	gadAX[gadAp]	repressor	[BPP, GEA, IHBCE, SM]	Strong
+RcsB	gadBC[gadBp]	activator	[APIORCISFBSCS, GEA]	Weak
+RcsB	gadY[gadYp]	activator	[GEA]	Weak
+RcsB	hdeAB-yhiD[hdeAp]	activator	[GEA]	Weak
+RcsB	hdeD[hdeDp]	activator	[GEA]	Weak
+RcsB	osmB[osmBp1]	activator	[APIORCISFBSCS, GEA]	Weak
+RcsB	osmC[osmCp1]	activator	[BPP, GEA, SM]	Strong
+RcsB	rpoE-rseABC[rpoEp2b]	activator	[APIORCISFBSCS, BPP, SM]	Strong
+RcsB	rprA[rprAp]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+RcsB	safA-ydeO[safAp]	activator	[GEA]	Weak
+RcsB	ydeP[ydePp]	activator	[BPP, GEA]	Strong
+RcsB-BglJ	bglG[bglGp]	activator	[APIORCISFBSCS, AIBSCS, GEA, SM]	Strong
+RcsB-BglJ	bglG[bglGp2]	activator	[APIORCISFBSCS, AIBSCS, GEA, SM]	Strong
+RcsB-BglJ	bglGFB[bglGp]	activator	[APIORCISFBSCS, AIBSCS, GEA, SM]	Strong
+RcsB-BglJ	leuO[leuOp2]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+RcsB-BglJ	yehF[yehFp]	activator	[AIBSCS, GEA]	Weak
+RcsB-BglJ	ygiZ[ygiZp]	activator	[AIBSCS, GEA]	Weak
+RcsB-BglJ	yidL[yidLp]	activator	[AIBSCS, GEA]	Weak
+RelB	relBE-hokD[relBp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+RhaR	rhaSR[rhaSp]	activator	[APIORCISFBSCS, BCE, BPP, GEA]	Strong
+RhaS	rhaBAD[rhaBp]	activator	[APIORCISFBSCS, BCE, BPP, GEA, SM]	Strong
+RhaS	rhaSR[rhaSp]	activator	[BPP, GEA, APIORCISFBSCS]	Strong
+RhaS	rhaT[rhaTp]	activator	[APIORCISFBSCS, AIBSCS, BPP, GEA, SM]	Strong
+Rob	acnA[acnAp2]	activator	[APIORCISFBSCS, GEA]	Weak
+Rob	acrAB[acrAp]	activator	[BPP, GEA]	Strong
+Rob	aldA[aldAp]	activator	[AIBSCS, GEA]	Weak
+Rob	aslB[aslBp]	activator	[GEA]	Weak
+Rob	fumC[fumCp1]	activator	[BPP, GEA, IEP]	Strong
+Rob	inaA[inaAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+Rob	ldtB[ldtBp]	activator	[GEA]	Weak
+Rob	marRAB[marRp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+Rob	micF[micFp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+Rob	mltF[mltFp]	activator	[GEA]	Weak
+Rob	nfo[nfop]	activator	[APIORCISFBSCS, GEA]	Weak
+Rob	nfsB[nfsBp]	activator	[APIORCISFBSCS, GEA]	Weak
+Rob	rob[robp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Rob	sodA[sodAp]	activator	[APIORCISFBSCS]	Weak
+Rob	tolC-ygiBC[tolCp4]	activator	[AIBSCS, GEA]	Weak
+Rob	tolC-ygiBC[tolCp3]	activator	[AIBSCS, GEA]	Weak
+Rob	ybjC-nfsA-rimK-ybjN[ybjCp]	activator	[APIORCISFBSCS, GEA]	Weak
+Rob	zwf[zwfp]	activator	[BPP]	Strong
+RstA	asr[asrp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+RstA	csgDEFG[csgDp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+RstA	csgDEFG[csgDp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+RstA	narGHJI[narGp]	activator	[APIORCISFBSCS]	Weak
+RstA	ompF[ompFp]	repressor	[APIORCISFBSCS, NAS]	Weak
+RtcR	rtcBA[rtcBp]	activator	[GEA]	Weak
+RutR	carAB[carAp1]	activator	[AIBSCS, BPP, GEA, SM]	Strong
+RutR	fepB[fepBp]	repressor	[AIBSCS, BPP, GEA]	Strong
+RutR	gadX[gadXp]	repressor	[BPP, GEA]	Strong
+RutR	gadXW[gadXp]	repressor	[BPP, GEA]	Strong
+RutR	nemRA[nemRp]	repressor	[AIBSCS, BPP, GEA]	Strong
+RutR	nemRA-gloA[nemRp]	repressor	[AIBSCS, BPP, GEA]	Strong
+RutR	pdeR[pdeRp]	repressor	[GEA]	Weak
+RutR	rutABCDEFG[rutAp]	repressor	[AIBSCS, BPP, GEA, SM]	Strong
+RutR	rutR[rutRp2]	repressor	[AIBSCS, BPP, GEA, SM]	Strong
+SdiA	ftsQ[ftsQp2]	activator	[BPP, GEA]	Strong
+SdiA	ftsQAZ[ftsQp1]	repressor	[BPP, GEA]	Strong
+SdiA	gadW[gadWp2]	activator	[GEA]	Weak
+SdiA	rmf[rmfp]	activator	[BPP, GEA, CV(GEA/GS), GS]	Strong
+SdiA	rsd[rsdp2]	activator	[BPP, GEA, CV(GEA/GS), GS]	Strong
+SgrR	alaC[alaCp]	activator	[APIORCISFBSCS, GEA, SM]	Strong
+SgrR	sgrST-setA[sgrSp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+SlyA	fecIR[fecIp]	repressor	[AIBSCS, BPP, GEA]	Strong
+SlyA	hlyE[hlyEp]	activator	[BPP, GEA]	Strong
+SlyA	leuO[leuOp]	activator	[AIBSCS, BPP, GEA]	Strong
+SlyA	paaABCDEFGHIJK[paaAp]	activator	[AIBSCS, BPP, GEA]	Strong
+SlyA	pagP[pagPp]	activator	[GEA, MCIBSPD]	Weak
+SlyA	rmf[rmfp]	activator	[BPP, GEA, CV(GEA/GS), GS]	Strong
+SlyA	rsd[rsdp2]	activator	[BPP, GEA, CV(GEA/GS), GS]	Strong
+SoxR	aroF-tyrA[aroFp]	activator	[CEUMA, IHBCE, RE]	Weak
+SoxR	fumC[fumCp]	activator	[BPP, GEA]	Strong
+SoxR	sodA[sodAp]	activator	[CEUMA, IHBCE, RE]	Weak
+SoxR	soxR[soxRp]	repressor	[BPP, CHIP-SV, CEUMA, GEA, IHBCE, MSI, RE]	Strong
+SoxR	soxS[soxSp]	activator	[BPP, CEUMA, GEA, IHBCE, RE]	Strong
+SoxR	yjcB[yjcBp]	activator	[CEUMA, IHBCE, RE]	Weak
+SoxR	yrbL[yrbLp]	activator	[CEUMA, IHBCE, RE]	Weak
+SoxS	acnA[acnAp2]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+SoxS	acrAB[acrAp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+SoxS	aldA[aldAp]	activator	[AIBSCS, GEA]	Weak
+SoxS	fldA-uof-fur[fldAp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+SoxS	fldB[fldBp]	activator	[APIORCISFBSCS, GEA]	Weak
+SoxS	fpr[fprp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+SoxS	fumC[fumCp]	activator	[BPP, CHIP-SV, CEUMA, GEA, IHBCE, MSI, RE]	Strong
+SoxS	inaA[inaAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+SoxS	marRAB[marRp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+SoxS	micF[micFp]	activator	[BCE, BPP, CEUMA, IHBCE, RE]	Strong
+SoxS	nepI[nepIp]	activator	[CEUMA, IHBCE, RE]	Weak
+SoxS	nfo[nfop]	activator	[APIORCISFBSCS, BCE, CEUMA, GEA, IHBCE, RE]	Weak
+SoxS	nfsB[nfsBp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+SoxS	pgi[pgip]	activator	[APIORCISFBSCS, GEA]	Weak
+SoxS	poxB[poxBp]	activator	[APIORCISFBSCS, GEA]	Weak
+SoxS	pqiABC[pqiAp1]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+SoxS	ptsG[ptsGp1]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+SoxS	rfaYZ[waaYp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+SoxS	ribA[ribAp1]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+SoxS	rob[robp]	repressor	[APIORCISFBSCS, BPP]	Strong
+SoxS	sodA[sodAp]	activator	[APIORCISFBSCS, BCE, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+SoxS	soxS[soxSp]	repressor	[BPP, CEUMA, GEA, IHBCE, RE]	Strong
+SoxS	tolC-ygiBC[tolCp4]	activator	[AIBSCS, GEA]	Weak
+SoxS	tolC-ygiBC[tolCp3]	activator	[AIBSCS, GEA]	Weak
+SoxS	uof-fur[uofp]	activator	[BPP, CE, IHBCE, RE]	Strong
+SoxS	ybjC-nfsA-rimK-ybjN[ybjCp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE]	Strong
+SoxS	ydbK[ydbKp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+SoxS	ydbK-ompN[ydbKp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+SoxS	yrbL[yrbLp]	activator	[CEUMA, IHBCE, RE]	Weak
+SoxS	zinT[zinTp]	activator	[GEA]	Weak
+SoxS	zwf[zwfp]	activator	[APIORCISFBSCS, BPP, CEUMA, GEA, IHBCE, RE, SM]	Strong
+SrlR	srlAEBD-gutM-srlR-gutQ[srlAp]	repressor	[GEA]	Weak
+StpA	bglG[bglGp]	repressor	[GEA]	Weak
+StpA	bglGFB[bglGp]	repressor	[GEA]	Weak
+StpA	leuO[leuOp2]	repressor	[GEA]	Weak
+StpA	ssrS[ssrSp1]	repressor	[BPP, GEA]	Strong
+StpA	ssrS[ssrSp2]	repressor	[BPP, GEA]	Strong
+StpA	ssrS-ygfA[ssrSp1]	repressor	[BPP, GEA]	Strong
+StpA	ssrS-ygfA[ssrSp2]	repressor	[BPP, GEA]	Strong
+StpA	stpA[stpAp1]	repressor	[GEA]	Weak
+SutR	cysE[cysEp]	repressor	[BPP, GEA]	Strong
+SutR	fliAZY[fliAp1]	repressor	[AIBSCS, BPP, GEA]	Strong
+TdcA	tdcABCDEFG[tdcAp]	activator	[BCE, GEA, SM]	Strong
+TorR	gadAX[gadAp]	repressor	[AIBSCS, GEA]	Weak
+TorR	hdeAB-yhiD[hdeAp]	activator	[AIBSCS, GEA]	Weak
+TorR	tnaC[tnaCp]	activator	[BPP, GEA]	Strong
+TorR	tnaCAB[tnaCp]	activator	[BPP, GEA]	Strong
+TorR	torCAD[torCp]	activator	[APIORCISFBSCS, BCE, BPP, GEA, SM, CV(GEA/GS), CV(GEA/SM/GS), GS]	Confirmed
+TorR	torR[torRp]	repressor	[APIORCISFBSCS, BCE, BPP, GEA, SM, CV(GEA/GS), CV(GEA/SM/GS), GS]	Confirmed
+TreR	treBC[treBp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+TrpR	aroH[aroHp1]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+TrpR	aroL-yaiA-aroM[aroLp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+TrpR	mtr[mtrp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+TrpR	trpL[trpLp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+TrpR	trpLEDCBA[trpLp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+TrpR	trpR[trpRp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+TyrR	aroF-tyrA[aroFp]	repressor	[APIORCISFBSCS, GEA, SM]	Strong
+TyrR	aroG[aroGp]	repressor	[APIORCISFBSCS, BPP, SM]	Strong
+TyrR	aroL-yaiA-aroM[aroLp]	repressor	[BPP, GEA, SM]	Strong
+TyrR	aroP[aroPp1]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+TyrR	aroP[aroPp2]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+TyrR	folA[folAp]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+TyrR	mtr[mtrp2]	activator	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+TyrR	tyrB[tyrBp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+TyrR	tyrP[tyrPp1]	activator	[BCE, BPP, GEA, SM]	Strong
+TyrR	tyrR[tyrRp]	repressor	[APIORCISFBSCS, GEA]	Weak
+UhpA	uhpT[uhpTp]	activator	[BCE, BPP, GEA, SM]	Strong
+UidR	uidABC[uidAp]	repressor	[GEA]	Weak
+UidR	uidR[uidRp]	repressor	[GEA]	Weak
+UlaR	ulaABCDEF[ulaAp]	repressor	[BPP, GEA, SM, CV(GEA/GS), CV(GEA/SM/GS), GS]	Confirmed
+UlaR	ulaG[ulaGp]	repressor	[BPP, GEA, CV(GEA/GS), GS]	Strong
+UvrY	csrB[csrBp]	activator	[BPP, GEA]	Strong
+UvrY	csrC[csrCp]	activator	[BPP, GEA]	Strong
+UvrY	luxS[luxSp2]	activator	[BPP, GEA]	Strong
+UvrY	uhpT[uhpTp]	activator	[BPP, GEA]	Strong
+UvrY	ydeP[ydePp]	activator	[BPP, GEA]	Strong
+UxuR	exuR[exuRp2]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+UxuR	gntP[gntPp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+UxuR	uidABC[uidAp]	repressor	[APIORCISFBSCS, GEA]	Weak
+UxuR	uxuAB[uxuAp]	repressor	[APIORCISFBSCS, BPP, GEA, SM]	Strong
+UxuR	uxuR[uxuRp]	repressor	[AIBSCS, GEA]	Weak
+XapR	xapAB[xapAp]	activator	[APIORCISFBSCS, GEA]	Weak
+XylR	araC[araCp]	repressor	[AIBSCS, BPP, GEA]	Strong
+XylR	xylAB[xylAp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+XylR	xylFGHR[xylFp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+YdeO	appCBA-yccB[appCp]	activator	[BPP, GEA, IHBCE]	Strong
+YdeO	gadE[gadEp3]	activator	[BPP, GEA, IHBCE]	Strong
+YdeO	gadEF-mdtEF[gadEp]	activator	[BPP, GEA]	Strong
+YdeO	gadW[gadWp1]	activator	[BPP, GEA, IHBCE]	Strong
+YdeO	hyaABCDEF[hyaAp]	activator	[BPP, GEA, IHBCE]	Strong
+YdeO	safA-ydeO[safAp]	repressor	[GEA]	Weak
+YdeO	slp-dctR[slpp]	activator	[BPP, GEA, IHBCE]	Strong
+YeiL	yeiL[yeiLp]	activator	[GEA]	Weak
+YhaJ	bssS[bssSp1]	activator	[BPP, GEA]	Strong
+YiaJ	yiaJ[yiaJp]	repressor	[BCE, GEA]	Weak
+YiaJ	yiaKLMNO-lyx-sgbHUE[yiaKp]	repressor	[BCE, GEA]	Weak
+YjjQ	flhDC[flhDp]	repressor	[AIBSCS, GEA, SM]	Strong
+YjjQ	ompC[ompCp1]	repressor	[AIBSCS, GEA]	Weak
+YqhC	yqhD-dkgA[yqhDp]	activator	[BPP, GEA, SM]	Strong
+ZntR	zntA[zntAp]	activator	[BPP, SM]	Strong
+ZraR	zraP[zraPp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+ZraR	zraSR[zraSp]	activator	[APIORCISFBSCS, BPP, GEA]	Strong
+Zur	zinT[zinTp]	repressor	[AIBSCS]	Weak
+Zur	znuA[znuAp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
+Zur	znuCB[znuCp]	repressor	[APIORCISFBSCS, BPP, GEA]	Strong
