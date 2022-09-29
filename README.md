@@ -2,6 +2,7 @@
 
 ## Content of the repository
 
+```
 ├── Binding_dataset_report.Rdata
 ├── README.md
 ├── TFBS_differences_107_1102.tsv
@@ -21,6 +22,7 @@
 │           ├── 11.0.1
 │           └── 11.0.2
 └── utils.r
+```
 
 ## Description:
 
